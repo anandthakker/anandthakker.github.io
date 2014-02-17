@@ -1,0 +1,274 @@
+@import "compass/css3";
+
+@import "compass/typography/lists";
+@import "compass/typography/links";
+
+
+//-----------------------------------
+// Mixins, Helpers, etc.
+//-----------------------------------
+
+@mixin bg-grid($color, $bg-color: transparent, $lh: $line-height) {
+  background-color: $bg-color;
+  background-image: linear-gradient(0deg, 
+      transparent 98%, 
+      $color 99%, 
+      $color),
+    linear-gradient(90deg, 
+      transparent 49%, 
+      $color 50%, 
+      $color 51%, 
+      transparent 52%, 
+      transparent);
+    background-size: ($lh * 1em) ($lh * 1em);
+}
+
+
+
+/**
+ Typograhpic scale and rhythm. 
+**/
+
+$scale-factor: 1.25;
+$min-line-padding: .1em;
+// NOTE: the mixin and function below also depend on a variable called $line-height.
+
+// Calculate the minimum multiple of rhythm units needed to contain the font-size.
+// Based on https://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss
+@function lines-for-font-size($font-size) {
+  $lines: ceil($font-size / ($line-height * 1em));
+  @if $lines * $line-height * 1em - $font-size < $min-line-padding * 2 {
+    $lines: $lines + 1;
+  }
+  @return $lines;
+}
+
+// Calculate the unitless line height needed for the given $font-size to take up $lines lines
+// in the baseline grid established by $line-height.
+@function line-height-for-font-size($font-size, $lines: 1) {
+  @return $line-height * (1em / $font-size) * $lines;
+}
+
+// Return the length, in ems, of a given level (power) of a scale.
+@function scale-to($level, $scale-factor: $scale-factor) {
+  @return (1em * pow($scale-factor, $level));
+}
+
+
+@mixin scale-type($font-size: $font-size, $leader: 0, $trailer: 0, $lines: lines-for-font-size($font-size) ) {
+  margin-top: $leader * $line-height * 1rem;
+  font-size: $font-size;
+  line-height: line-height-for-font-size($font-size, $lines);
+  margin-bottom: $trailer * $line-height * 1rem;
+}
+
+
+/**
+* Grid
+*/
+
+@mixin column($proportion) {
+  float: left;
+  margin-left: 5%;
+  width: $proportion*100% - 5%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@mixin row {
+  @include clearfix;
+}
+
+
+
+//-----------------------------------
+// Site Styles
+//-----------------------------------
+
+body, select, input, textarea {
+  color: $font-color;
+  // Set your base font here, to apply evenly
+  font-family: $font-family-sans;
+}
+
+body {
+  @include bg-grid(#ddd, #fff);
+  background-position: 0 1.25em;
+}
+
+a {
+  @include link-colors($link-color, $link-color-hover);
+  @include hover-link;
+}
+
+ul {
+  @include no-bullets;
+  padding: 0px;
+}
+
+
+// Set up typographic scale.
+
+
+p, h1, h2, h3, h4 { margin-top:0; margin-bottom:0; }
+
+h1 { @include scale-type(scale-to(4), 2, 2); }
+h2 { @include scale-type(scale-to(3), 1, 1); }
+h3 { @include scale-type(scale-to(2), 1, 1); }
+h4 { @include scale-type(scale-to(1), 1, 1); }
+p  { @include scale-type(scale-to(0), 1, 1); }
+
+small { font-size: scale-to(-1); }
+
+
+h1,h2, h3 {
+  font-family: $font-family-serif;
+  font-weight: normal;
+}
+h4,h5,h6 {
+  font-family: $font-family-display;
+  // text-transform: uppercase;
+  font-weight: normal;
+}
+
+body:before {
+  content: "\00a0"; /* No-break space character */
+  display: block;
+  overflow: hidden;
+  height: 0;
+}
+
+
+//-----------------------------------
+// Component Styles
+//-----------------------------------
+
+img.favicon {
+  margin-right: 5px;
+  position: relative;
+  top: -2px;
+}
+
+.builtwith ul {
+  @include delimited-list(",");
+  @include inline-block-list;
+}
+
+
+.taglines {
+  font-family: $font-family-display;
+}
+
+.social {
+  ul {
+    @include inline-list;
+  }
+  a.socialicon {
+    text-decoration: none;
+    &:before {
+      font-size: 1.333333em;
+      line-height: $line-height*1rem;
+    }
+  }
+}
+
+.card {
+  padding: 2rem 5px;
+  margin: 1rem 0;
+  background: $background-color;
+
+  @include box-shadow($shadow-color 1px 1px 1px 1px);
+
+  @include transform(perspective( 600px ));
+
+  @include transition-property(transform);
+  @include transition-duration(.1s);
+
+  &:hover {
+    @include transform(perspective( 600px ) translateZ(5px));
+    @include box-shadow($shadow-color 4px 4px 10px 1px);
+    @include transition-property(transform);
+    @include transition-duration(.25s);
+  }
+}
+
+
+//-----------------------------------
+// Page Layout / Composition
+//-----------------------------------
+
+
+#container {
+  &>footer {
+
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    /** 
+    * Shadow over page footer.
+    */
+    overflow: hidden;
+    &>.shadowhack {
+      &:before {
+        content: " ";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        @include box-shadow($behind-background-shadow-color 2px 2px 12px 2px);
+      }
+      margin-bottom: 1em;
+//      margin: 0 auto 1em auto;
+    }
+
+
+    text-align: center;
+    color: $font-color-inverse;
+    background-color: $behind-background-color;
+
+    font-size: .75em;
+  }
+}
+
+
+#main {
+  max-width: 41em;
+  margin: 0 auto;
+
+  .social h2 {
+    @include visually-hidden;
+  }
+
+  &>header {
+    h1 {
+      text-align: center;
+    }
+    .social {
+      text-align: center;
+      height: 1rem*$line-height;
+    }
+  }
+
+  @include row;
+
+  #work-types {
+    @include column(1/2);
+  }
+  #experience {
+    @include column(1/2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
