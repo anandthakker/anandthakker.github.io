@@ -1,4 +1,4 @@
 anandthakker.net
 ================
 
-Personal site
+My personal site
