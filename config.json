@@ -1,0 +1,28 @@
+{
+  "locals": {
+    "url": "http://localhost:8080",
+    "name": "Anand Thakker",
+    "owner": "Anand Thakker",
+    "description": "Personal site of Anand Thakker"
+  },
+  "plugins": [
+    "./plugins/paginator.coffee",
+    "wintersmith-sass"
+  ],
+  "output": "../asphalt/anandthakker/home/public",
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  },
+  "paginator": {
+    "perPage": 3
+  }
+}
