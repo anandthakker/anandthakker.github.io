@@ -7,9 +7,10 @@ block header
   !=contents['about.md'].html
 
 block content
+  - orderIterator = function (item) {return item.metadata.order;}
   section.work-types
     h2 What I can do
-    each worktype in contents.worktypes
+    each worktype in _(contents.workTypes).sortBy(orderIterator )
       section.work-type
         h3!= typogr(worktype.title).typogrify()
         | !{ typogr(worktype.html).typogrify() }
@@ -17,7 +18,7 @@ block content
   section.experience
     h2 Experience
     //- There's gotta be a cleaner way to do this...
-    each org in contents.experience
+    each org in _(contents.experience).sortBy( function(org) {return -org['index.md'].metadata.from;} )
       section.organization
         h3!= typogr(org['index.md'].title).typogrify()
 
@@ -26,7 +27,7 @@ block content
           | !{ typogr(org['index.md'].html).typogrify() }
 
 
-        each exp in _.omit(org, 'index.md')
+        each exp in _.chain(org).omit('index.md').sortBy(orderIterator).value()
           section.work(id=exp.metadata.id)
             h4!= typogr(exp.title).typogrify()
             if exp.html
