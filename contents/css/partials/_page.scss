@@ -30,7 +30,7 @@ $compass: true;
  Typograhpic scale and rhythm.
 **/
 
-$scale-factor: 1.25;
+$scale-factor: 1.5;
 $min-line-padding: .1em;
 // NOTE: the mixin and function below also depend on a variable called $line-height.
 
@@ -115,11 +115,13 @@ ul {
 
 p, h1, h2, h3, h4 { margin-top:0; margin-bottom:0; }
 
-h1 { @include scale-type(scale-to(4), 2, 2); }
-h2 { @include scale-type(scale-to(3), 1, 1); }
-h3 { @include scale-type(scale-to(2), 1, 1); }
-h4 { @include scale-type(scale-to(1), 1, 1); }
-p  { @include scale-type(scale-to(0), 1, 1); }
+h1 { @include scale-type(scale-to(3), 2, 2); }
+h2 { @include scale-type(scale-to(2), 1, 0); }
+h3 { @include scale-type(scale-to(1), 1, 0, 1); }
+h4 { @include scale-type(scale-to(0), 1, 0); }
+p  { @include scale-type(scale-to(0), 1, 0); }
+
+h4+p { margin-top: 0; }
 
 small { font-size: scale-to(-1); }
 
@@ -129,9 +131,9 @@ h1,h2, h3 {
   font-weight: normal;
 }
 h4,h5,h6 {
-  font-family: $font-family-display;
+  font-family: $font-family-sans;
+  font-weight: bold;
   // text-transform: uppercase;
-  font-weight: normal;
 }
 
 body:before {

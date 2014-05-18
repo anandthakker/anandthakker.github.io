@@ -12,7 +12,7 @@ block content
     each worktype in contents.worktypes
       section.work-type
         h3!= worktype.title
-        !{ typogr(worktype.html).typogrify() }
+        | !{ typogr(worktype.html).typogrify() }
 
   section.experience
     h2 Experience
