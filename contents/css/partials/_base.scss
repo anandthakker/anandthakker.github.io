@@ -1,24 +1,149 @@
-// This file must be imported before loading html5-boilerplate
+
+//-----------------------------------
+// Variables
+//-----------------------------------
+
 
 $line-height: 1.5 !default;
-$font-size: 1em !default;
+$font-size: 16px !default;
 
 $font-color: #222 !default;
-$font-color-inverse: #222 !default;
-
 $link-color: #015C65 !default;
 $link-color-hover: #028E9B !default;
 
-$selected-font-color: #fff !default;
-$selected-background-color: #ff5e99 !default;
-$invalid-background-color: #f0dddd !default;
-
 $background-color: #fff;
-$shadow-color: #aaa;
-$behind-background-color: #fff;
-$behind-background-shadow-color: #555;
 
 $font-family-serif: "Playfair Display", serif;
 $font-family-sans: "Gudea", sans-serif;
 $font-family-display: "Playfair Display SC", sans-serif;
 
+
+
+//-----------------------------------
+// Mixins, Helpers, etc.
+//-----------------------------------
+
+@mixin bg-grid($color: #dadada, $bg-color: transparent, $lh: $line-height) {
+  background-color: $bg-color;
+  background-image: linear-gradient(0deg,
+      transparent 98%,
+      $color 99%,
+      $color),
+    linear-gradient(90deg,
+      transparent 49%,
+      $color 50%,
+      $color 51%,
+      transparent 52%,
+      transparent);
+    background-size: ($lh * 1em) ($lh * 1em);
+}
+
+@mixin grid-border($color: $font-color) {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    top: -.08em;
+    bottom: -.4em;
+    left: -.24em;
+    content: " ";
+    width: 1px;
+    border-left: 1px solid $font-color;
+  }
+  &:after {
+    position: absolute;
+    left: -.66em;
+    right: 0;
+    bottom: 2px;
+    content: " ";
+    border-top: 1px solid $font-color;
+  }
+}
+
+
+
+/* uncollapse margins */
+%uncollapse-margin {
+  &:before, &:after {
+    content: "\00a0"; /* nbsp; */
+    display: block;
+    overflow: hidden;
+    height: 0;
+  }
+}
+
+
+//-----------------------------------
+//  Typograhpic scale and rhythm.
+//-----------------------------------
+
+$scale-factor: 1.5;
+$min-line-padding: .1em;
+// NOTE: the mixin and function below also depend on a variable called $line-height.
+
+// Calculate the minimum multiple of rhythm units needed to contain the font-size.
+// Based on https://github.com/chriseppstein/compass/blob/stable/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss
+@function lines-for-font-size($font-size) {
+  $lines: ceil($font-size / ($line-height * 1em));
+  @if $lines * $line-height * 1em - $font-size < $min-line-padding * 2 {
+    $lines: $lines + 1;
+  }
+  @return $lines;
+}
+
+// Calculate the unitless line height needed for the given $font-size to take up $lines lines
+// in the baseline grid established by $line-height.
+@function line-height-for-font-size($font-size, $lines: 1) {
+  @return $line-height * (1em / $font-size) * $lines;
+}
+
+// Return the length, in ems, of a given level (power) of a scale.
+@function scale-to($level, $scale-factor: $scale-factor) {
+  @return (1em * pow($scale-factor, $level));
+}
+
+
+@mixin scale-type($font-size: $font-size, $leader: 0, $trailer: 0, $lines: -1) {
+  @if $lines == -1 {
+    $lines: lines-for-font-size($font-size)
+  }
+  margin-top: $leader * $line-height * 1rem;
+  font-size: $font-size;
+  line-height: line-height-for-font-size($font-size, $lines);
+  margin-bottom: $trailer * $line-height * 1rem;
+}
+
+
+
+//-----------------------------------
+// Grid
+//-----------------------------------
+
+@mixin column($proportion) {
+  float: left;
+  margin-left: 5%;
+  width: $proportion*100% - 5%;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+}
+
+@mixin row {
+  @extend %clearfix;
+}
+
+
+
+//-----------------------------------
+// Variables
+//-----------------------------------
+
+/*
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

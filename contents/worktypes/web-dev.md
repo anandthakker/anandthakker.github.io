@@ -13,5 +13,5 @@ it quickly with robust, maintainable, standards-compliant code.
 
 I'm well versed in HTML, CSS (and SASS/LESS), Javascript (and coffeescript!), AngularJS.
 
-I also enjoy working with new languages or frameworks (and I certainly never charge for my research time.)
+I also enjoy working with new languages or frameworks (and I certainly never charge for my research time).
 

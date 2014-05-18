@@ -11,7 +11,7 @@ block content
     h2 What I can do
     each worktype in contents.worktypes
       section.work-type
-        h3!= worktype.title
+        h3!= typogr(worktype.title).typogrify()
         | !{ typogr(worktype.html).typogrify() }
 
   section.experience
@@ -19,7 +19,7 @@ block content
     //- There's gotta be a cleaner way to do this...
     each org in contents.experience
       section.organization
-        h3!= org['index.md'].title
+        h3!= typogr(org['index.md'].title).typogrify()
 
 
         if org['index.md'].html
@@ -28,7 +28,7 @@ block content
 
         each exp in _.omit(org, 'index.md')
           section.work(id=exp.metadata.id)
-            h4= exp.title
+            h4!= typogr(exp.title).typogrify()
             if exp.html
               | !{ typogr(exp.html).typogrify() }
 

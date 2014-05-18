@@ -6,7 +6,7 @@
  * Hide visually and from screen readers: h5bp.com/u
  */
 
-.hidden {
+%hidden {
     display: none !important;
     visibility: hidden;
 }
@@ -15,7 +15,7 @@
  * Hide only visually, but have it available for screen readers: h5bp.com/v
  */
 
-.visuallyhidden {
+%visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -31,8 +31,8 @@
  * when navigated to via the keyboard: h5bp.com/p
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+%visuallyhidden.focusable:active,
+%visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -45,7 +45,7 @@
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+%invisible {
     visibility: hidden;
 }
 
@@ -61,12 +61,12 @@
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+%clearfix:before,
+%clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.clearfix:after {
+%clearfix:after {
     clear: both;
 }
