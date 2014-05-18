@@ -10,7 +10,7 @@ block content
   - orderIterator = function (item) {return item.metadata.order;}
   section.work-types
     h2 What I can do
-    each worktype in _(contents.workTypes).sortBy(orderIterator )
+    each worktype in _(contents.worktypes).sortBy(orderIterator)
       section.work-type
         h3!= typogr(worktype.title).typogrify()
         | !{ typogr(worktype.html).typogrify() }
@@ -20,7 +20,10 @@ block content
     //- There's gotta be a cleaner way to do this...
     each org in _(contents.experience).sortBy( function(org) {return -org['index.md'].metadata.from;} )
       section.organization
-        h3!= typogr(org['index.md'].title).typogrify()
+        h3
+          | !{ typogr(org['index.md'].title).typogrify() }
+          span.when
+            | !{ org['index.md'].metadata.from}&mdash;!{org['index.md'].metadata.to }
 
 
         if org['index.md'].html

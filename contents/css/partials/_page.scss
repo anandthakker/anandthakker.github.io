@@ -90,6 +90,12 @@ small { font-size: scale-to(-1); }
     }
     .experience {
     }
+    .organization {
+      .when {
+        padding-left: .5em;
+        color: lighten($font-color, 33%);
+      }
+    }
 
     .work-type, .experience {
       h1 {
