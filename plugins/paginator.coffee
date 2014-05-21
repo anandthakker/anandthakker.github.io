@@ -1,12 +1,13 @@
 
 module.exports = (env, callback) ->
+  _ = env.locals._
   ### Paginator plugin. Defaults can be overridden in config.json
       e.g. "paginator": {"perPage": 10} ###
 
   defaults =
-    template: 'index.jade' # template that renders pages
+    template: 'articles.jade' # template that renders pages
     articles: 'articles' # directory containing contents to paginate
-    first: 'index.html' # filename/url for first page
+    first: 'articles.html' # filename/url for first page
     filename: 'page/%d/index.html' # filename for rest of pages
     perPage: 2 # number of articles per page
 
@@ -16,9 +17,8 @@ module.exports = (env, callback) ->
     options[key] ?= defaults[key]
 
   getArticles = (contents) ->
-    # helper that returns a list of articles found in *contents*
-    # note that each article is assumed to have its own directory in the articles directory
-    articles = contents[options.articles]._.directories.map (item) -> item.index
+    # GLONUS HACK
+    articles = _.values(contents[options.articles]["_posts"])
     articles.sort (a, b) -> b.date - a.date
     return articles
 
