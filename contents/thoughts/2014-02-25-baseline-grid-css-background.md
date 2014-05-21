@@ -12,9 +12,7 @@ tags:
 type: link
 ---
 
-[Baseline Grid + CSS
-Background](http://codepen.io/anandthakker/pen/GLlwJ)
+[Baseline Grid + CSS Background](http://codepen.io/anandthakker/pen/GLlwJ)
 
-> Aligning a CSS background grid with the page's typographic grid. Based
-> on http://codepen.io/jasonadelia/details/DnrAe ...
-
+Aligning a CSS background grid with the page's typographic grid. Based
+on <http://codepen.io/jasonadelia/details/DnrAe>.

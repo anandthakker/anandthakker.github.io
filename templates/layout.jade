@@ -27,18 +27,23 @@ html.no-js(lang='')
     | <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     | <![endif]-->
 
-    div#container
+    div.container
       header.header
         block header
 
       main.main
         block content
 
-      footer
-        block footer
-          section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+    footer.container
+      block footer
+        section.copy
+          p &copy; #{ new Date().getFullYear() } #{ locals.owner }
+            a(href="/about.html") about
+            a(href="https://twitter.com/anandthakker") twitter
+            a(href="https://github.com/anandthakker") github
+        section.poweredby
+          p Powered by&nbsp;
+            a(href='https://github.com/jnordberg/wintersmith') Wintersmith
 
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')

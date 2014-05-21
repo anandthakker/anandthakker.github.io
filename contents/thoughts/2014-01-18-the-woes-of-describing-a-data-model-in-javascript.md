@@ -18,6 +18,7 @@ White](http://restrictionisexpression.tumblr.com) and I used to be
 rather zealous about the beauty of type safety, and while we had our
 serious beefs with Java, at least it gave us a robust way of defining a
 data model.  
+<span class="more"></span>
 
 Now, I am totally blown away by what's happened to front-end web
 development since I've been gone these past 8 years.   The ability to

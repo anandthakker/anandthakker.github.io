@@ -11,10 +11,10 @@ tags:
 type: link
 ---
 
-[Visualizing Bayes'
-Theorem](http://anandthakker.net/statsclass/#!/conditional)
-
 If a medical test is 99% accurate, does that mean that you should be 99%
 sure of its result?  Weirdly, the answer is NO.
+
+[Visualizing Bayes' Theorem](http://anandthakker.net/statsclass/#!/conditional)
+
 
 

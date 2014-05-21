@@ -1,5 +1,5 @@
 ---
-title: "AngularJS responsive multi-range slider"
+title: "AngularJS multi-range slider"
 date: 2014-03-02
 template: article.jade
 filename: /:year/:month/:day/:title/index.html
@@ -12,11 +12,7 @@ tags:
 type: link
 ---
 
-[AngularJS responsive multi-range
-slider](http://codepen.io/anandthakker/pen/marlo)
-
-**Motivating use-case**
------------------------
+[AngularJS multi-range slider](http://codepen.io/anandthakker/pen/marlo)
 
 I needed a slider that could be used to choose choose a list of
 probabilities that always add up to 1. I could have used a text input or

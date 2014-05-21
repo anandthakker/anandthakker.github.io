@@ -45,6 +45,9 @@ h4,h5,h6 {
   font-weight: bold;
 }
 
+img {
+  max-width: 100%;
+}
 
 /* Set up typographic scale. */
 
@@ -66,63 +69,100 @@ small { font-size: scale-to(-1); }
 
 
 /*-----------------------------------
- Page Layout / Composition
+  Common Layout / Composition
 -----------------------------------*/
 
-
-.home {
-
-  h1 {
-    @include grid-border($font-color);
-  }
-
-  #container {
-    @include bg-grid();
-    background-position: 0 1.25em;
-    background-origin: content-box;
-
-    padding: 0 1.5em;
-
-    @extend %uncollapse-margin;
-  }
-
-
-  .main {
-    .work-types {
-    }
-    .experience {
-    }
-    .organization {
-      .when {
-        padding-left: .5em;
-        color: lighten($font-color, 33%);
-      }
-    }
-
-    .work-type, .experience {
-      h1 {
-        @extend h4;
-      }
-    }
-  }
+h1 {
+  @include grid-border($font-color);
 }
+.container {
+  @include bg-grid();
+  background-position: 0 1.25em;
+  background-origin: content-box;
 
+  padding: 0 1.5em;
+
+  @extend %uncollapse-margin;
+}
 
 $content-width: 35em;
 
 @media only screen and (min-width: $content-width) {
-  .home {
-    #container {
-      $content-width: $content-width;
-      $width: 50em;
-      $padding: ($width - $content-width);
-      padding: 0 ($padding*2/3) 0 ($padding/3);
-      max-width: $width;
-      margin: 0 auto;
+  .container {
+    $content-width: $content-width;
+    $width: 50em;
+    $padding: ($width - $content-width);
+    padding: 0 ($padding*2/3) 0 ($padding/3);
+    max-width: $width;
+    margin: 0 auto;
+  }
+}
+
+footer.container {
+  background: white;
+  padding: 0 0 2em 0;
+  @extend %clearfix;
+  .copy {
+    float: left;
+    a:before {
+      content: "/";
+      padding: 0 .25em;
+    }
+  }
+  .poweredby {
+    float: right;
+  }
+}
+
+
+
+/*-----------------------------------
+ Page- or section-specific Styles
+-----------------------------------*/
+
+%header-date {
+  padding-left: .5em;
+  color: lighten($font-color, 33%);
+  white-space: nowrap;
+}
+
+
+.thoughts {
+  header {
+    a {
+      @include link-colors($font-color, $font-color);
+    }
+    .date {
+      @extend %header-date;
+      float: right;
+    }
+  }
+
+  @extend %clearfix;
+  .pagenav {
+    margin-top: 2em;
+    float: right;
+    a {
+      padding-left: 2em;
     }
   }
 
 }
+
+.resume {
+  .organization {
+    .date {
+      @extend %header-date;
+    }
+  }
+  .work-type, .experience {
+    h1 {
+      @extend h4;
+    }
+  }
+}
+
+
 
 
 

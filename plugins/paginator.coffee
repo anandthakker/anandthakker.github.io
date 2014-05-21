@@ -5,9 +5,9 @@ module.exports = (env, callback) ->
       e.g. "paginator": {"perPage": 10} ###
 
   defaults =
-    template: 'articles.jade' # template that renders pages
-    articles: 'articles' # directory containing contents to paginate
-    first: 'articles.html' # filename/url for first page
+    template: 'index.jade' # template that renders pages
+    articles: 'thoughts' # directory containing contents to paginate
+    first: 'index.html' # filename/url for first page
     filename: 'page/%d/index.html' # filename for rest of pages
     perPage: 2 # number of articles per page
 
@@ -17,8 +17,10 @@ module.exports = (env, callback) ->
     options[key] ?= defaults[key]
 
   getArticles = (contents) ->
-    # GLONUS HACK
-    articles = _.values(contents[options.articles]["_posts"])
+    articles = _.values(contents[options.articles])
+    articles = _.filter(articles, (art)->
+      art.intro?
+    )
     articles.sort (a, b) -> b.date - a.date
     return articles
 

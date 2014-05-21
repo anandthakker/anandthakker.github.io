@@ -7,10 +7,9 @@ filename: /:year/:month/:day/:title/index.html
 type: photo
 ---
 
-![](/images/www.tumblr.com/photo/1280/thakker/2363933810/1/tumblr_ldn5ksVFJe1qz7dpq.jpe)
+![](/images/oroborromean.jpg)
 
 My "Oro[borromean Rings](http://en.wikipedia.org/wiki/Borromean_rings),"
-inspired by [this
-video](http://thakker.tumblr.com/post/2363917932/this-absolutely-lovely-video-has-probably-already).
+inspired by [this video](https://www.youtube.com/watch?v=heKK95DAKms).
 
 

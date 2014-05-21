@@ -1,0 +1,42 @@
+extends layout
+
+block append vars
+  - bodyclass = 'resume'
+
+block header
+  !=contents['about.md'].html
+
+block content
+
+  section.resume
+    - orderIterator = function (item) {return item.metadata.order;}
+    section.work-types
+      h2 What I can do
+      each worktype in _(contents.worktypes).sortBy(orderIterator)
+        section.work-type
+          h3!= typogr(worktype.title).typogrify()
+          | !{ typogr(worktype.html).typogrify() }
+
+    section.experience
+      h2 Experience
+      //- There's gotta be a cleaner way to do this...
+      each org in _(contents.experience).sortBy( function(org) {return -org['index.md'].metadata.from;} )
+        section.organization
+          h3
+            | !{ typogr(org['index.md'].title).typogrify() }
+            span.date
+              | !{ org['index.md'].metadata.from}&mdash;!{org['index.md'].metadata.to }
+
+
+          if org['index.md'].html
+            | !{ typogr(org['index.md'].html).typogrify() }
+
+
+          each exp in _.chain(org).omit('index.md').sortBy(orderIterator).value()
+            section.work(id=exp.metadata.id)
+              h4!= typogr(exp.title).typogrify()
+              if exp.html
+                | !{ typogr(exp.html).typogrify() }
+
+
+
