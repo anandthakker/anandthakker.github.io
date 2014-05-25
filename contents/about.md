@@ -13,6 +13,7 @@ with new ideas, and make cool stuff.
 Available for freelance. If you need help with a project
 or website, please get in touch!
 
+* [about](/about)
 * [@anandthakker](https://twitter.com/anandthakker)
 * [github.com/anandthakker](https://github.com/anandthakker)
 * [stackoverflow/anandthakker](http://stackoverflow.com/users/2544296/anandthakker)
