@@ -1,6 +1,10 @@
 doctype html
 block vars
   - var bodyclass = null;
+  - var activeSection = null;
+  - if(page && page.metadata && page.metadata.activeSection) {
+  -   activeSection = page.metadata.activeSection;
+  - }
 html.no-js(lang='')
   head
     block head
@@ -30,6 +34,8 @@ html.no-js(lang='')
     div.container
       header.header
         block header
+          h1 Hi. I'm Anand
+          include navigation
 
       main.main
         block content
@@ -38,7 +44,7 @@ html.no-js(lang='')
       block footer
         section.copy
           p &copy; #{ new Date().getFullYear() } #{ locals.owner }
-            a(href="/about.html") about
+            a(href="/about") about
             a(href="https://twitter.com/anandthakker") twitter
             a(href="https://github.com/anandthakker") github
         section.poweredby

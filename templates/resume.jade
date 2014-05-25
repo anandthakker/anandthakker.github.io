@@ -3,8 +3,9 @@ extends layout
 block append vars
   - bodyclass = 'resume'
 
-block header
+block append header
   !=contents['about.md'].html
+  !=contents['social.md'].html
 
 block content
 
@@ -37,6 +38,3 @@ block content
               h4!= typogr(exp.title).typogrify()
               if exp.html
                 | !{ typogr(exp.html).typogrify() }
-
-
-

@@ -1,0 +1,7 @@
+nav
+  ul
+    each url,section in contents["navigation.json"].metadata.sections
+      if activeSection === section
+        li.active= section
+      else
+        li: a(href=url)= section

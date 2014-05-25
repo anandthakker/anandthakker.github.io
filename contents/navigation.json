@@ -1,0 +1,9 @@
+{
+  "view": "none",
+  "sections": {
+    "home": "/",
+    "about": "/about",
+    "experiments": "/experiments",
+    "projects": "/projects"
+  }
+}

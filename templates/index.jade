@@ -2,12 +2,10 @@ extends layout
 
 block append vars
   - bodyclass = 'home'
+  - activeSection = 'home'
 
-block header
-  !=contents['about.md'].html
 
 block content
-
   section.thoughts
     each article in articles
       article.intro
@@ -28,6 +26,3 @@ block content
         a(href='/archive.html') « Archives
       if nextPage
         a(href=nextPage.url) Older »
-
-
-
