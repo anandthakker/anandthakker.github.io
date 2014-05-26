@@ -153,14 +153,17 @@ footer.container {
 
 .thoughts {
   header {
+    padding-top: lines(1);
     a {
       @include link-colors($font-color, $font-color);
     }
     .date {
       @extend %header-date;
       float: right;
+      margin-top: lines(1);
     }
   }
+
 
   @extend %clearfix;
   .pagenav {
