@@ -48,9 +48,10 @@ html.no-js(lang='')
       block footer
         section.copy
           p &copy; #{ new Date().getFullYear() } #{ locals.owner }
-            a(href="/about") about
-            a(href="https://twitter.com/anandthakker") twitter
-            a(href="https://github.com/anandthakker") github
+          nav: ul
+            li: a(href="/about") about
+            li: a(href="https://twitter.com/anandthakker") twitter
+            li: a(href="https://github.com/anandthakker") github
         section.poweredby
           p Powered by&nbsp;
             a(href='https://github.com/jnordberg/wintersmith') Wintersmith

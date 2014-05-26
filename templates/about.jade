@@ -1,13 +1,16 @@
 extends layout
 
 block append vars
-  - bodyclass = 'resume'
+  - bodyclass = 'about'
 
 block append header
-  !=contents['about.md'].html
-  !=contents['social.md'].html
 
 block content
+
+  section.about
+    != typogr(contents['about.md'].html).typogrify()
+    nav
+      !=contents['social.md'].html
 
   section.resume
     - orderIterator = function (item) {return item.metadata.order;}

@@ -102,15 +102,19 @@ $min-line-padding: .1em;
   @return (1em * pow($scale-factor, $level));
 }
 
+// Return a measurement for the given number of lines.
+@function lines($lines) {
+  @return (1rem * $line-height * $lines);
+}
 
 @mixin scale-type($font-size: $font-size, $leader: 0, $trailer: 0, $lines: -1) {
   @if $lines == -1 {
     $lines: lines-for-font-size($font-size)
   }
-  margin-top: $leader * $line-height * 1rem;
+  margin-top: lines($leader);
   font-size: $font-size;
   line-height: line-height-for-font-size($font-size, $lines);
-  margin-bottom: $trailer * $line-height * 1rem;
+  margin-bottom: lines($trailer);
 }
 
 

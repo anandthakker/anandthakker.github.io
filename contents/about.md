@@ -1,5 +1,5 @@
 ---
-template: resume.jade
+template: about.jade
 activeSection: about
 ---
 

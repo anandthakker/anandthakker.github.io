@@ -4,8 +4,11 @@ block append vars
   - bodyclass = 'home'
   - activeSection = 'home'
 
-
 block content
+  section.about
+    != typogr(contents['about.md'].html).typogrify()
+    nav
+      !=contents['social.md'].html
   section.thoughts
     each article in articles
       article.intro

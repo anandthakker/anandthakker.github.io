@@ -33,7 +33,7 @@ a {
 ul {
   @include no-bullets;
   padding: 0px;
-  margin: ($line-height * 1rem) 0;
+  margin: lines(1) 0;
 }
 
 h1,h2, h3 {
@@ -72,9 +72,33 @@ small { font-size: scale-to(-1); }
   Common Layout / Composition
 -----------------------------------*/
 
-h1 {
-  @include grid-border($font-color);
+.header {
+  h1 {
+    @include grid-border($font-color);
+    margin-bottom: 0;
+  }
+  nav ul {
+    margin-top: 0;
+  }
 }
+
+nav {
+  li {
+    display: inline-block;
+    &:first-child:before {
+      display: none;
+    }
+    &:before {
+      content: "/";
+      padding: 0 .25em;
+    }
+  }
+  .active {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
 .container {
   @include bg-grid();
   background-position: 0 1.25em;
@@ -89,7 +113,6 @@ $content-width: 35em;
 
 @media only screen and (min-width: $content-width) {
   .container {
-    $content-width: $content-width;
     $width: 50em;
     $padding: ($width - $content-width);
     padding: 0 ($padding*2/3) 0 ($padding/3);
@@ -102,11 +125,12 @@ footer.container {
   background: white;
   padding: 0 0 2em 0;
   @extend %clearfix;
+
   .copy {
+    margin-top: lines(1);
     float: left;
-    a:before {
-      content: "/";
-      padding: 0 .25em;
+    p, nav, ul {
+      display: inline;
     }
   }
   .poweredby {
@@ -161,16 +185,3 @@ footer.container {
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
