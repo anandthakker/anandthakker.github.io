@@ -9,7 +9,7 @@
     "./plugins/paginator.coffee",
     "wintersmith-sass"
   ],
-  "output": "../asphalt/anandthakker/home/public",
+  "output": "public",
   "require": {
     "moment": "moment",
     "_": "underscore",
