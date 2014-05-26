@@ -80,6 +80,13 @@ small { font-size: scale-to(-1); }
   nav ul {
     margin-top: 0;
   }
+  nav {
+    float: right;
+  }
+  h2 {
+    clear: both;
+  }
+  @extend %clearfix;
 }
 
 nav {
@@ -104,7 +111,7 @@ nav {
   background-position: 0 1.25em;
   background-origin: content-box;
 
-  padding: 0 1.5em;
+  padding: 0 1.5em lines(1) 1.5em;
 
   @extend %uncollapse-margin;
 }
@@ -115,7 +122,7 @@ $content-width: 35em;
   .container {
     $width: 50em;
     $padding: ($width - $content-width);
-    padding: 0 ($padding*2/3) 0 ($padding/3);
+    padding: 0 ($padding*2/3) lines(1) ($padding/3);
     max-width: $width;
     margin: 0 auto;
   }
@@ -166,8 +173,9 @@ footer.container {
 
 
   @extend %clearfix;
+
   .pagenav {
-    margin-top: 2em;
+    margin-top: lines(2);
     float: right;
     a {
       padding-left: 2em;

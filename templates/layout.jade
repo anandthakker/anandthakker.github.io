@@ -43,6 +43,7 @@ html.no-js(lang='')
 
       main.main
         block content
+          != typogr(page.html).typogrify()
 
     footer.container
       block footer
