@@ -18,7 +18,7 @@ serverport = 5000
 BUILD_DIR = "public"
 CONTENT_DIR = "contents"
 TEMPLATES_DIR = "templates"
-DEPLOY_DIR = "../asphalt/anandthakker/home/public"
+DEPLOY_DIR = "../asphalt/anandthakker/home"
 
 #
 # Helper task - Cleans everything in build dir
@@ -28,7 +28,7 @@ gulp.task "clean", ->
     .pipe clean()
 
 gulp.task "clean-deploy", ->
-  gulp.src(DEPLOY_DIR, {read: false})
+  gulp.src(DEPLOY_DIR + "/public", {read: false})
     .pipe clean({force: true})
 
 #
@@ -60,6 +60,8 @@ gulp.task "build", ["clean"], (cb) ->
 #
 gulp.task "deploy", ["build", "clean-deploy"], ->
   gulp.src(BUILD_DIR + "/**")
+    .pipe(gulp.dest(DEPLOY_DIR + "/public"))
+  gulp.src("index.coffee")
     .pipe(gulp.dest(DEPLOY_DIR))
 
 
