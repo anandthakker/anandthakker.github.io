@@ -18,15 +18,18 @@ serverport = 5000
 BUILD_DIR = "public"
 CONTENT_DIR = "contents"
 TEMPLATES_DIR = "templates"
+DEPLOY_DIR = "../asphalt/anandthakker/home/public"
 
 #
 # Helper task - Cleans everything in build dir
 #
 gulp.task "clean", ->
-  gulp.src(BUILD_DIR,
-    read: false
-  ).pipe clean()
+  gulp.src(BUILD_DIR, {read: false})
+    .pipe clean()
 
+gulp.task "clean-deploy", ->
+  gulp.src(DEPLOY_DIR, {read: false})
+    .pipe clean({force: true})
 
 #
 # Helper task - Tells Livereload to refresh
@@ -50,6 +53,14 @@ gulp.task "build", ["clean"], (cb) ->
 
     # Tell gulp task has finished
     cb()
+
+
+#
+# Deploy task
+#
+gulp.task "deploy", ["build", "clean-deploy"], ->
+  gulp.src(BUILD_DIR + "/**")
+    .pipe(gulp.dest(DEPLOY_DIR))
 
 
 #
