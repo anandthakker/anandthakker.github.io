@@ -40,19 +40,19 @@ gulp.task "refresh-browser", ->
   ).pipe refresh(lrserver)
 
 
+
 #
 # Build task
 #
-gulp.task "build", ["clean"], (cb) ->
-
+build = (cb)->
   # Tell Wintersmith to build
   runWintersmith.build ->
-
     # Log on successful build
     console.log "Wintersmith has finished building!"
-
     # Tell gulp task has finished
-    cb()
+  cb()
+gulp.task "build", ["clean"], build
+gulp.task "build-preview", build # build without clean, for use in preview.
 
 
 #
@@ -65,27 +65,20 @@ gulp.task "deploy", ["build", "clean-deploy"], ->
     .pipe(gulp.dest(DEPLOY_DIR))
 
 
-#
-# Preview task
-#
 server = express()
 server.use livereload({port: livereloadport})
 server.use require('./index.coffee').app
 
-gulp.task "preview", ["build"], ->
-  server.listen(serverport)
-  lrserver.listen(livereloadport)
-
-
 #
 # Watch task
 #
-gulp.task "watch", [
-  "preview"
-], ->
+gulp.task "watch", ["build-preview"], ->
+
+  server.listen(serverport)
+  lrserver.listen(livereloadport)
 
   # Watch Jade template files
-  gulp.watch TEMPLATES_DIR + "/**", ["build", "refresh-browser"]
+  gulp.watch TEMPLATES_DIR + "/**", ["build-preview", "refresh-browser"]
 
   # Watch all content files
-  gulp.watch CONTENT_DIR + "/**", ["build", "refresh-browser"]
+  gulp.watch CONTENT_DIR + "/**", ["build-preview", "refresh-browser"]
