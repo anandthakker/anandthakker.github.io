@@ -16,11 +16,12 @@ module.exports = (env, callback) ->
   for key, value of defaults
     options[key] ?= defaults[key]
 
-  getArticles = (contents) ->
+  getArticles = (contents, tags) ->
     articles = _.values(contents[options.articles])
-    articles = _.filter(articles, (art)->
+    articles = articles.filter (art)->
       art.intro?
-    )
+    .filter (art) ->
+      (not tags?) or _.intersection(tags, art.metadata.tags ? []).length > 0
     articles.sort (a, b) -> b.date - a.date
     return articles
 

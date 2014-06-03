@@ -72,10 +72,41 @@ $font-family-display: "Playfair Display SC", sans-serif;
   }
 }
 
+@mixin link-colors($color, $hover-color) {
+  color: $color;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+@mixin hover-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 
 //-----------------------------------
 //  Typograhpic scale and rhythm.
 //-----------------------------------
+
+@function pow ($x, $n) {
+    $ret: 1;
+
+    @if $n > 0 {
+        @for $i from 1 through $n {
+            $ret: $ret * $x;
+        }
+    } @else {
+        @for $i from $n to 0 {
+            $ret: $ret / $x;
+        }
+    }
+
+    @return $ret;
+}
+
 
 $scale-factor: 1.5;
 $min-line-padding: .1em;

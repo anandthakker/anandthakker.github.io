@@ -1,10 +1,4 @@
 
-$compass: true;
-@import "compass/css3";
-@import "compass/typography/lists";
-@import "compass/typography/links";
-
-
 
 /*-----------------------------------
  Site Styles
@@ -31,7 +25,7 @@ a {
 }
 
 ul {
-  @include no-bullets;
+  list-style-type: none;
   padding: 0px;
   margin: lines(1) 0;
 }

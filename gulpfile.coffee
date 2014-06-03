@@ -50,7 +50,7 @@ build = (cb)->
     # Log on successful build
     console.log "Wintersmith has finished building!"
     # Tell gulp task has finished
-  cb()
+    cb()
 gulp.task "build", ["clean"], build
 gulp.task "build-preview", build # build without clean, for use in preview.
 
