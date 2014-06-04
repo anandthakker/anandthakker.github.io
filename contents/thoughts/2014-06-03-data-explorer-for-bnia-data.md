@@ -23,8 +23,8 @@ their neighborhoods.)
 
 A work in progress, for sure, but here's [the current live version][4] and [the github repo][5].
 
-[1]:[http://hackforchange.org/]
-[2]:[https://twitter.com/bryanconnor]
-[3]:[http://bniajfi.org/]
-[4]:[https://anandthakker.github.io/baltimore-neighborhood-vitalsigns/]
-[5]:[https://github.com/anandthakker/baltimore-neighborhood-vitalsigns]
+[1]: http://hackforchange.org/
+[2]: http://twitter.com/bryanconnor
+[3]: http://bniajfi.org/
+[4]: http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/
+[5]: http://github.com/anandthakker/baltimore-neighborhood-vitalsigns
