@@ -4,4 +4,4 @@ from: 2007
 to: 2014
 ---
 
-A school in blah blah blah.
+A K-12 independent school in Baltimore, Maryland.
