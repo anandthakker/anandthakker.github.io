@@ -13,6 +13,7 @@
     "run-wintersmith": "0.0.2",
     "gulp-livereload": "~1.5.0",
     "gulp-clean": "~0.3.0",
-    "wintersmith-sass": "~0.3.0"
+    "wintersmith-sass": "~0.3.0",
+    "wintersmith-coffee": "~0.2.1"
   }
 }
