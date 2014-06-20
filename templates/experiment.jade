@@ -2,7 +2,7 @@
 extends layout
 
 block append vars
-  - bodyclass = 'experiment'
+  - bodyclass = 'experiment-detail'
 
 block append head
   each style in page.metadata.styles
@@ -11,11 +11,10 @@ block append head
 block prepend title
   | #{ page.title + " - "}
 
-block append header
-  h2= page.title
-
 block content
-  article
+  article.experiment
+    header
+      h2= page.title
     section.content!= typogr(page.html).typogrify()
 
 block prepend footer
