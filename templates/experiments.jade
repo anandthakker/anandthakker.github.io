@@ -1,0 +1,25 @@
+extends layout
+
+block append vars
+  - bodyclass = 'experiments'
+  - activeSection = page.metadata.activeSection
+  - experiments = _.values(contents["experiments"])
+  - articles = _(experiments).pluck('index.md')
+  - articles = _.compact(articles)
+
+block content
+  section.about
+    != typogr(page.html).typogrify()
+
+  section.posts
+    each article in articles
+      div.experiment
+        span.date
+          != moment.utc(article.date).format('DD MMMM YYYY')
+        ul.tags
+          each tag in article.metadata.tags
+            li=tag
+        h3
+          a(href=article.url)= article.title
+        p
+          != typogr(article.metadata.description).typogrify()

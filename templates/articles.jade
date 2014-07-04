@@ -2,4 +2,9 @@ extends index
 
 block append vars
   - activeSection = page.metadata.activeSection
+  - bodyclass = page.metadata.bodyClass
   - articles = env.helpers.getArticles(contents, page.metadata.tags)
+
+block about
+  section.about
+    != typogr(page.html).typogrify()

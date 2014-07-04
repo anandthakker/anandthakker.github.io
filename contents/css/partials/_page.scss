@@ -181,13 +181,22 @@ footer.container {
 }
 
 
+.tags {
+  margin: 0;
 
-//-----------------------------------
-// Page- or section-specific Styles
-//-----------------------------------
+  li {
+    @include scale-type(scale-to(-1), 0, 0);
+    color: lighten($font-color, 33%);
 
-.about {
-  @include heading-level(4);
+    &:after {
+      content: ',';
+    }
+
+    &:last-child:after {
+      content: '';
+    }
+
+  }
 }
 
 
@@ -195,6 +204,15 @@ footer.container {
   padding-left: .5em;
   color: lighten($font-color, 33%);
   white-space: nowrap;
+}
+
+
+//-----------------------------------
+// Page- or section-specific Styles
+//-----------------------------------
+
+.about {
+  @include heading-level(4);
 }
 
 
@@ -234,6 +252,36 @@ footer.container {
     }
   }
 }
+
+
+.experiments,
+.projects {
+  .about {
+    @include heading-level(3);
+  }
+}
+
+.experiments {
+
+  .experiment {
+    @include heading-level(4);
+
+    a {
+      @include link-colors($font-color, $font-color);
+    }
+
+    .date {
+      @extend %header-date;
+      float: right;
+    }
+
+    .tags {
+      float: right;
+      clear: right;
+    }
+  }
+}
+
 
 .resume {
   .work-types,

@@ -1,6 +1,6 @@
 ---
-template: layout.jade
+template: experiments.jade
 activeSection: experiments
 ---
 
-In progress!
+##Experiments in code

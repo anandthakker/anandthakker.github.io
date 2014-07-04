@@ -5,10 +5,11 @@ block append vars
   - activeSection = 'home'
 
 block content
-  section.about
-    != typogr(contents['about.md'].html).typogrify()
-    nav
-      !=contents['social.md'].html
+  block about
+    section.about
+      != typogr(contents['about.md'].html).typogrify()
+      nav
+        !=contents['social.md'].html
   section.posts
     each article in articles
       article.intro

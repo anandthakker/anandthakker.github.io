@@ -4,6 +4,10 @@ document.addEventListener 'DOMContentLoaded', ()->
   canvas = document.getElementById('canvas')
   ctx = canvas.getContext('2d')
 
+  message = document.getElementById('message')
+  log = (s)->
+    message.innerHTML = s
+
   mouseCoords = (canvas, e) ->
     rect = canvas.getBoundingClientRect()
     x = e.clientX ? e.changedTouches?[0].clientX
@@ -26,12 +30,22 @@ document.addEventListener 'DOMContentLoaded', ()->
 
   move = (e)->
     return unless drawing
+
+    e.preventDefault()
+
     [x,y] = mouseCoords(this, e)
 
     currentLine = lines[lines.length - 1]
     currentLine.push {x: x,y: y}
 
-    render(currentLine)
+    return unless currentLine.length > 1
+    prev = currentLine[currentLine.length - 2]
+    ctx.beginPath()
+    ctx.lineTo(prev.x, prev.y)
+    ctx.lineTo(x,y)
+    ctx.stroke()
+    ctx.closePath()
+    # render(currentLine)
 
 
   start = ()->
@@ -41,7 +55,6 @@ document.addEventListener 'DOMContentLoaded', ()->
   stop = ()->
     drawing = false
     currentLine = lines[lines.length - 1]
-    currentLine.push currentLine[0]
     lines[lines.length - 1] = simplify currentLine, 5
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)

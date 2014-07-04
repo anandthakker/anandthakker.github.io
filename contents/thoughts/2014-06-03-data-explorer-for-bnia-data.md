@@ -18,6 +18,8 @@ dozens of different indicators about 55 "Community Statistical Areas" in Baltimo
 
 [![Screenshot of Data Explorer App](/images/baltimoredataexplorer.jpg)][4]
 
+<span class="more"></span>
+
 The idea here is to make a way to explore indicators and neighborhoods
 of interest.  Currently, you can choose your indicators from the menu on the
 right, and you'll get a [choropleth][6] map and a histogram for each one, presented
