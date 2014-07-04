@@ -277,11 +277,13 @@ footer.container {
     .date {
       @extend %header-date;
       float: right;
+      clear: right;
     }
 
     .tags {
       float: right;
       clear: right;
+      text-align: right;
     }
   }
 }

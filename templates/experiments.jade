@@ -6,6 +6,7 @@ block append vars
   - experiments = _.values(contents["experiments"])
   - articles = _(experiments).pluck('index.md')
   - articles = _.compact(articles)
+  - articles = _.sortBy(articles, "date").reverse()
 
 block content
   section.about
