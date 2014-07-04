@@ -8,11 +8,10 @@ tags:
   - web development
   - codepen
   - widget
+  - project
 
 type: link
 ---
-
-[AngularJS multi-range slider](http://codepen.io/anandthakker/pen/marlo)
 
 I needed a slider that could be used to choose choose a list of
 probabilities that always add up to 1. I could have used a text input or
@@ -20,17 +19,24 @@ slider for each probability and link it up so that changing one would
 update the others, but that's a fairly clunky interaction. This approach
 isn't perfect, but I think it's better...
 
-**Usage**
----------
+Code: [Codepen](http://codepen.io/anandthakker/pen/marlo)
+| [Github](https://github.com/anandthakker/angular-multirange-slider)
 
-`<slider model="arrayOfValues"></slider>`
+
+##Usage
+
+```html
+<slider model="arrayOfValues"></slider>
+```
 
 `arrayOfValues` is an array of numbers: the range values, in order from
 left to right.
 
 or
 
-`<slider model="arrayOfObjects" property="prop"></slider>`
+```html
+<slider model="arrayOfObjects" property="prop"></slider>
+```
 
 `arrayOfObjects` is an array of objects and `prop` is the property from
 which to pull the range value from each object.
@@ -47,12 +53,14 @@ percentage of the slider's width, so the whole
 thing *should* stretch/shrink to fit its containing element. For
 example:
 
+```html
     <div class="slider-control ng-isolate-scope" model="otherProbs">
       <div class="slider" style="position: relative;">
         <div class="slider-handle" style="position: absolute; left: 30%; top: -8px;"></div>
         <div class="slider-handle" style="position: absolute; left: 60%; top: -8px;"></div>
       </div>
     </div>
+```
 
 **Todo**
 --------
@@ -60,5 +68,3 @@ example:
 -   Allow comprehension expressions as a more flexible (and common)
     alternative to the `model`/`property`approach.
 -   Option for labeling ranges?
-
-

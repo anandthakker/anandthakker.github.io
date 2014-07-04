@@ -2,7 +2,7 @@
 title: "Drawing simplified lines"
 description: "Using line simplification and Bezier curves to capture smooth user-drawn curves."
 tags:
-  - line-simplification
+  - line simplification
   - canvas
 date: 2014-06-19
 template: experiment.jade

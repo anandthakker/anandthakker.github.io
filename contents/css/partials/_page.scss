@@ -251,6 +251,10 @@ footer.container {
       margin-top: lines(1);
     }
   }
+
+  .content {
+    @include heading-level(4);
+  }
 }
 
 

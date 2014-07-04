@@ -5,8 +5,9 @@ block append vars
   - bodyclass = 'experiment-detail'
 
 block append head
-  each style in page.metadata.styles
-    link(rel='stylesheet', type='text/css', href=style)
+  if page.metadata.styles
+    each style in page.metadata.styles
+      link(rel='stylesheet', type='text/css', href=style)
 
 block prepend title
   | #{ page.title + " - "}
@@ -22,5 +23,6 @@ block prepend footer
     a(href=contents.index.url) « Home
 
 block append scripts
-  each script in page.metadata.scripts
-    script(src=script)
+  if page.metadata.scripts
+    each script in page.metadata.scripts
+      script(src=script)
