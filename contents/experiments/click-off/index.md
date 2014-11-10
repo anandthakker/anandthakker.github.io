@@ -3,9 +3,7 @@ title: "AngularJS Click-Off Directive"
 description: An ngClick-like directive for when user clicks OFF the element.
 date: 2014-02-25
 tags:
-  - css
-  - vertical rhythm
-  - typography
+  - angularjs
 template: experiment.jade
 scripts:
   - http://code.angularjs.org/angular-1.0.1.js
