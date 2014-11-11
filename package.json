@@ -4,16 +4,14 @@
   },
   "repository": "none",
   "devDependencies": {
+    "browser-sync": "^1.6.5",
     "gulp": ">=3.6.2",
-    "connect-livereload": ">=0.4.0",
-    "tiny-lr": "0.0.7",
-    "moment": "2.3.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x",
-    "run-wintersmith": "0.0.2",
-    "gulp-livereload": ">=1.5.0",
     "gulp-clean": ">=0.3.0",
-    "wintersmith-sass": ">=0.3.0",
-    "wintersmith-coffee": ">=0.2.1"
+    "moment": "2.3.x",
+    "run-wintersmith": "0.0.2",
+    "typogr": "0.5.x",
+    "underscore": "1.4.x",
+    "wintersmith-coffee": ">=0.2.1",
+    "wintersmith-sass": ">=0.3.0"
   }
 }

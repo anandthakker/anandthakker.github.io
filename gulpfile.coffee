@@ -2,13 +2,8 @@ gulp = require('gulp')
 
 # Include plugins
 clean = require("gulp-clean")
-refresh = require("gulp-livereload")
 runWintersmith = require("run-wintersmith")
-express = require("express")
-livereload = require("connect-livereload")
-lrserver = require('tiny-lr')()
-livereloadport = 35729
-serverport = 5000
+browserSync = require('browser-sync')
 
 #
 # Directories
@@ -24,14 +19,14 @@ gulp.task "clean", ->
   gulp.src(BUILD_DIR, {read: false})
     .pipe clean()
 
-
 #
-# Helper task - Tells Livereload to refresh
+# Init browserSync
 #
-gulp.task "refresh-browser", ->
-  gulp.src("config.json",
-    read: false
-  ).pipe refresh(lrserver)
+gulp.task 'bs-init', ->
+  browserSync.init
+    port: 5000
+    server:
+      baseDir: BUILD_DIR
 
 
 #
@@ -53,17 +48,10 @@ gulp.task "build-preview", build # build without clean, for use in preview.
 # Watch task
 #
 
-server = express()
-server.use livereload({port: livereloadport})
-server.use require('./index.coffee').app
-
-gulp.task "watch", ["build-preview"], ->
-
-  server.listen(serverport)
-  lrserver.listen(livereloadport)
+gulp.task "watch", ["build-preview", "bs-init"], ->
 
   # Watch Jade template files
-  gulp.watch TEMPLATES_DIR + "/**", ["build-preview", "refresh-browser"]
+  gulp.watch TEMPLATES_DIR + "/**", ["build-preview", browserSync.reload]
 
   # Watch all content files
-  gulp.watch CONTENT_DIR + "/**", ["build-preview", "refresh-browser"]
+  gulp.watch CONTENT_DIR + "/**", ["build-preview", browserSync.reload]
