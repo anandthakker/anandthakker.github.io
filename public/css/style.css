@@ -1,0 +1,428 @@
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.header:before, footer.container:before, .posts:before,
+.header:after,
+footer.container:after,
+.posts:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.header:after, footer.container:after, .posts:after {
+  clear: both; }
+
+/* uncollapse margins */
+body:before, .container:before, .posts header:before, .article header:before,
+.intro header:before,
+.experiment header:before, body:after, .container:after, .posts header:after, .article header:after,
+.intro header:after,
+.experiment header:after {
+  content: "\00a0";
+  /* nbsp; */
+  display: block;
+  overflow: hidden;
+  height: 0; }
+
+/*
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+  color: #8e908c; }
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: #c82829; }
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: #f5871f; }
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: #eab700; }
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: #718c00; }
+
+.tomorrow-aqua, pre .css .hexcolor {
+  color: #3e999f; }
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: #4271ae; }
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+  color: #8959a8; }
+
+pre {
+  display: block;
+  margin: 1.5rem 0;
+  background: rgba(200, 200, 200, 0.2); }
+  pre code {
+    display: block; }
+
+code {
+  color: #4d4d4c;
+  font-family: Menlo, Monaco, Consolas, monospace; }
+
+html {
+  font-size: 16px; }
+
+body,
+select,
+input,
+textarea {
+  color: #222;
+  font-family: "Gudea", sans-serif;
+  line-height: 1.5; }
+
+a {
+  color: #0002CC;
+  text-decoration: none; }
+  a:hover {
+    color: #0002CC; }
+  a:hover {
+    text-decoration: underline; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0; }
+
+img {
+  max-width: 100%; }
+
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.resume .work-types h1,
+.resume .work-types h2,
+.resume .work-types h3,
+.resume .work-types h4,
+.resume .experience h1,
+.resume .experience h2,
+.resume .experience h3,
+.resume .experience h4,
+.article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4,
+.experiments .about h1,
+.experiments .about h2,
+.experiments .about h3,
+.experiments .about h4,
+.projects .about h1,
+.projects .about h2,
+.projects .about h3,
+.projects .about h4,
+.resume .work-type h1,
+.resume .work-type h2,
+.resume .work-type h3,
+.resume .work-type h4,
+.resume .organization h1,
+.resume .organization h2,
+.resume .organization h3,
+.resume .organization h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal; }
+
+.about h1,
+.about h2,
+.about h3,
+.about h4, .article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4, .experiments .experiment h1,
+.experiments .experiment h2,
+.experiments .experiment h3,
+.experiments .experiment h4, .resume .work h1,
+.resume .work h2,
+.resume .work h3,
+.resume .work h4 {
+  font-family: "Gudea", sans-serif;
+  font-weight: bold; }
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p {
+  margin-top: 1.5rem;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0rem; }
+
+.header h1,
+.header h2,
+.header h3,
+.header h4 {
+  margin-top: 3rem;
+  font-size: 2.25em;
+  line-height: 1.33333;
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 480px) {
+    .header h1,
+    .header h2,
+    .header h3,
+    .header h4 {
+      margin-top: 3rem;
+      font-size: 3.375em;
+      line-height: 1.33333;
+      margin-bottom: 3rem; } }
+
+.resume .work-types h1,
+.resume .work-types h2,
+.resume .work-types h3,
+.resume .work-types h4,
+.resume .experience h1,
+.resume .experience h2,
+.resume .experience h3,
+.resume .experience h4 {
+  margin-top: 1.5rem;
+  font-size: 2.25em;
+  line-height: 1.33333;
+  margin-bottom: 0rem; }
+
+.article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4, .experiments .about h1,
+.experiments .about h2,
+.experiments .about h3,
+.experiments .about h4,
+.projects .about h1,
+.projects .about h2,
+.projects .about h3,
+.projects .about h4, .resume .work-type h1,
+.resume .work-type h2,
+.resume .work-type h3,
+.resume .work-type h4,
+.resume .organization h1,
+.resume .organization h2,
+.resume .organization h3,
+.resume .organization h4 {
+  margin-top: 1.5rem;
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0rem; }
+
+.about h1,
+.about h2,
+.about h3,
+.about h4, .article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4, .experiments .experiment h1,
+.experiments .experiment h2,
+.experiments .experiment h3,
+.experiments .experiment h4, .resume .work h1,
+.resume .work h2,
+.resume .work h3,
+.resume .work h4 {
+  margin-top: 1.5rem;
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0rem; }
+  .about h1 + p,
+  .about h2 + p,
+  .about h3 + p,
+  .about h4 + p, .article .content h1 + p,
+  .article .content h2 + p,
+  .article .content h3 + p,
+  .article .content h4 + p,
+  .intro .content h1 + p,
+  .intro .content h2 + p,
+  .intro .content h3 + p,
+  .intro .content h4 + p,
+  .experiment .content h1 + p,
+  .experiment .content h2 + p,
+  .experiment .content h3 + p,
+  .experiment .content h4 + p, .experiments .experiment h1 + p,
+  .experiments .experiment h2 + p,
+  .experiments .experiment h3 + p,
+  .experiments .experiment h4 + p, .resume .work h1 + p,
+  .resume .work h2 + p,
+  .resume .work h3 + p,
+  .resume .work h4 + p {
+    margin-top: 0; }
+
+small {
+  font-size: 0.66667em; }
+
+.header h1 {
+  position: relative;
+  margin-bottom: 0; }
+  .header h1:before {
+    position: absolute;
+    top: -.08em;
+    bottom: -.4em;
+    left: -.24em;
+    content: " ";
+    width: 1px;
+    border-left: 1px solid #222; }
+  .header h1:after {
+    position: absolute;
+    left: -.66em;
+    right: 0;
+    bottom: 2px;
+    content: " ";
+    border-top: 1px solid #222; }
+.header nav {
+  float: right; }
+  .header nav ul {
+    margin-top: 0; }
+
+nav li {
+  display: inline-block; }
+  nav li:first-child:before {
+    display: none; }
+  nav li:before {
+    content: '/';
+    padding: 0 .25em; }
+nav .active {
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.container {
+  background-color: transparent;
+  background-image: linear-gradient(0deg, transparent 98%, #dadada 99%, #dadada), linear-gradient(90deg, transparent 49%, #dadada 50%, #dadada 51%, transparent 52%, transparent);
+  background-size: 1.5em 1.5em;
+  background-position: 0 1.25em;
+  background-origin: content-box;
+  padding: 0 1.5em 1.5rem; }
+
+@media only screen and (min-width: 35em) {
+  .container {
+    padding: 0 10em 1.5rem 5em;
+    max-width: 50em;
+    margin: 0 auto; } }
+footer.container {
+  background: #fff;
+  padding: 0 0 2em; }
+  footer.container .copy {
+    margin-top: 1.5rem;
+    float: left; }
+    footer.container .copy p,
+    footer.container .copy nav,
+    footer.container .copy ul {
+      display: inline; }
+  footer.container .poweredby {
+    float: right; }
+
+.tags {
+  margin: 0; }
+  .tags li {
+    margin-top: 0rem;
+    font-size: 0.66667em;
+    line-height: 2.25;
+    margin-bottom: 0rem;
+    color: #767676; }
+    .tags li:after {
+      content: ','; }
+    .tags li:last-child:after {
+      content: ''; }
+
+.article header .date,
+.intro header .date,
+.experiment header .date, .experiments .experiment .date, .resume .organization .date {
+  padding-left: .5em;
+  color: #767676;
+  white-space: nowrap; }
+
+.posts header {
+  margin-top: 1.5rem; }
+  .posts header a {
+    color: #222; }
+    .posts header a:hover {
+      color: #222; }
+.posts .pagenav {
+  margin-top: 3rem;
+  float: right; }
+  .posts .pagenav a {
+    padding-left: 2em; }
+
+.article header .date,
+.intro header .date,
+.experiment header .date {
+  float: right;
+  margin-top: 1.5rem; }
+
+.experiments .experiment a {
+  color: #222; }
+  .experiments .experiment a:hover {
+    color: #222; }
+.experiments .experiment .date {
+  float: right;
+  clear: right; }
+.experiments .experiment .tags {
+  float: right;
+  clear: right;
+  text-align: right; }
