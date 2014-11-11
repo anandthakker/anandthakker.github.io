@@ -14,7 +14,7 @@
     <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
     <script src="js/vendor/modernizr.custom.js"></script>
   </head>
-  <body class="home">
+  <body class="projects">
     <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -23,65 +23,57 @@
         <h1>Hi. I'm Anand</h1>
         <nav role="navigation">
           <ul>
-            <li class="active">home</li>
+            <li><a href="/">home</a></li>
             <li><a href="/experiments">experiments</a></li>
-            <li><a href="/projects">projects</a></li>
+            <li class="active">projects</li>
             <li><a href="/about">about</a></li>
           </ul>
         </nav>
       </header>
       <main class="main">
-        <section class="about"><p>Depending on the year or season, I’m either a <strong>software developer</strong>,
-a high school <strong>math and <span class="caps">CS</span> teacher</strong>, or some combination of the two.
-Regardless of the year or season, I’m eager to wander the world, play
-with new ideas, and make cool&nbsp;stuff.</p>
-<h4 id="current-status-">Current&nbsp;status:</h4>
-<p>Available for freelance. If you need help with a project
-or website, please get in&nbsp;touch!</p>
+        <section class="about"><p>For the purposes of this site, a “project” is basically an experiment with an
+audience other than&nbsp;myself.</p>
 
-          <nav><ul>
-<li><a href="https://twitter.com/anandthakker">@anandthakker</a></li>
-<li><a href="https://github.com/anandthakker">github</a></li>
-<li><a href="http://stackoverflow.com/users/2544296/anandthakker">stackoverflow</a></li>
-</ul>
-
-          </nav>
         </section>
         <section class="posts">
           <article class="intro">
-            <header><span class="date">18 January 2014</span>
-              <h3><a href="/2014/01/18/the-woes-of-describing-a-data-model-in-javascript/">The woes of describing a data model in Javascript</a></h3>
+            <header><span class="date">03 June 2014</span>
+              <h3><a href="/2014/06/03/simple-data-explorer-for-baltimore-neighborhood-data/">Simple data explorer for Baltimore neighborhood data.</a></h3>
             </header>
-            <section class="content"><p>Is it just me, or is describing a complex data model in Javascript (or
-any non-statically-typed language) just… not as&nbsp;good?</p>
-<p>I mean, my friend <a href="http://restrictionisexpression.tumblr.com/">Aaron
-White</a> and I used to be
-rather zealous about the beauty of type safety, and while we had our
-serious beefs with Java, at least it gave us a robust way of defining a
-data model.<br><a href="/2014/01/18/the-woes-of-describing-a-data-model-in-javascript/" class="more">(more)</a>
+            <section class="content"><p>In response to a local challenge for this year’s <a href="http://hackforchange.org/">National Day of Civic Hacking</a>,
+designer <a href="http://twitter.com/bryanconnor">Bryan Connor</a> and I built a simple app for exploring a set of data about
+Baltimore neighborhoods.  The data, curated/collected by <a href="http://bniajfi.org/"><span class="caps">BNIA</span></a>, includes
+dozens of different indicators about 55 “Community Statistical Areas” in&nbsp;Baltimore.</p>
+<p><a href="http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/#/i/salepr12:read812:pwhite10:mort44_12/c/North-_Baltimore--Guilford--Homeland:Upton--Druid-_Heights:The-_Waverlies/"><img src="/images/baltimoredataexplorer.jpg" alt="Screenshot of Data Explorer App"></a></p>
+<p><a href="/2014/06/03/simple-data-explorer-for-baltimore-neighborhood-data/" class="more">(more)</a>
             </section>
           </article>
           <article class="intro">
-            <header><span class="date">07 May 2011</span>
-              <h3><a href="/2011/05/07/playing-card-polyhedra/">Playing Card Polyhedra</a></h3>
+            <header><span class="date">09 March 2014</span>
+              <h3><a href="/2014/03/09/visualizing-bayes-theorem/">Visualizing Bayes' Theorem</a></h3>
             </header>
-            <section class="content"><p><img src="/images/tumblr_lkuh6ljEog1qz7dpqo1_1280.jpe" alt=""></p>
-<p>I found this waiting for me when I got to my desk Friday morning, and
-just about shat my&nbsp;pants.
-<a href="/2011/05/07/playing-card-polyhedra/" class="more">(more)</a>
-            </section>
-          </article>
-          <article class="intro">
-            <header><span class="date">18 December 2010</span>
-              <h3><a href="/2010/12/18/my-oroborromean-rings-inspired-by-this-video/">My &quot;Oroborromean Rings,&quot; inspired by this video. </a></h3>
-            </header>
-            <section class="content"><p><img src="/images/oroborromean.jpg" alt=""></p>
-<p>My “Oro<a href="http://en.wikipedia.org/wiki/Borromean_rings">borromean Rings</a>,”
-inspired by <a href="https://www.youtube.com/watch?v=heKK95DAKms">this video</a>.</p>
+            <section class="content"><p><a href="http://anandthakker.net/statsclass/#!/conditional"><img src="/images/conditional-probability.jpg" alt="Screenshot of Conditional Probability Tool"></a></p>
+<p>If a medical test is 99% accurate, does that mean that you should be 99%
+sure of its result?  Weirdly, the answer is&nbsp;<span class="caps">NO</span>.</p>
+<p>Read more: <a href="http://anandthakker.net/statsclass/#!/conditional">Visualizing Bayes’ Theorem</a>.</p>
 
             </section>
           </article>
-          <div class="pagenav"><a href="/page/2/">« Newer</a>
+          <article class="intro">
+            <header><span class="date">02 March 2014</span>
+              <h3><a href="/2014/03/02/angularjs-multi-range-slider/">AngularJS multi-range slider</a></h3>
+            </header>
+            <section class="content"><p>I needed a slider that could be used to choose choose a list of
+probabilities that always add up to 1. I could have used a text input or
+slider for each probability and link it up so that changing one would
+update the others, but that’s a fairly clunky interaction. This approach
+isn’t perfect, but I think it’s&nbsp;better…</p>
+<p>Code: <a href="http://codepen.io/anandthakker/pen/marlo">Codepen</a>
+| <a href="https://github.com/anandthakker/angular-multirange-slider">Github</a></p>
+<a href="/2014/03/02/angularjs-multi-range-slider/" class="more">(more)</a>
+            </section>
+          </article>
+          <div class="pagenav"><a href="/archive.html">« Archives</a>
           </div>
         </section>
       </main>

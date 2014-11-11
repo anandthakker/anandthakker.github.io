@@ -8,7 +8,7 @@ block append header
 block content
 
   section.about
-    != typogr(contents['about.md'].html).typogrify()
+    != typogr(contents.about['index.md'].html).typogrify()
     nav
       !=contents['social.md'].html
 

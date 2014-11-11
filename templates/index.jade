@@ -7,7 +7,7 @@ block append vars
 block content
   block about
     section.about
-      != typogr(contents['about.md'].html).typogrify()
+      != typogr(contents.about['index.md'].html).typogrify()
       nav
         !=contents['social.md'].html
   section.posts
