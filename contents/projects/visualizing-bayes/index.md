@@ -1,5 +1,6 @@
 ---
 title: "Visualizing Bayes' Theorem"
+draft: true
 date: 2014-03-09
 template: article.jade
 filename: /:year/:month/:day/:title/index.html

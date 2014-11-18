@@ -1,5 +1,5 @@
 ---
-template: articles.jade
+template: projects.jade
 activeSection: projects
 bodyClass: projects
 tags:

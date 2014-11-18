@@ -2,7 +2,6 @@
 title: "AngularJS multi-range slider"
 date: 2014-03-02
 template: article.jade
-filename: /:year/:month/:day/:title/index.html
 tags:
   - angularjs
   - web development
