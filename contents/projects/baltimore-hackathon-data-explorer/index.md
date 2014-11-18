@@ -2,7 +2,10 @@
 title: "Simple data explorer for Baltimore neighborhood data."
 date: 2014-06-03
 template: article.jade
-filename: /:year/:month/:day/:title/index.html
+github: anandthakker/baltimore-neighborhood-vitalsigns
+description: >
+  A simple d3-based design for using multiple small choropleth maps to see/explore 
+  a large set of Baltimore neighborhood data.
 tags:
   - project
   - AngularJS
