@@ -1,0 +1,32 @@
+extends layout
+
+block append vars
+  - bodyclass = 'home'
+  - activeSection = 'home'
+
+block content
+  block about
+    section.about
+      != typogr(contents.about['index.md'].html).typogrify()
+      nav
+        !=contents['social.md'].html
+  section.posts
+    each article in articles
+      article.intro
+        header
+          span.date
+            != moment.utc(article.date).format('DD MMMM YYYY')
+          h3
+            a(href=article.url)= article.title
+
+        section.content
+          | !{ typogr(article.intro).typogrify() }
+          if article.hasMore
+            a.more(href=article.url) (more)
+    div.pagenav
+      if prevPage
+        a(href=prevPage.url) « Newer
+      else
+        a(href='/archive.html') « Archives
+      if nextPage
+        a(href=nextPage.url) Older »

@@ -5,10 +5,10 @@ module.exports = (env, callback) ->
       e.g. "paginator": {"perPage": 10} ###
 
   defaults =
-    template: 'index.jade' # template that renders pages
-    articles: 'thoughts' # directory containing contents to paginate
-    first: 'index.html' # filename/url for first page
-    filename: 'page/%d/index.html' # filename for rest of pages
+    template: 'notes.jade' # template that renders pages
+    articles: 'notes' # directory containing contents to paginate
+    first: 'notes/index.html' # filename/url for first page
+    filename: 'notes/page/%d/index.html' # filename for rest of pages
     perPage: 2 # number of articles per page
 
   # assign defaults any option not set in the config file
