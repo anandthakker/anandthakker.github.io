@@ -1,6 +1,6 @@
 ---
 title: MathJax Prerenderer
-date: 2014-10-11
+date: 2014-11-13
 type: project
 github: anandthakker/prerender-mathjax
 description: >
