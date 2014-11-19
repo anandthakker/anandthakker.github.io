@@ -53,3 +53,21 @@ block content
               h4!= typogr(exp.title).typogrify()
               if exp.html
                 | !{ typogr(exp.html).typogrify() }
+                
+    section.education
+      h2 Education
+      - schools = _.sortBy(contents.about['education.json'].metadata.schools, 'from').reverse()
+      each school in schools
+        section.school
+          h3
+            | !{ typogr(school.name).typogrify() }
+            span.date
+              | !{ school.from}&mdash;!{school.to }
+          
+          table
+            tr
+              td Degree:
+              td !{typogr(school.degree).typogrify()}
+            tr
+              td Focus:
+              td !{typogr(school.focus).typogrify()}

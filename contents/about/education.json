@@ -1,0 +1,18 @@
+{
+  "schools": [
+    {
+      "name": "Carnegie Mellon University",
+      "from": "2000",
+      "to": "2003",
+      "degree": "Batchelor of Computer Science and Mathematics",
+      "focus": "Programming Languages, Mathematical Logic, Computability and Gödel's Theorem, Discrete Math"
+    },
+    {
+      "name": "Harvard Graduate School of Education",
+      "from": "2006",
+      "to": "2007",
+      "degree": "Master of Education",
+      "focus": "Philosophy of Education, Teaching and Learning, School Reform"
+    }
+  ]
+}

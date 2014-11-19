@@ -147,7 +147,10 @@ img {
 .experiment header h4, .projects h2, .resume .experience .organization h1,
 .resume .experience .organization h2,
 .resume .experience .organization h3,
-.resume .experience .organization h4, .about h1,
+.resume .experience .organization h4, .resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4, .about h1,
 .about h2,
 .about h3,
 .about h4, .article .content h1,
@@ -191,7 +194,10 @@ img {
   .experiment header h4 a, .projects h2 a, .resume .experience .organization h1 a,
   .resume .experience .organization h2 a,
   .resume .experience .organization h3 a,
-  .resume .experience .organization h4 a, .about h1 a,
+  .resume .experience .organization h4 a, .resume .education .school h1 a,
+  .resume .education .school h2 a,
+  .resume .education .school h3 a,
+  .resume .education .school h4 a, .about h1 a,
   .about h2 a,
   .about h3 a,
   .about h4 a, .article .content h1 a,
@@ -233,7 +239,10 @@ img {
     .experiment header h4 a:hover, .projects h2 a:hover, .resume .experience .organization h1 a:hover,
     .resume .experience .organization h2 a:hover,
     .resume .experience .organization h3 a:hover,
-    .resume .experience .organization h4 a:hover, .about h1 a:hover,
+    .resume .experience .organization h4 a:hover, .resume .education .school h1 a:hover,
+    .resume .education .school h2 a:hover,
+    .resume .education .school h3 a:hover,
+    .resume .education .school h4 a:hover, .about h1 a:hover,
     .about h2 a:hover,
     .about h3 a:hover,
     .about h4 a:hover, .article .content h1 a:hover,
@@ -276,7 +285,11 @@ img {
 .resume .experience .organization h1,
 .resume .experience .organization h2,
 .resume .experience .organization h3,
-.resume .experience .organization h4 {
+.resume .experience .organization h4,
+.resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4 {
   font-family: "Playfair Display", serif;
   font-weight: normal; }
 
@@ -376,7 +389,10 @@ p {
 .experiment header h4, .projects h2, .resume .experience .organization h1,
 .resume .experience .organization h2,
 .resume .experience .organization h3,
-.resume .experience .organization h4 {
+.resume .experience .organization h4, .resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4 {
   margin-top: 1.5rem;
   font-size: 1.5em;
   line-height: 1;
@@ -510,7 +526,7 @@ footer.container {
 
 .article header .date,
 .intro header .date,
-.experiment header .date, .projects .project .date, .resume .experience .organization .date {
+.experiment header .date, .projects .project .date, .resume .experience .organization .date, .resume .education .school .date {
   padding-left: .5em;
   color: #767676;
   white-space: nowrap; }
@@ -551,3 +567,10 @@ footer.container {
 
 .resume .skills .skill {
   font-weight: bold; }
+.resume .education .school table {
+  margin-top: 1.5rem; }
+.resume .education .school td {
+  vertical-align: baseline; }
+  .resume .education .school td:first-child {
+    font-weight: bold;
+    padding-right: .5em; }
