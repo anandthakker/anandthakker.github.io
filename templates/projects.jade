@@ -7,6 +7,8 @@ block append vars
 block content
 
   section.posts
+    
+    p !{ typogr(page.html).typogrify() }
 
     - function projects(list, type) {
     - list = _.chain(list).values().pluck('index.md').compact()
