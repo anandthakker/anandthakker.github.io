@@ -1,8 +1,8 @@
 
 
-//-----------------------------------
-// Site Styles
-//-----------------------------------
+/*-----------------------------------
+Site Styles
+-----------------------------------*/
 
 html {
   font-size: $font-size;
@@ -36,23 +36,37 @@ img {
   max-width: 100%;
 }
 
+/* Heading styles */
+
+%h1,%h2,%h3,%h4,%h5 {
+  text-transform: none;
+  text-align: left;
+  color: $font-color;
+  a { @include link-colors($font-color, $font-color); }
+}
 
 %h1,
-%h2,
 %h3 {
   font-family: $font-family-serif;
   font-weight: normal;
 }
 
+%h2,
 %h4,
 %h5 {
   font-family: $font-family-sans;
   font-weight: bold;
 }
 
-// Set up typographic scale.
+%h2 {
+  text-transform: uppercase;
+  text-align: right;
+  color: $grid-color;
+}
 
-// zero out the actual margins for headings, to be overridden below.
+/* Set up typographic scale. */
+
+/* zero out the actual margins for headings, to be overridden below. */
 p,
 h1,
 h2,
@@ -72,12 +86,14 @@ p { @include scale-type(scale-to(0), 1, 0); }
   }
 }
 
-%h2 { @include scale-type(scale-to(2), 1, 0); }
+%h2 {
+  @include scale-type(scale-to(3), 2, 2, 2);
+}
 
 %h3 { @include scale-type(scale-to(1), 1, 0, 1); }
 %h4 {
   @include scale-type(scale-to(0), 1, 0);
-  &+p { margin-top: 0; } // This level of heading should go flush with proceeding text.
+  &+p { margin-top: 0; } /* This level of heading should go flush with proceeding text.*/
 }
 
 @mixin heading-level($level) {
@@ -94,9 +110,9 @@ small { font-size: scale-to(-1); }
 
 
 
-//-----------------------------------
-//  Common Layout / Composition
-//-----------------------------------
+/*-----------------------------------
+  Common Layout / Composition
+-----------------------------------*/
 
 .header {
   @extend %clearfix;
@@ -128,7 +144,7 @@ nav {
     &:before {
       content: '/';
       padding: 0 .25em;
-    }
+    } 
   }
 
   .active {
@@ -200,9 +216,9 @@ footer.container {
 }
 
 
-//-----------------------------------
-// Page- or section-specific Styles
-//-----------------------------------
+/*-----------------------------------
+ Page- or section-specific Styles
+-----------------------------------*/
 
 .about {
   @include heading-level(4);
@@ -258,10 +274,6 @@ footer.container {
   .project {
     @include heading-level(4);
 
-    a {
-      @include link-colors($font-color, $font-color);
-    }
-
     .date {
       @extend %header-date;
       float: right;
@@ -276,28 +288,26 @@ footer.container {
         clear: right;
       }
     }
+    
+    p {
+      max-width: calc(100% - 4em);
+    }
   }
 }
 
 
 .resume {
-  .work-types,
   .experience {
     @include heading-level(2);
-  }
+    .organization {
+      @include heading-level(3);
+      .date {
+        @extend %header-date;
+      }
+    }
 
-  .work-type,
-  .organization {
-    @include heading-level(3);
-  }
-
-  .work {
-    @include heading-level(4);
-  }
-
-  .organization {
-    .date {
-      @extend %header-date;
+    .work {
+      @include heading-level(4);
     }
   }
 }

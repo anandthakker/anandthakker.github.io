@@ -96,6 +96,9 @@ code {
   color: #4d4d4c;
   font-family: Menlo, Monaco, Consolas, monospace; }
 
+/*-----------------------------------
+Site Styles
+-----------------------------------*/
 html {
   font-size: 16px; }
 
@@ -123,19 +126,14 @@ ul {
 img {
   max-width: 100%; }
 
+/* Heading styles */
 .header h1,
 .header h2,
 .header h3,
-.header h4,
-.resume .work-types h1,
-.resume .work-types h2,
-.resume .work-types h3,
-.resume .work-types h4,
-.resume .experience h1,
+.header h4, .resume .experience h1,
 .resume .experience h2,
 .resume .experience h3,
-.resume .experience h4,
-.article header h1,
+.resume .experience h4, .article header h1,
 .article header h2,
 .article header h3,
 .article header h4,
@@ -146,20 +144,10 @@ img {
 .experiment header h1,
 .experiment header h2,
 .experiment header h3,
-.experiment header h4,
-.projects h2,
-.resume .work-type h1,
-.resume .work-type h2,
-.resume .work-type h3,
-.resume .work-type h4,
-.resume .organization h1,
-.resume .organization h2,
-.resume .organization h3,
-.resume .organization h4 {
-  font-family: "Playfair Display", serif;
-  font-weight: normal; }
-
-.about h1,
+.experiment header h4, .projects h2, .resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4, .about h1,
 .about h2,
 .about h3,
 .about h4, .article .content h1,
@@ -176,13 +164,163 @@ img {
 .experiment .content h4, .projects .project h1,
 .projects .project h2,
 .projects .project h3,
-.projects .project h4, .resume .work h1,
-.resume .work h2,
-.resume .work h3,
-.resume .work h4 {
+.projects .project h4, .resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
+  text-transform: none;
+  text-align: left;
+  color: #222; }
+  .header h1 a,
+  .header h2 a,
+  .header h3 a,
+  .header h4 a, .resume .experience h1 a,
+  .resume .experience h2 a,
+  .resume .experience h3 a,
+  .resume .experience h4 a, .article header h1 a,
+  .article header h2 a,
+  .article header h3 a,
+  .article header h4 a,
+  .intro header h1 a,
+  .intro header h2 a,
+  .intro header h3 a,
+  .intro header h4 a,
+  .experiment header h1 a,
+  .experiment header h2 a,
+  .experiment header h3 a,
+  .experiment header h4 a, .projects h2 a, .resume .experience .organization h1 a,
+  .resume .experience .organization h2 a,
+  .resume .experience .organization h3 a,
+  .resume .experience .organization h4 a, .about h1 a,
+  .about h2 a,
+  .about h3 a,
+  .about h4 a, .article .content h1 a,
+  .article .content h2 a,
+  .article .content h3 a,
+  .article .content h4 a,
+  .intro .content h1 a,
+  .intro .content h2 a,
+  .intro .content h3 a,
+  .intro .content h4 a,
+  .experiment .content h1 a,
+  .experiment .content h2 a,
+  .experiment .content h3 a,
+  .experiment .content h4 a, .projects .project h1 a,
+  .projects .project h2 a,
+  .projects .project h3 a,
+  .projects .project h4 a, .resume .experience .work h1 a,
+  .resume .experience .work h2 a,
+  .resume .experience .work h3 a,
+  .resume .experience .work h4 a {
+    color: #222; }
+    .header h1 a:hover,
+    .header h2 a:hover,
+    .header h3 a:hover,
+    .header h4 a:hover, .resume .experience h1 a:hover,
+    .resume .experience h2 a:hover,
+    .resume .experience h3 a:hover,
+    .resume .experience h4 a:hover, .article header h1 a:hover,
+    .article header h2 a:hover,
+    .article header h3 a:hover,
+    .article header h4 a:hover,
+    .intro header h1 a:hover,
+    .intro header h2 a:hover,
+    .intro header h3 a:hover,
+    .intro header h4 a:hover,
+    .experiment header h1 a:hover,
+    .experiment header h2 a:hover,
+    .experiment header h3 a:hover,
+    .experiment header h4 a:hover, .projects h2 a:hover, .resume .experience .organization h1 a:hover,
+    .resume .experience .organization h2 a:hover,
+    .resume .experience .organization h3 a:hover,
+    .resume .experience .organization h4 a:hover, .about h1 a:hover,
+    .about h2 a:hover,
+    .about h3 a:hover,
+    .about h4 a:hover, .article .content h1 a:hover,
+    .article .content h2 a:hover,
+    .article .content h3 a:hover,
+    .article .content h4 a:hover,
+    .intro .content h1 a:hover,
+    .intro .content h2 a:hover,
+    .intro .content h3 a:hover,
+    .intro .content h4 a:hover,
+    .experiment .content h1 a:hover,
+    .experiment .content h2 a:hover,
+    .experiment .content h3 a:hover,
+    .experiment .content h4 a:hover, .projects .project h1 a:hover,
+    .projects .project h2 a:hover,
+    .projects .project h3 a:hover,
+    .projects .project h4 a:hover, .resume .experience .work h1 a:hover,
+    .resume .experience .work h2 a:hover,
+    .resume .experience .work h3 a:hover,
+    .resume .experience .work h4 a:hover {
+      color: #222; }
+
+.header h1,
+.header h2,
+.header h3,
+.header h4,
+.article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4,
+.projects h2,
+.resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal; }
+
+.resume .experience h1,
+.resume .experience h2,
+.resume .experience h3,
+.resume .experience h4,
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4,
+.projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4,
+.resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
   font-family: "Gudea", sans-serif;
   font-weight: bold; }
 
+.resume .experience h1,
+.resume .experience h2,
+.resume .experience h3,
+.resume .experience h4 {
+  text-transform: uppercase;
+  text-align: right;
+  color: #dadada; }
+
+/* Set up typographic scale. */
+/* zero out the actual margins for headings, to be overridden below. */
 p,
 h1,
 h2,
@@ -215,18 +353,14 @@ p {
       line-height: 1.33333;
       margin-bottom: 3rem; } }
 
-.resume .work-types h1,
-.resume .work-types h2,
-.resume .work-types h3,
-.resume .work-types h4,
 .resume .experience h1,
 .resume .experience h2,
 .resume .experience h3,
 .resume .experience h4 {
-  margin-top: 1.5rem;
-  font-size: 2.25em;
-  line-height: 1.33333;
-  margin-bottom: 0rem; }
+  margin-top: 3rem;
+  font-size: 3.375em;
+  line-height: 0.88889;
+  margin-bottom: 3rem; }
 
 .article header h1,
 .article header h2,
@@ -239,14 +373,10 @@ p {
 .experiment header h1,
 .experiment header h2,
 .experiment header h3,
-.experiment header h4, .projects h2, .resume .work-type h1,
-.resume .work-type h2,
-.resume .work-type h3,
-.resume .work-type h4,
-.resume .organization h1,
-.resume .organization h2,
-.resume .organization h3,
-.resume .organization h4 {
+.experiment header h4, .projects h2, .resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4 {
   margin-top: 1.5rem;
   font-size: 1.5em;
   line-height: 1;
@@ -269,14 +399,15 @@ p {
 .experiment .content h4, .projects .project h1,
 .projects .project h2,
 .projects .project h3,
-.projects .project h4, .resume .work h1,
-.resume .work h2,
-.resume .work h3,
-.resume .work h4 {
+.projects .project h4, .resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
   margin-top: 1.5rem;
   font-size: 1em;
   line-height: 1.5;
-  margin-bottom: 0rem; }
+  margin-bottom: 0rem;
+  /* This level of heading should go flush with proceeding text.*/ }
   .about h1 + p,
   .about h2 + p,
   .about h3 + p,
@@ -294,15 +425,18 @@ p {
   .experiment .content h4 + p, .projects .project h1 + p,
   .projects .project h2 + p,
   .projects .project h3 + p,
-  .projects .project h4 + p, .resume .work h1 + p,
-  .resume .work h2 + p,
-  .resume .work h3 + p,
-  .resume .work h4 + p {
+  .projects .project h4 + p, .resume .experience .work h1 + p,
+  .resume .experience .work h2 + p,
+  .resume .experience .work h3 + p,
+  .resume .experience .work h4 + p {
     margin-top: 0; }
 
 small {
   font-size: 0.66667em; }
 
+/*-----------------------------------
+  Common Layout / Composition
+-----------------------------------*/
 .header h1 {
   position: relative;
   margin-bottom: 0; }
@@ -376,11 +510,14 @@ footer.container {
 
 .article header .date,
 .intro header .date,
-.experiment header .date, .projects .project .date, .resume .organization .date {
+.experiment header .date, .projects .project .date, .resume .experience .organization .date {
   padding-left: .5em;
   color: #767676;
   white-space: nowrap; }
 
+/*-----------------------------------
+ Page- or section-specific Styles
+-----------------------------------*/
 .posts header {
   margin-top: 1.5rem; }
   .posts header a {
@@ -401,10 +538,6 @@ footer.container {
 
 .projects * + h2 {
   margin-top: 3rem; }
-.projects .project a {
-  color: #222; }
-  .projects .project a:hover {
-    color: #222; }
 .projects .project .date {
   float: right;
   clear: right; }
@@ -413,3 +546,5 @@ footer.container {
   margin-left: 1em; }
   .projects .project .tag:nth-of-type(-n+3) {
     clear: right; }
+.projects .project p {
+  max-width: calc(100% - 4em); }

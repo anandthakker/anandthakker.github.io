@@ -13,6 +13,8 @@ $link-color-hover: #0002CC !default;
 
 $background-color: #fff;
 
+$grid-color: #dadada;
+
 $font-family-serif: "Playfair Display", serif;
 $font-family-sans: "Gudea", sans-serif;
 $font-family-display: "Playfair Display SC", sans-serif;
@@ -23,7 +25,7 @@ $font-family-display: "Playfair Display SC", sans-serif;
 // Mixins, Helpers, etc.
 //-----------------------------------
 
-@mixin bg-grid($color: #dadada, $bg-color: transparent, $lh: $line-height) {
+@mixin bg-grid($color: $grid-color, $bg-color: transparent, $lh: $line-height) {
   background-color: $bg-color;
   background-image: linear-gradient(0deg,
       transparent 98%,

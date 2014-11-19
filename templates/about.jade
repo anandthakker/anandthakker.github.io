@@ -14,13 +14,7 @@ block content
 
   section.resume
     - orderIterator = function (item) {return item.metadata.order;}
-    section.work-types
-      h2 What I can do
-      each worktype in _(contents.worktypes).sortBy(orderIterator)
-        section.work-type
-          h3!= typogr(worktype.title).typogrify()
-          | !{ typogr(worktype.html).typogrify() }
-
+    
     section.experience
       h2 Experience
       //- There's gotta be a cleaner way to do this...

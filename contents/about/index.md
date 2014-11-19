@@ -23,7 +23,7 @@ identities:
 Depending on the year or season, I'm either a **software developer**,
 a high school **math and CS teacher**, or some combination of the two.
 Regardless of the year or season, I'm eager to wander the world, play
-with new ideas, and make cool stuff.
+with new ideas, make cool stuff, and try to do some good.
 
 ####Current status:
 Traveling until Spring 2015.  Possibly available for small projects.
