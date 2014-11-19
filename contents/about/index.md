@@ -1,6 +1,23 @@
 ---
 template: about.jade
 activeSection: about
+identities: 
+  email:
+    url: "javascript:alert('Spam drives me crazy.')"
+  twitter:
+    name: "anandthakker"
+    url: "https://twitter.com/anandthakker"
+  github:
+    name: "anandthakker"
+    url: "https://github.com/anandthakker"
+  pubkey:
+    url: "/about/pubkey.txt"
+  keybase:
+    name: "anandthakker"
+    url: "https://keybase.io/anandthakker"
+  stackoverflow:
+    name: "anandthakker"
+    url: "http://stackoverflow.com/users/2544296/anandthakker"
 ---
 
 Depending on the year or season, I'm either a **software developer**,
@@ -9,5 +26,4 @@ Regardless of the year or season, I'm eager to wander the world, play
 with new ideas, and make cool stuff.
 
 ####Current status:
-Available for freelance. If you need help with a project
-or website, please get in touch!
+Traveling until Spring 2015.  Possibly available for small projects.

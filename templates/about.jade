@@ -10,7 +10,7 @@ block content
   section.about
     != typogr(contents.about['index.md'].html).typogrify()
     nav
-      !=contents['social.md'].html
+      include contact
 
   section.resume
     - orderIterator = function (item) {return item.metadata.order;}
