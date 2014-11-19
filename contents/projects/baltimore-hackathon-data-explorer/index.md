@@ -10,8 +10,9 @@ description: >
 tags:
   - AngularJS
   - d3js
-  - data
   - choropleth
+  - visual
+  - data
 ---
 
 In response to a local challenge for this year's [National Day of Civic Hacking][1],

@@ -5,6 +5,7 @@ type: experiment
 tags:
   - line simplification
   - canvas
+  - visual
 date: 2014-06-19
 template: experiment.jade
 scripts:

@@ -5,6 +5,7 @@ date: 2014-02-25
 type: experiment
 tags:
   - AngularJS
+  - widget
 template: experiment.jade
 scripts:
   - http://code.angularjs.org/angular-1.0.1.js

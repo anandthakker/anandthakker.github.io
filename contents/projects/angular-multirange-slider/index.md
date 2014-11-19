@@ -9,8 +9,8 @@ description: >
   multiple ranges that add to a fixed total.
 tags:
   - AngularJS
-  - web development
   - widget
+  - front-end
 ---
 
 I needed a slider that could be used to choose choose a list of

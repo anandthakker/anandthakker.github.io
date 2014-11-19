@@ -26,7 +26,8 @@ block content
           p
             | !{ typogr(proj.metadata.description).typogrify() }
             br
-            a.more(href=proj.intro.trim().length > 0 ? proj.url : proj.metadata.github) (read more)
+            if proj.intro.trim().length > 0
+              a.more(href=proj.url) (read more)
 
             if proj.metadata.github
               a.repo(href='https://github.com/'+proj.metadata.github) (github)
