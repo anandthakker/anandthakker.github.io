@@ -1,5 +1,5 @@
 ---
-title: "Teaching: Math"
+title: "Teaching: Math and Statistics"
 id: teaching-math
 order: 0
 ---
