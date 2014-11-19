@@ -183,22 +183,15 @@ footer.container {
 
 .tags {
   margin: 0;
-
-  li {
-    @include scale-type(scale-to(-1), 0, 0);
-    color: lighten($font-color, 33%);
-
-    &:after {
-      content: ',';
-    }
-
-    &:last-child:after {
-      content: '';
-    }
-
-  }
 }
 
+%tag {
+  @include scale-type(scale-to(-1), 0, 0);
+  color: lighten($font-color, 33%);
+}
+
+.tags li,
+.tag { @extend %tag; }
 
 %header-date {
   padding-left: .5em;
@@ -258,16 +251,11 @@ footer.container {
 }
 
 
-.experiments,
 .projects {
-  .about {
-    @include heading-level(3);
-  }
-}
-
-.experiments {
-
-  .experiment {
+  h2 { @extend %h3; }
+  * + h2 { margin-top: lines(2); }
+  
+  .project {
     @include heading-level(4);
 
     a {
@@ -280,10 +268,13 @@ footer.container {
       clear: right;
     }
 
-    .tags {
+    .tag {
       float: right;
-      clear: right;
-      text-align: right;
+
+      margin-left: 1em;
+      &:nth-of-type(-n+3) {
+        clear: right;
+      }
     }
   }
 }

@@ -1,27 +1,38 @@
-extends notes
+extends layout
 
 block append vars
   - activeSection = page.metadata.activeSection
   - bodyclass = page.metadata.bodyClass
 
 block content
-  block about
-    section.about
-      != typogr(contents.about['index.md'].html).typogrify()
-      nav
-        !=contents['social.md'].html
-  section.posts
-    each proj in contents.projects
-      if proj['index.md'] && !proj['index.md'].metadata.draft
-        - proj = proj['index.md']
-        article.intro
-          header
-            span.date
-              != moment.utc(proj.date).format('DD MMMM YYYY')
-            h3
-              a(href=proj.url)= proj.title
 
-          section.content
-            | !{ typogr(proj.intro).typogrify() }
-            if proj.hasMore
-              a.more(href=proj.url) (more)
+  section.posts
+
+    - function projects(list, type) {
+    - list = _.chain(list).values().pluck('index.md').compact()
+    - list = list.sortBy('date').reverse()
+    - list = list.value()
+    each proj in list
+      if !proj.metadata.draft && (!type || proj.metadata.type == type)
+        article.project
+          span.date
+            != moment.utc(proj.date).format('DD MMMM YYYY')
+          each tag in proj.metadata.tags
+            div.tag= tag
+
+          h3
+            a(href=proj.url)= proj.title
+
+          p
+            | !{ typogr(proj.metadata.description).typogrify() }
+            a.more(href=proj.intro.trim().length > 0 ? proj.url : proj.metadata.github) (read more)
+
+            if proj.metadata.github
+              a.repo(href='https://github.com/'+proj.github) (github)
+    - }
+    
+    h2 Projects
+    - projects(contents.projects, 'project')
+
+    h2 Sketches / Experiments
+    - projects(contents.projects, 'experiment')

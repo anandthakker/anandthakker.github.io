@@ -1,6 +1,7 @@
 ---
 title: "Baseline Grid + CSS Background"
 description: Aligning a CSS background grid with the page's typographic grid.
+type: experiment
 date: 2014-02-25
 tags:
   - css

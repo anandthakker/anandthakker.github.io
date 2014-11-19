@@ -1,6 +1,7 @@
 ---
 title: "Drawing simplified lines"
 description: "Using line simplification and Bezier curves to capture smooth user-drawn curves."
+type: experiment
 tags:
   - line simplification
   - canvas

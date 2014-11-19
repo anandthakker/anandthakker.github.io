@@ -14,7 +14,7 @@ block content
 
   section.posts
     each article in articles
-      div.experiment
+      article.experiment
         span.date
           != moment.utc(article.date).format('DD MMMM YYYY')
         ul.tags

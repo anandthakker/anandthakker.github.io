@@ -147,14 +147,7 @@ img {
 .experiment header h2,
 .experiment header h3,
 .experiment header h4,
-.experiments .about h1,
-.experiments .about h2,
-.experiments .about h3,
-.experiments .about h4,
-.projects .about h1,
-.projects .about h2,
-.projects .about h3,
-.projects .about h4,
+.projects h2,
 .resume .work-type h1,
 .resume .work-type h2,
 .resume .work-type h3,
@@ -180,10 +173,10 @@ img {
 .experiment .content h1,
 .experiment .content h2,
 .experiment .content h3,
-.experiment .content h4, .experiments .experiment h1,
-.experiments .experiment h2,
-.experiments .experiment h3,
-.experiments .experiment h4, .resume .work h1,
+.experiment .content h4, .projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4, .resume .work h1,
 .resume .work h2,
 .resume .work h3,
 .resume .work h4 {
@@ -246,14 +239,7 @@ p {
 .experiment header h1,
 .experiment header h2,
 .experiment header h3,
-.experiment header h4, .experiments .about h1,
-.experiments .about h2,
-.experiments .about h3,
-.experiments .about h4,
-.projects .about h1,
-.projects .about h2,
-.projects .about h3,
-.projects .about h4, .resume .work-type h1,
+.experiment header h4, .projects h2, .resume .work-type h1,
 .resume .work-type h2,
 .resume .work-type h3,
 .resume .work-type h4,
@@ -280,10 +266,10 @@ p {
 .experiment .content h1,
 .experiment .content h2,
 .experiment .content h3,
-.experiment .content h4, .experiments .experiment h1,
-.experiments .experiment h2,
-.experiments .experiment h3,
-.experiments .experiment h4, .resume .work h1,
+.experiment .content h4, .projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4, .resume .work h1,
 .resume .work h2,
 .resume .work h3,
 .resume .work h4 {
@@ -305,10 +291,10 @@ p {
   .experiment .content h1 + p,
   .experiment .content h2 + p,
   .experiment .content h3 + p,
-  .experiment .content h4 + p, .experiments .experiment h1 + p,
-  .experiments .experiment h2 + p,
-  .experiments .experiment h3 + p,
-  .experiments .experiment h4 + p, .resume .work h1 + p,
+  .experiment .content h4 + p, .projects .project h1 + p,
+  .projects .project h2 + p,
+  .projects .project h3 + p,
+  .projects .project h4 + p, .resume .work h1 + p,
   .resume .work h2 + p,
   .resume .work h3 + p,
   .resume .work h4 + p {
@@ -379,20 +365,18 @@ footer.container {
 
 .tags {
   margin: 0; }
-  .tags li {
-    margin-top: 0rem;
-    font-size: 0.66667em;
-    line-height: 2.25;
-    margin-bottom: 0rem;
-    color: #767676; }
-    .tags li:after {
-      content: ','; }
-    .tags li:last-child:after {
-      content: ''; }
+
+.tags li,
+.tag {
+  margin-top: 0rem;
+  font-size: 0.66667em;
+  line-height: 2.25;
+  margin-bottom: 0rem;
+  color: #767676; }
 
 .article header .date,
 .intro header .date,
-.experiment header .date, .experiments .experiment .date, .resume .organization .date {
+.experiment header .date, .projects .project .date, .resume .organization .date {
   padding-left: .5em;
   color: #767676;
   white-space: nowrap; }
@@ -415,14 +399,17 @@ footer.container {
   float: right;
   margin-top: 1.5rem; }
 
-.experiments .experiment a {
+.projects * + h2 {
+  margin-top: 3rem; }
+.projects .project a {
   color: #222; }
-  .experiments .experiment a:hover {
+  .projects .project a:hover {
     color: #222; }
-.experiments .experiment .date {
+.projects .project .date {
   float: right;
   clear: right; }
-.experiments .experiment .tags {
+.projects .project .tag {
   float: right;
-  clear: right;
-  text-align: right; }
+  margin-left: 1em; }
+  .projects .project .tag:nth-of-type(-n+3) {
+    clear: right; }

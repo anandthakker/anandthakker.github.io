@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Anand Thakker
+    <title>Drawing simplified lines - Anand Thakker
     </title>
     <meta name="description" content="Personal site of Anand Thakker">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
     <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
     <script src="js/vendor/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body class="experiments">
+  <body class="experiment-detail">
     <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -23,48 +24,29 @@
         <nav role="navigation">
           <ul>
             <li><a href="/">home</a></li>
-            <li class="active">experiments</li>
             <li><a href="/projects">projects</a></li>
+            <li><a href="/notes">notes</a></li>
             <li><a href="/about">about</a></li>
           </ul>
         </nav>
       </header>
       <main class="main">
-        <section class="about"><h2 id="experiments-in-code">Experiments in&nbsp;code</h2>
+        <article class="experiment">
+          <header>
+            <h2>Drawing simplified lines</h2>
+          </header>
+          <section class="content"><p>Draw something in the box below. As you draw, the mouse/touch coordinates
+are captured at <em>each</em> mouseMove.  When you stop drawing, the resulting array
+of points is simplified using <a href="http://mourner.github.io/simplify-js/">Simplify.js</a></p>
+<div class="draw"><canvas id="canvas" width="900" height="600"></canvas></div>
+<div id="info" class="info"></div>
 
-        </section>
-        <section class="posts">
-          <article class="experiment"><span class="date">19 June 2014</span>
-            <ul class="tags">
-              <li>line simplification</li>
-              <li>canvas</li>
-            </ul>
-            <h3><a href="/experiments/draw/">Drawing simplified lines</a></h3>
-            <p>Using line simplification and Bezier curves to capture smooth user-drawn&nbsp;curves.
-            </p>
-          </article>
-          <article class="experiment"><span class="date">25 February 2014</span>
-            <ul class="tags">
-              <li>angularjs</li>
-            </ul>
-            <h3><a href="/experiments/click-off/">AngularJS Click-Off Directive</a></h3>
-            <p>An ngClick-like directive for when user clicks <span class="caps">OFF</span> the&nbsp;element.
-            </p>
-          </article>
-          <article class="experiment"><span class="date">25 February 2014</span>
-            <ul class="tags">
-              <li>css</li>
-              <li>vertical rhythm</li>
-              <li>typography</li>
-            </ul>
-            <h3><a href="/experiments/baseline-grid/">Baseline Grid + CSS Background</a></h3>
-            <p>Aligning a <span class="caps">CSS</span> background grid with the page&#8217;s typographic&nbsp;grid.
-            </p>
-          </article>
-        </section>
+</section>
+        </article>
       </main>
     </div>
     <footer class="container">
+      <div class="pagenav"><a href="/notes/">« Home</a></div>
       <section class="copy">
         <p>&copy; 2014 Anand Thakker</p>
         <nav>
@@ -84,6 +66,9 @@
       window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>');
       
     </script>
+    <script src="/js/vendor/simplify.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="script.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

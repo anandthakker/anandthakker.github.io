@@ -2,6 +2,7 @@
 title: "Visualizing Bayes' Theorem"
 draft: true
 date: 2014-03-09
+type: experiment
 template: article.jade
 filename: /:year/:month/:day/:title/index.html
 tags:
@@ -9,8 +10,6 @@ tags:
   - probability
   - weird
   - project
-
-type: link
 ---
 
 [![Screenshot of Conditional Probability Tool](/images/conditional-probability.jpg)][1]

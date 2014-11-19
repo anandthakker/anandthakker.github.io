@@ -1,15 +1,10 @@
 extends layout
 
 block append vars
-  - bodyclass = 'home'
-  - activeSection = 'home'
+  - bodyclass = 'notes'
+  - activeSection = 'notes'
 
 block content
-  block about
-    section.about
-      != typogr(contents.about['index.md'].html).typogrify()
-      nav
-        !=contents['social.md'].html
   section.posts
     each article in articles
       article.intro

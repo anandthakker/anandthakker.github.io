@@ -2,8 +2,8 @@
   "view": "none",
   "sections": {
     "home": "/",
-    "experiments": "/experiments",
     "projects": "/projects",
+    "notes": "/notes",
     "about": "/about"
   }
 }

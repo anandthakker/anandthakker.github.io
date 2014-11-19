@@ -1,19 +1,16 @@
 ---
 title: "AngularJS multi-range slider"
 date: 2014-03-02
+type: project
 template: article.jade
 github: anandthakker/angular-multirange-slider
 description: >
   An Angular directive for a multi-range slider widget, to allow user to input
   multiple ranges that add to a fixed total.
 tags:
-  - angularjs
+  - AngularJS
   - web development
-  - codepen
   - widget
-  - project
-
-type: link
 ---
 
 I needed a slider that could be used to choose choose a list of
