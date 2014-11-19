@@ -1,7 +1,7 @@
 ---
 template: about.jade
 activeSection: about
-identities: 
+identities:
   email:
     url: "javascript:alert('Spam drives me crazy.')"
   twitter:

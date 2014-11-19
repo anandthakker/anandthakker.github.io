@@ -130,10 +130,10 @@ img {
 .header h1,
 .header h2,
 .header h3,
-.header h4, .resume .experience h1,
-.resume .experience h2,
-.resume .experience h3,
-.resume .experience h4, .article header h1,
+.header h4, .resume > section h1,
+.resume > section h2,
+.resume > section h3,
+.resume > section h4, .article header h1,
 .article header h2,
 .article header h3,
 .article header h4,
@@ -174,10 +174,10 @@ img {
   .header h1 a,
   .header h2 a,
   .header h3 a,
-  .header h4 a, .resume .experience h1 a,
-  .resume .experience h2 a,
-  .resume .experience h3 a,
-  .resume .experience h4 a, .article header h1 a,
+  .header h4 a, .resume > section h1 a,
+  .resume > section h2 a,
+  .resume > section h3 a,
+  .resume > section h4 a, .article header h1 a,
   .article header h2 a,
   .article header h3 a,
   .article header h4 a,
@@ -216,10 +216,10 @@ img {
     .header h1 a:hover,
     .header h2 a:hover,
     .header h3 a:hover,
-    .header h4 a:hover, .resume .experience h1 a:hover,
-    .resume .experience h2 a:hover,
-    .resume .experience h3 a:hover,
-    .resume .experience h4 a:hover, .article header h1 a:hover,
+    .header h4 a:hover, .resume > section h1 a:hover,
+    .resume > section h2 a:hover,
+    .resume > section h3 a:hover,
+    .resume > section h4 a:hover, .article header h1 a:hover,
     .article header h2 a:hover,
     .article header h3 a:hover,
     .article header h4 a:hover,
@@ -280,10 +280,10 @@ img {
   font-family: "Playfair Display", serif;
   font-weight: normal; }
 
-.resume .experience h1,
-.resume .experience h2,
-.resume .experience h3,
-.resume .experience h4,
+.resume > section h1,
+.resume > section h2,
+.resume > section h3,
+.resume > section h4,
 .about h1,
 .about h2,
 .about h3,
@@ -311,10 +311,10 @@ img {
   font-family: "Gudea", sans-serif;
   font-weight: bold; }
 
-.resume .experience h1,
-.resume .experience h2,
-.resume .experience h3,
-.resume .experience h4 {
+.resume > section h1,
+.resume > section h2,
+.resume > section h3,
+.resume > section h4 {
   text-transform: uppercase;
   text-align: right;
   color: #dadada; }
@@ -353,10 +353,10 @@ p {
       line-height: 1.33333;
       margin-bottom: 3rem; } }
 
-.resume .experience h1,
-.resume .experience h2,
-.resume .experience h3,
-.resume .experience h4 {
+.resume > section h1,
+.resume > section h2,
+.resume > section h3,
+.resume > section h4 {
   margin-top: 3rem;
   font-size: 3.375em;
   line-height: 0.88889;
@@ -548,3 +548,6 @@ footer.container {
     clear: right; }
 .projects .project p {
   max-width: calc(100% - 4em); }
+
+.resume .skills .skill {
+  font-weight: bold; }

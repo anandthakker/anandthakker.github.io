@@ -297,8 +297,18 @@ footer.container {
 
 
 .resume {
-  .experience {
+
+  & > section {
     @include heading-level(2);
+  }
+  
+  .skills {
+    .skill {
+      font-weight: bold;
+    }
+  }
+  
+  .experience {
     .organization {
       @include heading-level(3);
       .date {
