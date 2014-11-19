@@ -501,8 +501,11 @@ nav .active {
     max-width: 50em;
     margin: 0 auto; } }
 footer.container {
+  color: #a2a2a2;
   background: #fff;
   padding: 0 0 2em; }
+  footer.container > * {
+    font-size: .75em; }
   footer.container .copy {
     margin-top: 1.5rem;
     float: left; }
@@ -511,7 +514,12 @@ footer.container {
     footer.container .copy ul {
       display: inline; }
   footer.container .poweredby {
-    float: right; }
+    float: left;
+    clear: left; }
+    @media only screen and (min-width: 35em) {
+      footer.container .poweredby {
+        clear: none;
+        float: right; } }
 
 .tags {
   margin: 0; }
@@ -534,6 +542,10 @@ footer.container {
 /*-----------------------------------
  Page- or section-specific Styles
 -----------------------------------*/
+@media only screen and (min-width: 50em) {
+  .home {
+    margin-top: 4.5rem; } }
+
 .posts header {
   margin-top: 1.5rem; }
   .posts header a {

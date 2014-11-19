@@ -163,20 +163,25 @@ nav {
 }
 
 $content-width: 35em;
+$container-width: 50em;
 
 @media only screen and (min-width: $content-width) {
+  $padding: ($container-width - $content-width);
+
   .container {
-    $width: 50em;
-    $padding: ($width - $content-width);
     padding: 0 ($padding*2/3) lines(1) ($padding/3);
-    max-width: $width;
+    max-width: $container-width;
     margin: 0 auto;
   }
 }
 
 footer.container {
   @extend %clearfix;
+  
+  & > * { font-size: .75em;}
 
+  color: lighten($font-color, 50%);
+  // a { @include link-colors(lighten($link-color, 50%), lighten($link-color-hover, 50%)); }
   background: #fff;
   padding: 0 0 2em;
 
@@ -192,7 +197,12 @@ footer.container {
   }
 
   .poweredby {
-    float: right;
+    float: left;
+    clear: left;
+    @media only screen and (min-width: $content-width) {
+      clear: none;
+      float: right;
+    }
   }
 }
 
@@ -220,10 +230,15 @@ footer.container {
  Page- or section-specific Styles
 -----------------------------------*/
 
+.home {
+  @media only screen and (min-width: $container-width) {
+    margin-top: lines(3);
+  } 
+}
+
 .about {
   @include heading-level(4);
 }
-
 
 .posts {
   @extend %clearfix;
