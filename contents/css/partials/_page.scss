@@ -48,6 +48,26 @@ img {
   max-width: 100%;
 }
 
+@media print {
+  body,
+  a {
+    color: black;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+  .work {
+    page-break-inside: avoid;
+  }
+}
+
+
 /* Heading styles */
 
 %h1,%h2,%h3,%h4,%h5 {
@@ -74,6 +94,13 @@ img {
   text-transform: uppercase;
   text-align: right;
   color: $grid-color;
+  @media print {
+    color: black;
+    font-weight: normal;
+    font-family: $font-family-serif;
+    text-transform: none;
+    text-align: center;
+  }
 }
 
 /* Set up typographic scale. */
@@ -118,7 +145,7 @@ small { font-size: scale-to(-1); }
   Common Layout / Composition
 -----------------------------------*/
 
-.header {
+.site-header {
   @extend %clearfix;
 
   @include heading-level(1);
@@ -126,6 +153,7 @@ small { font-size: scale-to(-1); }
   h1 {
     @include grid-border($font-color);
     margin-bottom: 0;
+    @media only screen { span { @include visuallyhidden; } }
   }
 
   nav {
@@ -161,9 +189,12 @@ nav {
 
 .container {
   @extend %uncollapse-margin;
-  @include bg-grid();
-  background-position: 0 1.25em;
-  background-origin: content-box;
+  
+  @media only screen {
+    @include bg-grid();
+    background-position: 0 1.25em;
+    background-origin: content-box;
+  }
   margin-top: 0;
   padding: 0 1.5em lines(1);
 }
@@ -231,6 +262,31 @@ footer.container {
   white-space: nowrap;
 }
 
+
+@media print {
+
+  .site-header h1 {
+    font-size: scale-to(1);
+    text-align: right;
+    .name {
+      float: left;
+    }
+    .email { 
+      float: left;
+      clear: left;
+      margin: 0;
+      font-size: scale-to(-1);
+    }
+  }
+  
+  .site-header nav,
+  #current-status-,
+  #current-status- + *,
+  footer > *,
+  .contact {
+    display: none;
+  }
+}
 
 /*-----------------------------------
  Page- or section-specific Styles
@@ -342,7 +398,6 @@ footer.container {
     margin-top: 0;
     margin-bottom: lines(1);
     &:first-of-type { margin-top: lines(1); }
-    &.collapse { margin-bottom: 0; }
     h4:after {
       font-weight: normal;
       font-size: scale-to(-1);
@@ -369,6 +424,16 @@ footer.container {
       display: block;
       float: none; 
       padding: 0;
+    }
+  }
+  
+  @media print {
+    &:after {
+      content: "Thanks for your time and consideration.";
+      display: block;
+      border-top: 1px solid black;
+      margin-top: 2em;
+      width: 100%;
     }
   }
 }

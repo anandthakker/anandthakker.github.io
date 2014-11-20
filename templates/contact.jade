@@ -1,13 +1,4 @@
 - identities = contents.about['index.md'].metadata.identities
-script.
-  document.addEventListener('DOMContentLoaded', function() {
-    var email = document.querySelector('[href^=javascript]');
-    email.addEventListener('mouseover', function onmouseover(e){
-      this.setAttribute('href', 
-      ['m','a','i','l','t','o',':','t','h','a','k','k','e','r','@','g','m','a','i','l','.','c','o','m' ].join(''));
-      this.removeEventListener('mouseover', onmouseover);
-    });
-  });
 section.contact
   ul
     each account, site in identities

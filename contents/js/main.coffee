@@ -14,3 +14,28 @@ document.addEventListener 'DOMContentLoaded', ->
       window.getSelection()?.toString().length > 0)
       
       this.parentElement.classList.toggle('collapse')
+
+
+  emailstring = [ 'm', 'e', '@', 'a', 'n', 'a', 'n', 'd', '.',
+  'c', 'o', 'd', 'e', 's' ].join('')
+  email = document.querySelector('[href^=emailaddress]')
+  if email then email.addEventListener('mouseover', onmouseover = ->
+    @setAttribute('href', 'mailto:'+emailstring)
+    @removeEventListener('mouseover', onmouseover)
+  )
+
+  ###
+  From http://tjvantoll.com/2012/06/15/detecting-print-requests-with-javascript/
+  ###
+  beforePrint = ->
+    emailNode = document.querySelector('.email')
+    emailNode.innerHTML = emailstring
+    return
+
+  if window.matchMedia
+    mediaQueryList = window.matchMedia("print")
+    if mediaQueryList.matches then beforePrint()
+    mediaQueryList.addListener (mql) ->
+      if mql.matches then beforePrint()
+
+  window.onbeforeprint = beforePrint

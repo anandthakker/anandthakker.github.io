@@ -4,7 +4,7 @@ filename: /resume/index.html
 activeSection: resume
 identities:
   email:
-    url: "javascript:alert('Spam drives me crazy.')"
+    url: "emailaddress"
   twitter:
     name: "anandthakker"
     url: "https://twitter.com/anandthakker"
@@ -21,7 +21,7 @@ identities:
     url: "http://stackoverflow.com/users/2544296/anandthakker"
 ---
 
-Depending on the year or season, I'm either a **software developer**,
+Hi. I'm Anand Thakker. Depending on the year or season, I'm either a **software developer**,
 a high school **math and CS teacher**, or some combination of the two.
 Regardless of the year or season, I'm eager to play
 with new ideas, make cool stuff, and try to do some good.
