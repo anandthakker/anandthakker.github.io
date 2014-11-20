@@ -372,11 +372,13 @@ footer.container {
 
 
 .resume {
-  a[href^=http]:after {
-    content: "⧉";
-    font: 1em/1.5em;
-    margin: 0 0 0 2px;
-    text-align: center;
+  @media only screen {
+    a[href^=http]:after {
+      content: "⧉";
+      font: 1em/1.5em;
+      margin: 0 0 0 2px;
+      text-align: center;
+    }
   }
 
   & > section h2 { @extend %h2; }

@@ -624,11 +624,12 @@ footer.container {
 .projects .project p {
   max-width: calc(100% - 4em); }
 
-.resume a[href^=http]:after {
-  content: "⧉";
-  font: 1em/1.5em;
-  margin: 0 0 0 2px;
-  text-align: center; }
+@media only screen {
+  .resume a[href^=http]:after {
+    content: "⧉";
+    font: 1em/1.5em;
+    margin: 0 0 0 2px;
+    text-align: center; } }
 .resume .skills .skill {
   font-weight: bold; }
 .resume .work {
