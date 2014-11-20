@@ -1,13 +1,13 @@
 ---
-title: MathJax Prerenderer
+title: Do I Use
 date: 2014-11-13
 type: project
-github: anandthakker/prerender-mathjax
+github: anandthakker/doiuse
 description: >
-  Simple node server (or Koa middleware) to server-side prerender the Latex 
-  equations in a page using MathJax's beautiful math rendering.
+  Node module / command line utility to lint CSS for browser support against 
+  the caniuse.com database.  Inspired by autoprefixer and postcss and a website
+  project that annoyingly needed IE 8 support.
 tags:
-  - MathJax
-  - server-side
-  - node
+  - css
+  - dev tool
 ---

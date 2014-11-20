@@ -1,6 +1,7 @@
 ---
 template: about.jade
-activeSection: about
+filename: /resume/index.html
+activeSection: resume
 identities:
   email:
     url: "javascript:alert('Spam drives me crazy.')"
