@@ -2,6 +2,7 @@
 title: "Co-creator: Pseudocode Meta Language"
 id: pml
 order: 0
+show: true
 ---
 
 My friend [Aaron][1] and I stayed after work one day, excitedly discussing an 

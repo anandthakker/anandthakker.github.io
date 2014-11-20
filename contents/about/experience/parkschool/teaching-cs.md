@@ -1,7 +1,8 @@
 ---
 title: "Teaching: Computer Science"
+show: true
 id: teaching-cs
-order: 2
+order: 0
 ---
 
 I developed two semester-long introductory programming 

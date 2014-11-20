@@ -49,10 +49,11 @@ block content
 
 
           each exp in _.chain(org).omit('index.md').sortBy(orderIterator).value()
-            section.work(id=exp.metadata.id)
+            section(id=exp.metadata.id, class=exp.metadata.show ? 'work' : 'collapse work',
+            data-has-details=!!exp.html)
               h4!= typogr(exp.title).typogrify()
               if exp.html
-                div !{ typogr(exp.html).typogrify() }
+                div.details !{ typogr(exp.html).typogrify() }
                 
     section.education
       h2 Education

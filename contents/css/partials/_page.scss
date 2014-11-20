@@ -30,7 +30,7 @@ seeing the owl staring at me every time I scroll past :)
   margin-top: lines(1);
   margin-bottom: 0;
 }
-p:first-child { margin-top: 0; }
+*:first-child { margin-top: 0; }
 li + li { margin-top: 0; }
 
 a {
@@ -313,6 +313,12 @@ footer.container {
 
 
 .resume {
+  a[href^=http]:after {
+    content: "⧉";
+    font: 1em/1.5em;
+    margin: 0 0 0 2px;
+    text-align: center;
+  }
 
   & > section h2 { @extend %h2; }
   
@@ -330,6 +336,18 @@ footer.container {
     @include heading-level(4);
   }
   
+  .work {
+    margin-top: 0;
+    margin-bottom: lines(1);
+    &:first-of-type { margin-top: lines(1); }
+    &.collapse { margin-bottom: 0; }
+    h4:after {
+      font-weight: normal;
+      font-size: scale-to(-1);
+    }
+  }
+  
+  
   .education .school {
     @include heading-level(3);
     .date { @extend %header-date; }
@@ -341,6 +359,24 @@ footer.container {
         font-weight: bold;
         padding-right: .5em;
       }
+    }
+  }
+}
+
+@media only screen {
+  .js {
+    .work[data-has-details] {
+      h4 { cursor: pointer; }
+      h4:hover { text-decoration: underline; }
+      
+    }
+    .work[data-has-details]:hover {
+      h4:after { content: " (hide description)"; }
+    }
+    .work.collapse[data-has-details] {
+      margin-bottom: 0;
+      h4:after { content: " (show description)"; }
+      .details { @include visuallyhidden; }
     }
   }
 }

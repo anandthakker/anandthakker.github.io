@@ -1,7 +1,8 @@
 ---
 title: "Data Analysis: Student-led Arctic Research"
 id: arctic-research
-order: 4
+show: true
+order: 1
 ---
 
 After joining the Arctic Research program as a chaperone in 2012, I soon became

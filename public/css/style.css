@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -119,7 +120,7 @@ seeing the owl staring at me every time I scroll past :)
   margin-top: 1.5rem;
   margin-bottom: 0; }
 
-p:first-child {
+*:first-child {
   margin-top: 0; }
 
 li + li {
@@ -564,8 +565,23 @@ footer.container {
 .projects .project p {
   max-width: calc(100% - 4em); }
 
+.resume a[href^=http]:after {
+  content: "⧉";
+  font: 1em/1.5em;
+  margin: 0 0 0 2px;
+  text-align: center; }
 .resume .skills .skill {
   font-weight: bold; }
+.resume .work {
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+  .resume .work:first-of-type {
+    margin-top: 1.5rem; }
+  .resume .work.collapse {
+    margin-bottom: 0; }
+  .resume .work h4:after {
+    font-weight: normal;
+    font-size: 0.66667em; }
 .resume .education .school table {
   margin-top: 1.5rem; }
 .resume .education .school td {
@@ -573,3 +589,24 @@ footer.container {
   .resume .education .school td:first-child {
     font-weight: bold;
     padding-right: .5em; }
+
+@media only screen {
+  .js .work[data-has-details] h4 {
+    cursor: pointer; }
+  .js .work[data-has-details] h4:hover {
+    text-decoration: underline; }
+  .js .work[data-has-details]:hover h4:after {
+    content: " (hide description)"; }
+  .js .work.collapse[data-has-details] {
+    margin-bottom: 0; }
+    .js .work.collapse[data-has-details] h4:after {
+      content: " (show description)"; }
+    .js .work.collapse[data-has-details] .details {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; } }
