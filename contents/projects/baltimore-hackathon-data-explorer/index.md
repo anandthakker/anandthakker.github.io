@@ -6,7 +6,8 @@ template: article.jade
 github: anandthakker/baltimore-neighborhood-vitalsigns
 description: >
   A simple d3-based design for using multiple small choropleth maps to see/explore 
-  a large set of Baltimore neighborhood data.
+  a large set of Baltimore neighborhood data. (Built for the Baltimore Hack for 
+  Change / National Coder Day of Service hackathon.)
 tags:
   - AngularJS
   - d3js
