@@ -94,13 +94,6 @@ img {
   text-transform: uppercase;
   text-align: right;
   color: $grid-color;
-  @media print {
-    color: black;
-    font-weight: normal;
-    font-family: $font-family-serif;
-    text-transform: none;
-    text-align: center;
-  }
 }
 
 /* Set up typographic scale. */
@@ -139,6 +132,16 @@ p { @include scale-type(scale-to(0)); }
 
 small { font-size: scale-to(-1); }
 
+@media print {
+  %h2 {
+    color: black;
+    font-weight: normal;
+    font-family: $font-family-serif;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: lines(1);
+  }
+}
 
 
 /*-----------------------------------
@@ -380,7 +383,7 @@ footer.container {
       text-align: center;
     }
   }
-
+  
   & > section h2 { @extend %h2; }
   
   .skills {

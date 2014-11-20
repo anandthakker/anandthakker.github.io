@@ -7,6 +7,6 @@ order: 1
 
 Served as the <i>de facto</i> data analyst of the group, both managing / analyzing / visualizing
 the 9-year, 40-variable, multi-1000-row dataset and teaching students the
-statistical programming language **R** so that they could do so themselves.
+statistical programming language R so that they could do so themselves.
 
 [1]: http://www.isamr.net/

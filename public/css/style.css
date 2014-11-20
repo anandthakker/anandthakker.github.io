@@ -347,13 +347,6 @@ img {
   text-transform: uppercase;
   text-align: right;
   color: #ddd; }
-  @media print {
-    .resume > section h2 {
-      color: black;
-      font-weight: normal;
-      font-family: "Playfair Display", serif;
-      text-transform: none;
-      text-align: center; } }
 
 /* Set up typographic scale. */
 p {
@@ -463,6 +456,14 @@ p {
 small {
   font-size: 0.66667em; }
 
+@media print {
+  .resume > section h2 {
+    color: black;
+    font-weight: normal;
+    font-family: "Playfair Display", serif;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 1.5rem; } }
 /*-----------------------------------
   Common Layout / Composition
 -----------------------------------*/
