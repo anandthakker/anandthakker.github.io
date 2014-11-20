@@ -25,19 +25,31 @@ $font-family-display: "Playfair Display SC", sans-serif;
 // Mixins, Helpers, etc.
 //-----------------------------------
 
-@mixin bg-grid($color: $grid-color, $bg-color: transparent, $lh: $line-height) {
-  background-color: $bg-color;
+@mixin bgimage-lines($color, $thickness) {
   background-image: linear-gradient(0deg,
-      transparent 98.5%,
-      $color 99%,
+      transparent,
+      transparent calc(100% - #{$thickness}),
+      $color calc(100% - #{$thickness}),
       $color),
     linear-gradient(90deg,
-      transparent 49.5%,
+      transparent,
+      transparent 50%,
       $color 50%,
-      $color 51%,
-      transparent 51.5%,
+      $color calc(50% + #{$thickness}),
+      transparent calc(50% + #{$thickness}),
       transparent);
-    background-size: ($lh * 1em) ($lh * 1em);
+}
+
+@mixin bg-grid($color: $grid-color, $bg-color: transparent, $lh: $line-height) {
+
+  @include bgimage-lines(lighten($color, 5%), 1px);
+  @media (-webkit-min-device-pixel-ratio: 2), 
+         (min-resolution: 192dpi) {
+    @include bgimage-lines($color, 0.5px); 
+  }
+  
+  background-color: $bg-color;
+  background-size: ($lh * 1em) ($lh * 1em);
 }
 
 @mixin grid-border($color: $font-color) {
