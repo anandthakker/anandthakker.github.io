@@ -359,9 +359,15 @@ p {
 
 .resume > section h2 {
   margin-top: 3rem;
-  font-size: 3.375em;
-  line-height: 0.88889;
+  font-size: 2.25em;
+  line-height: 1.33333;
   margin-bottom: 3rem; }
+  @media only screen and (min-width: 480px) {
+    .resume > section h2 {
+      margin-top: 3rem;
+      font-size: 3.375em;
+      line-height: 0.88889;
+      margin-bottom: 3rem; } }
 
 .article header h1,
 .article header h2,
@@ -481,6 +487,7 @@ nav {
   background-size: 1.5em 1.5em;
   background-position: 0 1.25em;
   background-origin: content-box;
+  margin-top: 0;
   padding: 0 1.5em 1.5rem; }
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .container {
@@ -525,7 +532,7 @@ footer.container {
 
 .article header .date,
 .intro header .date,
-.experiment header .date, .projects .project .date, .resume .experience .organization .date, .resume .education .school .date {
+.experiment header .date, .projects .project .date, .resume .date {
   padding-left: .5em;
   color: #767676;
   white-space: nowrap; }
@@ -589,6 +596,11 @@ footer.container {
   .resume .education .school td:first-child {
     font-weight: bold;
     padding-right: .5em; }
+@media only screen and (max-width: 479px) {
+  .resume .date {
+    display: block;
+    float: none;
+    padding: 0; } }
 
 @media only screen {
   .js .work[data-has-details] h4 {

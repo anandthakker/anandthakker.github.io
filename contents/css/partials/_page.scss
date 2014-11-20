@@ -88,7 +88,10 @@ p { @include scale-type(scale-to(0)); }
 }
 
 %h2 {
-  @include scale-type(scale-to(3), 2, 2, 2);
+  @include scale-type(scale-to(2), 2, 2);
+  @media only screen and (min-width: 480px) {
+    @include scale-type(scale-to(3), 2, 2, 2);
+  }
 }
 
 %h3 { @include scale-type(scale-to(1), default, 0, 1); }
@@ -161,7 +164,7 @@ nav {
   @include bg-grid();
   background-position: 0 1.25em;
   background-origin: content-box;
-
+  margin-top: 0;
   padding: 0 1.5em lines(1);
 }
 
@@ -330,7 +333,6 @@ footer.container {
   
   .experience .organization {
     @include heading-level(3);
-    .date { @extend %header-date; }
   }
   .experience .work {
     @include heading-level(4);
@@ -350,7 +352,6 @@ footer.container {
   
   .education .school {
     @include heading-level(3);
-    .date { @extend %header-date; }
 
     table { margin-top: lines(1); }
     td {
@@ -359,6 +360,15 @@ footer.container {
         font-weight: bold;
         padding-right: .5em;
       }
+    }
+  }
+  
+  .date { @extend %header-date; }
+  @media only screen and (max-width: 479px) {
+    .date { 
+      display: block;
+      float: none; 
+      padding: 0;
     }
   }
 }
