@@ -33,6 +33,24 @@ block content
             if skill.note
               span.note  (!{skill.note})
 
+    section.education
+      h2 Education
+      - schools = _.sortBy(contents.about['education.json'].metadata.schools, 'from').reverse()
+      each school in schools
+        section.school
+          h3
+            | !{ typogr(school.name).typogrify() }
+            span.date
+              | !{ school.from}&mdash;!{school.to }
+          
+          table
+            tr
+              td Degree:
+              td !{typogr(school.degree).typogrify()}
+            tr
+              td Focus:
+              td !{typogr(school.focus).typogrify()}
+
     section.experience
       h2 Experience
       //- There's gotta be a cleaner way to do this...
@@ -55,20 +73,3 @@ block content
               if exp.html
                 div.details !{ typogr(exp.html).typogrify() }
                 
-    section.education
-      h2 Education
-      - schools = _.sortBy(contents.about['education.json'].metadata.schools, 'from').reverse()
-      each school in schools
-        section.school
-          h3
-            | !{ typogr(school.name).typogrify() }
-            span.date
-              | !{ school.from}&mdash;!{school.to }
-          
-          table
-            tr
-              td Degree:
-              td !{typogr(school.degree).typogrify()}
-            tr
-              td Focus:
-              td !{typogr(school.focus).typogrify()}

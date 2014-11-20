@@ -22,7 +22,7 @@ skills:
 - I can think about architecture, design data structures, and analyze
   algorithms.
 - I'm flexible about different approaches to writing code and building software.
-- I play well with others.
+- I work and play well with others.
 
 If you agree that the list above is way more important than the list below, 
-then let's talk &hearts;.
+then let's talk.
