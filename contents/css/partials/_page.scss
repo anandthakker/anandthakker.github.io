@@ -183,7 +183,7 @@ footer.container {
   color: lighten($font-color, 50%);
   // a { @include link-colors(lighten($link-color, 50%), lighten($link-color-hover, 50%)); }
   background: #fff;
-  padding: 0 0 2em;
+  padding: 0 .5em 2em;
 
   .copy {
     margin-top: lines(1);
