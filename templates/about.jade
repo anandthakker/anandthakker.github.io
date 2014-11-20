@@ -52,7 +52,7 @@ block content
             section.work(id=exp.metadata.id)
               h4!= typogr(exp.title).typogrify()
               if exp.html
-                | !{ typogr(exp.html).typogrify() }
+                div !{ typogr(exp.html).typogrify() }
                 
     section.education
       h2 Education

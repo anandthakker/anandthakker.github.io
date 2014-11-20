@@ -21,6 +21,18 @@ body {
   @extend %uncollapse-margin;
 }
 
+/*
+http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+Sure, this may be doable with *:nth-child(n+2) {...}, but I love
+seeing the owl staring at me every time I scroll past :)
+*/
+* + * {
+  margin-top: lines(1);
+  margin-bottom: 0;
+}
+p:first-child { margin-top: 0; }
+li + li { margin-top: 0; }
+
 a {
   @include link-colors($link-color, $link-color-hover);
   @include hover-link;
@@ -66,18 +78,7 @@ img {
 
 /* Set up typographic scale. */
 
-/* zero out the actual margins for headings, to be overridden below. */
-p,
-h1,
-h2,
-h3,
-h4 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-p { @include scale-type(scale-to(0), 1, 0); }
+p { @include scale-type(scale-to(0)); }
 
 %h1 {
   @include scale-type(scale-to(2), 2, 2);
@@ -90,10 +91,10 @@ p { @include scale-type(scale-to(0), 1, 0); }
   @include scale-type(scale-to(3), 2, 2, 2);
 }
 
-%h3 { @include scale-type(scale-to(1), 1, 0, 1); }
+%h3 { @include scale-type(scale-to(1), default, 0, 1); }
 %h4 {
-  @include scale-type(scale-to(0), 1, 0);
-  &+p { margin-top: 0; } /* This level of heading should go flush with proceeding text.*/
+  @include scale-type(scale-to(0));
+  & + * { margin-top: 0; }
 }
 
 @mixin heading-level($level) {
@@ -134,8 +135,10 @@ small { font-size: scale-to(-1); }
 }
 
 nav {
+  margin: 0;
   li {
     display: inline-block;
+    margin: 0;
 
     &:first-child:before {
       display: none;
@@ -245,7 +248,6 @@ footer.container {
 
   header {
     @extend %uncollapse-margin;
-    margin-top: lines(1);
 
     a {
       @include link-colors($font-color, $font-color);
@@ -267,12 +269,11 @@ footer.container {
 .experiment {
   header {
     @extend %uncollapse-margin;
-
     @include heading-level(3);
+    
     .date {
       @extend %header-date;
       float: right;
-      margin-top: lines(1);
     }
   }
 
@@ -313,9 +314,7 @@ footer.container {
 
 .resume {
 
-  & > section {
-    @include heading-level(2);
-  }
+  & > section h2 { @extend %h2; }
   
   .skills {
     .skill {
@@ -344,5 +343,4 @@ footer.container {
       }
     }
   }
-
 }
