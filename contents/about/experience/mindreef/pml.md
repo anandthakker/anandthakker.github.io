@@ -5,7 +5,7 @@ order: 1
 show: true
 ---
 
-My friend [Aaron][1] and I stayed after work one day, excitedly discussing an 
+[A colleague][1] and I stayed after work one day, excitedly discussing an 
 idea we'd had for how we could use the programming language theory we'd learned
 in college to overcome some important limitations in one of Mindreef's product 
 features.  A few late nights later, we'd built a prototype, and a couple weeks
