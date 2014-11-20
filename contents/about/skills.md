@@ -1,6 +1,6 @@
 ---
 skills:
-  - name: javascript
+  - name: Javascript
     includes:
       - Node
       - AngularJS
@@ -9,8 +9,8 @@ skills:
       - coffeescript
   - name: Java
     note: "it's been a while, but it's what I was raised on"
-  - name: python
-    note: "still learning, but loving it"
+  - name: Python
+    note: "Django REST; Flask; still learning, but loving it"
   - name: CSS
     includes:
       - SASS
@@ -21,7 +21,8 @@ skills:
 
 - I can think about architecture, design data structures, and analyze
   algorithms.
-- I'm flexible about different approaches to writing code and building software.
+- I enjoy learning new languages and frameworks, and I'm flexible about 
+  different approaches to writing code and building software.
 - I work and play well with others.
 
 If you agree that the list above is way more important than the list below, 
