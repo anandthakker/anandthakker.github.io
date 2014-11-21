@@ -22,17 +22,19 @@ block content
           each tag in proj.metadata.tags
             div.tag= tag
 
+          - hasWriteup = (proj.intro.trim().length > 0)
+          - githubUrl = 'https://github.com/'+proj.metadata.github
           h3
-            a(href=proj.url)= proj.title
+            a(href=hasWriteup ? proj.url : githubUrl)= proj.title
 
           p
             | !{ typogr(proj.metadata.description).typogrify() }
             br
-            if proj.intro.trim().length > 0
+            if hasWriteup
               a.more(href=proj.url) (read more)
 
             if proj.metadata.github
-              a.repo(href='https://github.com/'+proj.metadata.github) (github)
+              a.repo(href=githubUrl) (github)
     - }
     
     h2 Projects

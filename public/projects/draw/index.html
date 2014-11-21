@@ -37,7 +37,14 @@
           </header>
           <section class="content"><p>Draw something in the box below. As you draw, the mouse/touch coordinates
 are captured at <em>each</em> mouseMove.  When you stop drawing, the resulting array
-of points is simplified using <a href="http://mourner.github.io/simplify-js/">Simplify.js</a></p>
+of points is simplified using <a href="http://mourner.github.io/simplify-js/">Simplify.js</a>.</p>
+<p>This isn’t doing that much yet, but it will be once&nbsp;I…</p>
+<ol>
+<li>Scrap Simplify.js in favor of doing the simplification in realtime. (Pending research
+on existing algorithms for&nbsp;this).</li>
+<li>Partition the drawn curve into an ordered set of non-intersecting&nbsp;curves</li>
+<li>Use that to make <a href="https://www.youtube.com/watch?v=heKK95DAKms">this</a> into a digital toy (but only if I can do it in a way that doesn’t ruin the mystery and&nbsp;fun!).</li>
+</ol>
 <div class="draw"><canvas id="canvas" width="900" height="600"></canvas></div>
 <div id="info" class="info"></div>
 
