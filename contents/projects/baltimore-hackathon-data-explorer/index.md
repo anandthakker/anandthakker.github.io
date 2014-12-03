@@ -1,7 +1,7 @@
 ---
 title: "Simple data explorer for Baltimore neighborhood data."
 date: 2014-06-03
-type: project
+type: experiment
 template: article.jade
 github: anandthakker/baltimore-neighborhood-vitalsigns
 description: >
