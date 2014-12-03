@@ -596,6 +596,8 @@ footer.container {
 @media only screen and (min-width: 50em) {
   .home {
     margin-top: 4.5rem; } }
+.home .container {
+  position: relative; }
 
 .posts header a {
   color: #222; }
@@ -681,3 +683,33 @@ footer.container {
       padding: 0;
       position: absolute;
       width: 1px; } }
+.geometry {
+  /* imitate a background image */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  /* siblings to this element should get a higher z-index
+     WARNING: this is probably a bit dangerous... */
+  /* colors */
+  fill: none;
+  stroke: rgba(128, 160, 160, 0.2); }
+  .geometry ~ * {
+    position: relative;
+    z-index: 200; }
+  .geometry .point {
+    fill: white;
+    stroke: inherit; }
+  .geometry .handle {
+    fill: none;
+    stroke: transparent;
+    stroke-width: 20; }
+  .geometry .active {
+    stroke-width: 2px;
+    cursor: pointer; }
+  .geometry .hex {
+    stroke: rgba(160, 100, 50, 0.5); }

@@ -298,7 +298,8 @@ footer.container {
 .home {
   @media only screen and (min-width: $container-width) {
     margin-top: lines(3);
-  } 
+  }
+  .container { position: relative; }
 }
 
 .about {

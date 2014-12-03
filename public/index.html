@@ -18,6 +18,7 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="container">
+      <svg viewbox="0 0 800 800" preserveAspectRatio="xMinYMin meet" class="geometry"></svg>
       <header class="site-header">
         <h1><span class="name">Anand Thakker</span><span class="email"></span><span class="protocol">http://</span>anand.codes</h1>
         <nav role="navigation">
@@ -68,6 +69,72 @@ with new ideas, make cool stuff, and try to do some&nbsp;good.</p>
       </section>
     </footer>
     <script src="/js/main.js"></script>
+    <script>
+      function init() {
+        var svg = document.querySelector('svg'),
+            viewBox = svg.viewBox.baseVal,
+            width = viewBox.width,
+            height = viewBox.height;
+            
+        /* align 0,0 to the "axis" origin */
+        var header = document.querySelector('.site-header h1').getBoundingClientRect(),
+            svgbox = svg.getBoundingClientRect(),
+            shiftx = (header.left - svgbox.left)/svgbox.width*width + 36,
+            shifty = (header.bottom - svgbox.top)/svgbox.height*height;
+            
+        d3.select(svg).append('g')
+          .attr('transform', 'translate('+shiftx+','+shifty+')'); // -185, 246
+          
+        /* setup geom scene */
+        var g = document.querySelector('svg g');
+        var scene = new geom.Scene({
+        width: width,
+        height: height,
+        left: viewBox.x,
+        top: viewBox.y,
+        right: viewBox.x + width,
+        bottom: viewBox.y + height
+        })
+        var render = geom.renderer(scene, g);
+        
+        
+        scene
+        .point(0, 0)
+        .point(36 * 6, 0)
+        .circle(0, 1)
+        .circle(1, 0)
+        .circle(2, 0)
+        .circle(4, 0)
+        .circle(6, 0)
+        .circle(8, 0)
+        .circle(3, 0)
+        .group('hex')
+        .segment(1,2)
+        .segment(2,4)
+        .segment(4,6)
+        .segment(6,8)
+        .segment(8,3)
+        .segment(3,1)
+        
+        function update() {
+        scene.updateIntersections();
+        render();
+        d3.selectAll('.free-point').call(geom.behavior.move.point(update));
+        d3.selectAll('.circle').call(geom.behavior.move.circle(update));
+        d3.selectAll('.line').call(geom.behavior.move.line(update));
+        }
+        
+        geom.behavior.follow(g, scene.P(1), update);
+        
+        update();
+      }
+      
+      document.addEventListener('DOMContentLoaded', init)
+      
+    </script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="/js/geometry.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

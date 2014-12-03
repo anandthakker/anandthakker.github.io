@@ -35,18 +35,19 @@ html.no-js(lang='')
     | <![endif]-->
 
     div.container
-      header.site-header
-        block header
-          h1
-            span.name Anand Thakker
-            span.email 
-            span.protocol http://
-            | anand.codes
-          include navigation
+      block main-container
+        header.site-header
+          block header
+            h1
+              span.name Anand Thakker
+              span.email 
+              span.protocol http://
+              | anand.codes
+            include navigation
 
-      main.main
-        block content
-          != typogr(page.html).typogrify()
+        main.main
+          block content
+            != typogr(page.html).typogrify()
 
     footer.container
       block footer
