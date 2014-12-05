@@ -27,4 +27,4 @@ Regardless of the year or season, I'm eager to play
 with new ideas, make cool stuff, and try to do some good.
 
 ####Current status:
-Traveling until Spring 2015.  Possibly available for small projects.
+Traveling until Spring 2015.
