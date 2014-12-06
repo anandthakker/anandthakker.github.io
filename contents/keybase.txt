@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/anandthakker
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://anand.codes
+  * I am anandthakker (https://keybase.io/anandthakker) on keybase.
+  * I have a public key with fingerprint 7F94 DE91 B40A 4E3D B43B  6886 F288 30EB 768D D2ED
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "7f94de91b40a4e3db43b6886f28830eb768dd2ed",
+            "host": "keybase.io",
+            "key_id": "f28830eb768dd2ed",
+            "uid": "ac663256f4c3d8344c7862e53154a100",
+            "username": "anandthakker"
+        },
+        "service": {
+            "hostname": "anand.codes",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1417876045,
+    "expire_in": 157680000,
+    "prev": "77f54a90c850245a979b982a21afc8865c4842a6624e14e29a556b0e5f54ac95",
+    "seqno": 10,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
+Comment: GPGTools - https://gpgtools.org
+
+owFtkVtIFFEYx3ezLBezsMQXERuQcDWb25md2SICgyholYgiyR3nctaddGe22XFz
+3RWlC1po+CBpPnQnWEtLMkEIukAv5gVFky5UDylbqxEmyYZmZ6Sgh87L4Xzf7///
+Lqd1Y5LFZp1vwuPBlvE568unP0TLkbPp5WFM1OQQ5gxjlXD18ihqBdT9uqIamBNz
+eDhahhwh0rhAQ0oWaUpkWJbxkCxL4VB0MKwsk1DGCjCvFjAVyEYUArBQ0VAMPXhF
+RtH/8NWrCUFiGIoEjIeWKJmlaFpysAwJAUUAWiBw3AQDUFcFHzRpVVBlwytUVkId
+qyvAUCaoSNDs2yz/L1UoaTIMILlf1wxN0qpQwmsYfqepM0J+EzwNRf6PBS8qqoxG
+R4Ig1AOKpmJOApGSoZieBE04WAeD06AAgzV+RYe8YhIADYSjY5aBQXNhDg9qnMMl
+FuAkDQTOwYkcSwokIXgktDgg0SxNCgxD0pCgIckJADAiDoEpkziAmUOdUjXkjUwN
+oQJ5BpQKVTCqdYjV2S5Ys9ZarDZL8ro15vdZbCmb/36qvLJ+xacN8v5PyY1d9Uvg
+YsjlS+BjpVJJcm5xU0PpaGbRu4W8xm1725Oy9Lf3L1fZbx6L9UY7DlzKDhWmJnTb
++Tu1E+cY15sP78Nzr0+A6eaayfmW5xkjDZuKyqZ7wrj4uPjFwWRvPPEtkxk8TF3X
+ln6NNLs/2/uW2/alils7dnXxA+6M6kf9y+7se4nojpSP2zsjvtihyaQ92FQr//X4
+ySE8hxlbXpmYmXH1TI0Oz9b6BxbtbP5SPNpOKbEtTxZnI7kR++6ctPzvlviZvIH4
+Qrqb2vlzf6Qz7erw0d7svmu3vtwet9V3tw3diJY/fHD3yhhfAsqmnvV3b3D15r2K
+/QY=
+=+8iM
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/anandthakker
+
+==================================================================
