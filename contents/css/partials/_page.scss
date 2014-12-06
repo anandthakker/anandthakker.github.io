@@ -454,7 +454,7 @@ footer.container {
     .work[data-has-details]:hover {
       h4:after { content: " (hide description)"; }
     }
-    .work.collapse[data-has-details] {
+    .work.collapse[data-has-details]:not(:target) {
       margin-bottom: 0;
       h4:after { content: " (show description)"; }
       .details { @include visuallyhidden; }
