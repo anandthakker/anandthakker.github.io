@@ -38,14 +38,53 @@
 Granada, I wanted to try to explore some of the underlying symmetry and
 geometry. I could have jumped straight to the tessellations, but it felt like
 a deeper way to get into it would be to build up from basic constructions, and
-so, over the course of a few train rides, I started with this. <a href="https://github.com/anandthakker/euclid">Demo</a> / <a href="http://anandthakker.github.io/euclid/">Code</a>.</p>
-<p>Next up, based on&nbsp;this:</p>
-<ul>
+so, over the course of a few train rides, I started with this little library for
+building and rendering plane geometry scenes. <a href="https://github.com/anandthakker/euclid">Demo</a> / <a href="http://anandthakker.github.io/euclid/">Code</a>.</p>
+<p>Example:</p>
+<pre><code class="lang-javascript"><span class="keyword">var</span> geom = <span class="built_in">require</span>(<span class="string">'euclid'</span>),
+    svg = document.querySelector(<span class="string">'svg'</span>),
+    scene = <span class="keyword">new</span> geom.Scene({left: <span class="number">0</span>, right: <span class="number">500</span>, top: <span class="number">0</span>, bottom: <span class="number">500</span>}),
+    render = geom.renderer(scene, svg);
+
+scene
+  .point(<span class="number">200</span>, <span class="number">250</span>)
+  .point(<span class="number">300</span>, <span class="number">250</span>)
+  .segment(<span class="number">0</span>,<span class="number">1</span>)
+  .circle(<span class="number">0</span>,<span class="number">1</span>)
+  .circle(<span class="number">1</span>,<span class="number">0</span>)
+  .line(<span class="number">0</span>,<span class="number">2</span>)
+  .segment(<span class="number">0</span>,<span class="number">3</span>)
+  .segment(<span class="number">4</span>,<span class="number">1</span>)
+  .segment(<span class="number">2</span>,<span class="number">6</span>)
+
+render();
+</code></pre>
+<p><code>point()</code> takes coordinates; <code>circle</code>, 
+<code>line</code>, and <code>segment</code> each take two point indexes.  E.g., <code>circle(1,0)</code> adds
+a circle centered at point 1 and with point 0 on the circle.  As shapes are added,
+any new intersections points are added to the scene, which is how things like 
+<code>segment(2,6)</code> can work even though we only created two initial&nbsp;points.  </p>
+<h2 id="problems">Problems</h2>
+<ol>
+<li><p>This <span class="caps">API</span> is too simplistic, because as you drag points around, it’s possible to change the number of intersections, which of course breaks things. I’ll change this soon to something&nbsp;like:</p>
+<pre><code class="lang-javascript">scene.point(<span class="string">'A'</span>,x1,y1)
+.point(<span class="string">'B'</span>,x2,y2)
+.circle({center: <span class="string">'A'</span>, radius: <span class="string">'<span class="caps">AB</span>'</span>})
+.circle({center: <span class="string">'B'</span>, radius: <span class="string">'<span class="caps">BA</span>'</span>})
+.intersection(<span class="string">'C'</span>, [{circle: <span class="string">'A'</span>}, {circle: <span class="string">'B'</span>}]) <span class="comment">// would arbitrarily choose one?</span>
+</code></pre>
+<p>That’s a less ambiguous way to define a diagram, and then objects depending on an intersection can just be invalidated when they cease to exist and added back if they reappear. (Or actions that would remove a labeled intersection could be&nbsp;prevented.)</p>
+</li>
+<li><p>It’s a little slow right now because it calculates intersections between every pair of objects each frame; I expect I’ll need to optimize that with a modified <code>sweepline</code> algorithm when I start upping the number of objects in the&nbsp;scene.</p>
+</li>
+</ol>
+<h2 id="next-up-based-on-this-">Next up, based on&nbsp;this:</h2>
+<ol>
 <li>A tessellation builder using this that will, hopefully, be simultaneously simple to use
 and true to the underlying&nbsp;geometry.</li>
 <li>A geometry proof parser that attempts to generate diagrams based on the text in 
 a proof. (This is very ambitious, but would be very&nbsp;cool.)</li>
-</ul>
+</ol>
 </section>
         </article>
       </main>
