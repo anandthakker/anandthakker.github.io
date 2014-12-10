@@ -1,0 +1,17 @@
+.experiment canvas {
+  max-width: 100%;
+  border: 1px solid #aaa; }
+.experiment .draw {
+  width: 75%;
+  display: inline-block; }
+.experiment .info {
+  width: 24%;
+  display: inline-block;
+  vertical-align: top; }
+  .experiment .info h4 {
+    margin-top: 0; }
+  .experiment .info .original-line,
+  .experiment .info .simplified-line {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%; }
