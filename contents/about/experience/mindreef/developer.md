@@ -1,5 +1,5 @@
 ---
-title: "Developer: The Usual Stuff"
+title: "Developer: Java, C#, Javascript, XML/WSDL/SOAP"
 id: developer
 order: 0
 show: true

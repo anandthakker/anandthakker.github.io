@@ -5,7 +5,7 @@ show: true
 order: 1
 ---
 
-The content for the math curriculum that my colleagues and I wrote (see [below](/resume/#curriculum-writing)) has been locked up in about 40 InDesign documents, along with thousands equations in the form of MathType .EPS files. I'm in the process of:
+The content for the math curriculum that my colleagues and I wrote (see ['Curriculum Writing'](/resume/#curriculum-writing) below) has been locked up in about 40 InDesign documents, along with thousands equations in the form of MathType .EPS files. I'm in the process of:
 
 1. Extracting/converting the content into clean HTML.
 2. Using *CSS* (well, *SASS*) to reproduce the existing design/layout in print (via

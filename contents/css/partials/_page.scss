@@ -54,13 +54,24 @@ img {
     color: black;
   }
   
+  a[href^="http"]:not([href*="twitter"]) {
+    color: $link-color;
+    &:after {
+      text-decoration: none;
+      content: ' (' attr(href) ')';
+      word-break: break-all;
+    }
+  }
+  
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .organization > p {
     page-break-after: avoid;
+    page-break-inside: avoid;
   }
   .work {
     page-break-inside: avoid;
@@ -376,15 +387,6 @@ footer.container {
 
 
 .resume {
-  @media only screen {
-    a[href^=http]:after {
-      content: "⧉";
-      font: 1em/1.5em;
-      margin: 0 0 0 2px;
-      text-align: center;
-    }
-  }
-  
   & > section h2 { @extend %h2; }
   
   .skills {
@@ -433,6 +435,15 @@ footer.container {
     }
   }
   
+  @media only screen {
+    a[href^=http]:after {
+      content: "⧉";
+      font: 1em/1.5em;
+      margin: 0 0 0 2px;
+      text-align: center;
+    }
+  }
+  
   @media print {
     &:after {
       content: "Thanks for your time and consideration.";
@@ -441,6 +452,37 @@ footer.container {
       margin-top: 2em;
       width: 100%;
     }
+    
+    .work[data-has-details] {
+      h4 {
+        display: inline-block;
+        vertical-align: top;
+        width: 32%;
+        padding-right: 1%;
+      }
+      .details {
+        display: inline-block;
+        vertical-align: top;
+        width: 60%;
+        padding-top: .25em;
+        font-size: scale-to(-1);
+        p { padding-left: .5em; }
+        p:first-of-type {
+          border-left: 1px dotted black;
+        }
+      }
+      
+      @include clearfix;
+    }
+    
+    * + .organization,
+    * + .school {
+      margin-top: lines(2);
+    }
+    
+    /*** HACK because Chrome isn't respecting page-break-after:avoid properly
+        for this one. */
+    .organization:nth-of-type(3) { page-break-before: always; }
   }
 }
 

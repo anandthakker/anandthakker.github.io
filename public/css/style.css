@@ -26,15 +26,11 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.site-header:before, footer.container:before, .posts:before,
-.site-header:after,
-footer.container:after,
-.posts:after {
+.site-header:before, footer.container:before, .posts:before, .site-header:after, footer.container:after, .posts:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
-
 .site-header:after, footer.container:after, .posts:after {
   clear: both; }
 
@@ -147,13 +143,22 @@ img {
   a {
     color: black; }
 
+  a[href^="http"]:not([href*="twitter"]) {
+    color: #0002CC; }
+    a[href^="http"]:not([href*="twitter"]):after {
+      text-decoration: none;
+      content: " (" attr(href) ")";
+      word-break: break-all; }
+
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6 {
-    page-break-after: avoid; }
+  h6,
+  .organization > p {
+    page-break-after: avoid;
+    page-break-inside: avoid; }
 
   .work {
     page-break-inside: avoid; } }
@@ -627,12 +632,6 @@ footer.container {
 .projects .project p {
   max-width: calc(100% - 4em); }
 
-@media only screen {
-  .resume a[href^=http]:after {
-    content: "⧉";
-    font: 1em/1.5em;
-    margin: 0 0 0 2px;
-    text-align: center; } }
 .resume .skills .skill {
   font-weight: bold; }
 .resume .work {
@@ -655,13 +654,49 @@ footer.container {
     display: block;
     float: none;
     padding: 0; } }
+@media only screen {
+  .resume a[href^=http]:after {
+    content: "⧉";
+    font: 1em/1.5em;
+    margin: 0 0 0 2px;
+    text-align: center; } }
 @media print {
-  .resume:after {
-    content: "Thanks for your time and consideration.";
-    display: block;
-    border-top: 1px solid black;
-    margin-top: 2em;
-    width: 100%; } }
+  .resume {
+    /*** HACK because Chrome isn't respecting page-break-after:avoid properly
+        for this one. */ }
+    .resume:after {
+      content: "Thanks for your time and consideration.";
+      display: block;
+      border-top: 1px solid black;
+      margin-top: 2em;
+      width: 100%; }
+    .resume .work[data-has-details] h4 {
+      display: inline-block;
+      vertical-align: top;
+      width: 32%;
+      padding-right: 1%; }
+    .resume .work[data-has-details] .details {
+      display: inline-block;
+      vertical-align: top;
+      width: 60%;
+      padding-top: .25em;
+      font-size: 0.66667em; }
+      .resume .work[data-has-details] .details p {
+        padding-left: .5em; }
+      .resume .work[data-has-details] .details p:first-of-type {
+        border-left: 1px dotted black; }
+    .resume .work[data-has-details]:before, .resume .work[data-has-details]:after {
+      content: " ";
+      /* 1 */
+      display: table;
+      /* 2 */ }
+    .resume .work[data-has-details]:after {
+      clear: both; }
+    .resume * + .organization,
+    .resume * + .school {
+      margin-top: 3rem; }
+    .resume .organization:nth-of-type(3) {
+      page-break-before: always; } }
 
 @media only screen {
   .js .work[data-has-details] h4 {
