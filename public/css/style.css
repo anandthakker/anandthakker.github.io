@@ -144,9 +144,8 @@ img {
     color: black; }
 
   a[href^="http"]:not([href*="twitter"]) {
-    color: #0002CC; }
+    border-bottom: 1px dotted black; }
     a[href^="http"]:not([href*="twitter"]):after {
-      text-decoration: none;
       content: " (" attr(href) ")";
       word-break: break-all; }
 

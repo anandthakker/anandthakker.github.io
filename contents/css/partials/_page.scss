@@ -55,9 +55,8 @@ img {
   }
   
   a[href^="http"]:not([href*="twitter"]) {
-    color: $link-color;
+    border-bottom: 1px dotted black;
     &:after {
-      text-decoration: none;
       content: ' (' attr(href) ')';
       word-break: break-all;
     }
