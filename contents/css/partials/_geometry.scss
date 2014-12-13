@@ -1,37 +1,21 @@
 
+/* base styles for euclid js */
 .geometry {
-
-  /* imitate a background image */
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  
-  /* siblings to this element should get a higher z-index
-     WARNING: this is probably a bit dangerous... */
-  & ~ * {
-    position: relative;
-    z-index: 200;
-  }
-  
-  /* colors */
+  stroke: black;
   fill: none;
-  stroke: rgba(128, 160, 160, .2);
-  
-  .point { fill: white; stroke: inherit; }
+  .point {
+    fill: black;
+    stroke: none;
+  }
+  .free-point {
+    fill: blue;
+    stroke: none;
+    cursor: pointer;
+  }
   .handle {
     fill: none;
     stroke: rgba(0,0,0,0);
     stroke-width: 20;
   }
-  .active {
-    stroke-width: 2px;
-    cursor: pointer;
-  }
-  .hex { stroke: rgba(160, 100, 50, .5); }
-  
+  .active { stroke-width: 2px; cursor: pointer; }
 }

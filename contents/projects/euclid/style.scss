@@ -1,0 +1,34 @@
+@import "../../css/partials/base";
+
+.geometry {
+  height: lines(15);
+  width: 100%;
+  margin-bottom: 1em;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  
+  .guides {
+    stroke: #ddd;
+    &.point {
+      fill: #fff;
+      stroke: #888;
+    }
+  }
+  .perpendicular-bisectors {
+    stroke-dasharray: 5,5;
+  }
+  .result {
+    stroke: #050;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: lines(25);
+  border: none;
+}
+
+.message {
+  font-size: scale-to(-1);
+  color: $red;
+}

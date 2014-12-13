@@ -2,7 +2,7 @@
 title: "Euclidean geometry in JS."
 date: 2014-12-03
 type: project
-template: article.jade
+template: experiment.jade
 github: anandthakker/euclid
 description: >
   Model Euclidean geometry, and draw/interact with it in the browser using d3.
@@ -11,55 +11,60 @@ tags:
   - d3js
   - geometry
   - visual
+scripts:
+  - http://d3js.org/d3.v3.min.js
+  - /js/geometry.js
+  - script.js
+styles:
+  - style.css
 ---
+
+<svg class="geometry" viewbox="0 0 500 500" preserveAspectRatio="xMidYMin meet">
+</svg>
 
 After seeing the [incredible geometric designs][1] throughout the Alhambra in
 Granada, I wanted to try to explore some of the underlying symmetry and
 geometry. I could have jumped straight to the tessellations, but it felt like
 a deeper way to get into it would be to build up from basic constructions, and
 so, over the course of a few train rides, I started with this little library for
-building and rendering plane geometry scenes. [Demo][2] / [Code][3].
+building and rendering plane geometry scenes. [Code on Github][3].
 
-Example:
+Building the scene can be done programmatically with a [simple API][2], or by
+describing the it with a (sort of) friendly grammar that the library can parse.
+The diagram above comes from the text below (which you can edit, at your own
+risk!).
 
-```javascript
-var geom = require('euclid'),
-    svg = document.querySelector('svg'),
-    scene = new geom.Scene({left: 0, right: 500, top: 0, bottom: 500}),
-    render = geom.renderer(scene, svg);
-    
-scene
-  .point(200, 250)
-  .point(300, 250)
-  .segment(0,1)
-  .circle(0,1)
-  .circle(1,0)
-  .line(0,2)
-  .segment(0,3)
-  .segment(4,1)
-  .segment(2,6)
-  
-render();
-```
+<div class="message">
+</div>
+<textarea class="code">
+[main-figure]
+Let a = (150, 100).
+Let b = (350, 300).
+Let c = (300, 400).
+Let s be a segment with endpoints a and b.
+Let t be a segment with endpoints b and c.
+Let u be a segment from a to c.
 
-`point()` takes coordinates; `circle`, 
-`line`, and `segment` each take two point indexes.  E.g., `circle(1,0)` adds
-a circle centered at point 1 and with point 0 on the circle.  As shapes are added,
-any new intersections points are added to the scene, which is how things like 
-`segment(2,6)` can work even though we only created two initial points.  
+[guides]
+Let k be a circle centered at a containing b.
+Let l be a circle centered at b containing a.
+Let m be the circle centered at b containing c.
+Let n be the circle centered at c containing b.
+d = the intersection of k and l
+e = the intersection of k and l that is not d
+f = the intersection of m and n
+g = the intersection of m and n that is not f
 
-## Problems
-1. This API is too simplistic, because as you drag points around, it's possible to change the number of intersections, which of course breaks things. I'll change this soon to something like:
-   ```javascript
-   scene.point('A',x1,y1)
-   .point('B',x2,y2)
-   .circle({center: 'A', radius: 'AB'})
-   .circle({center: 'B', radius: 'BA'})
-   .intersection('C', [{circle: 'A'}, {circle: 'B'}]) // would arbitrarily choose one?
-   ```
-   That's a less ambiguous way to define a diagram, and then objects depending on an intersection can just be invalidated when they cease to exist and added back if they reappear. (Or actions that would remove a labeled intersection could be prevented.)
+[perpendicular-bisectors]
+Let v be the line determined by d and e
+Let w be the line determined by f and g
 
-2. It's a little slow right now because it calculates intersections between every pair of objects each frame; I expect I'll need to optimize that with a modified `sweepline` algorithm when I start upping the number of objects in the scene.
+[result]
+Let O be the intersection of v and w
+Draw the circle centered at O containing a.
+</textarea>
+
+
 
 ## Next up, based on this:
 1. A tessellation builder using this that will, hopefully, be simultaneously simple to use
@@ -69,5 +74,6 @@ any new intersections points are added to the scene, which is how things like
 
 
 [1]: https://www.google.com/search?q=alhambra+geometry&espv=2&tbm=isch&tbo=u&source=univ&sa=X&ei=pXR_VL-TGob5asH2guAG&ved=0CDgQsAQ&biw=1146&bih=672
-[2]: https://github.com/anandthakker/euclid
-[3]: http://anandthakker.github.io/euclid/
+[2]: https://anandthakker.github.io/euclid/
+[3]: https://github.com/anandthakker/euclid
+[4]: https://anandthakker.github.io/euclid/parse.html

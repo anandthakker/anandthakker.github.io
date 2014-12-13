@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
     <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
     <script src="/js/vendor/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <body class="article-detail">
+  <body class="experiment-detail">
     <!--[if lt IE 10]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,54 +31,54 @@
         </nav>
       </header>
       <main class="main">
-        <article class="article">
-          <header><span class="date">03 December 2014</span>
+        <article class="experiment">
+          <header>
             <h2>Euclidean geometry in JS.</h2>
           </header>
-          <section class="content"><p>After seeing the <a href="https://www.google.com/search?q=alhambra+geometry&amp;espv=2&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=pXR_VL-TGob5asH2guAG&amp;ved=0CDgQsAQ&amp;biw=1146&amp;bih=672">incredible geometric designs</a> throughout the Alhambra in
+          <section class="content"><svg class="geometry" viewbox="0 0 500 500" preserveAspectRatio="xMidYMin meet">
+</svg>
+
+<p>After seeing the <a href="https://www.google.com/search?q=alhambra+geometry&amp;espv=2&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=pXR_VL-TGob5asH2guAG&amp;ved=0CDgQsAQ&amp;biw=1146&amp;bih=672">incredible geometric designs</a> throughout the Alhambra in
 Granada, I wanted to try to explore some of the underlying symmetry and
 geometry. I could have jumped straight to the tessellations, but it felt like
 a deeper way to get into it would be to build up from basic constructions, and
 so, over the course of a few train rides, I started with this little library for
-building and rendering plane geometry scenes. <a href="https://github.com/anandthakker/euclid">Demo</a> / <a href="http://anandthakker.github.io/euclid/">Code</a>.</p>
-<p>Example:</p>
-<pre><code class="lang-javascript"><span class="keyword">var</span> geom = <span class="built_in">require</span>(<span class="string">'euclid'</span>),
-    svg = document.querySelector(<span class="string">'svg'</span>),
-    scene = <span class="keyword">new</span> geom.Scene({left: <span class="number">0</span>, right: <span class="number">500</span>, top: <span class="number">0</span>, bottom: <span class="number">500</span>}),
-    render = geom.renderer(scene, svg);
+building and rendering plane geometry scenes. <a href="https://github.com/anandthakker/euclid">Code on Github</a>.</p>
+<p>Building the scene can be done programmatically with a <a href="https://anandthakker.github.io/euclid/">simple <span class="caps">API</span></a>, or by
+describing the it with a (sort of) friendly grammar that the library can parse.
+The diagram above comes from the text below (which you can edit, at your own&nbsp;risk!).</p>
+<p><div class="message">
+</div></p>
+<textarea class="code">
+[main-figure]
+Let a = (150, 100).
+Let b = (350, 300).
+Let c = (300, 400).
+Let s be a segment with endpoints a and b.
+Let t be a segment with endpoints b and c.
+Let u be a segment from a to c.
 
-scene
-  .point(<span class="number">200</span>, <span class="number">250</span>)
-  .point(<span class="number">300</span>, <span class="number">250</span>)
-  .segment(<span class="number">0</span>,<span class="number">1</span>)
-  .circle(<span class="number">0</span>,<span class="number">1</span>)
-  .circle(<span class="number">1</span>,<span class="number">0</span>)
-  .line(<span class="number">0</span>,<span class="number">2</span>)
-  .segment(<span class="number">0</span>,<span class="number">3</span>)
-  .segment(<span class="number">4</span>,<span class="number">1</span>)
-  .segment(<span class="number">2</span>,<span class="number">6</span>)
+[guides]
+Let k be a circle centered at a containing b.
+Let l be a circle centered at b containing a.
+Let m be the circle centered at b containing c.
+Let n be the circle centered at c containing b.
+d = the intersection of k and l
+e = the intersection of k and l that is not d
+f = the intersection of m and n
+g = the intersection of m and n that is not f
 
-render();
-</code></pre>
-<p><code>point()</code> takes coordinates; <code>circle</code>, 
-<code>line</code>, and <code>segment</code> each take two point indexes.  E.g., <code>circle(1,0)</code> adds
-a circle centered at point 1 and with point 0 on the circle.  As shapes are added,
-any new intersections points are added to the scene, which is how things like 
-<code>segment(2,6)</code> can work even though we only created two initial&nbsp;points.  </p>
-<h2 id="problems">Problems</h2>
-<ol>
-<li><p>This <span class="caps">API</span> is too simplistic, because as you drag points around, it’s possible to change the number of intersections, which of course breaks things. I’ll change this soon to something&nbsp;like:</p>
-<pre><code class="lang-javascript">scene.point(<span class="string">'A'</span>,x1,y1)
-.point(<span class="string">'B'</span>,x2,y2)
-.circle({center: <span class="string">'A'</span>, radius: <span class="string">'<span class="caps">AB</span>'</span>})
-.circle({center: <span class="string">'B'</span>, radius: <span class="string">'<span class="caps">BA</span>'</span>})
-.intersection(<span class="string">'C'</span>, [{circle: <span class="string">'A'</span>}, {circle: <span class="string">'B'</span>}]) <span class="comment">// would arbitrarily choose one?</span>
-</code></pre>
-<p>That’s a less ambiguous way to define a diagram, and then objects depending on an intersection can just be invalidated when they cease to exist and added back if they reappear. (Or actions that would remove a labeled intersection could be&nbsp;prevented.)</p>
-</li>
-<li><p>It’s a little slow right now because it calculates intersections between every pair of objects each frame; I expect I’ll need to optimize that with a modified <code>sweepline</code> algorithm when I start upping the number of objects in the&nbsp;scene.</p>
-</li>
-</ol>
+[perpendicular-bisectors]
+Let v be the line determined by d and e
+Let w be the line determined by f and g
+
+[result]
+Let O be the intersection of v and w
+Draw the circle centered at O containing a.
+</textarea>
+
+
+
 <h2 id="next-up-based-on-this-">Next up, based on&nbsp;this:</h2>
 <ol>
 <li>A tessellation builder using this that will, hopefully, be simultaneously simple to use
@@ -90,7 +91,7 @@ a proof. (This is very ambitious, but would be very&nbsp;cool.)</li>
       </main>
     </div>
     <footer class="container">
-      <div class="pagenav"><a href="/notes/">« Full blog</a></div>
+      <div class="pagenav"><a href="/notes/">« Home</a></div>
       <section class="copy">
         <p>&copy; 2014 Anand Thakker</p>
         <nav>
@@ -107,6 +108,9 @@ a proof. (This is very ambitious, but would be very&nbsp;cool.)</li>
       </section>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="/js/geometry.js"></script>
+    <script src="script.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
