@@ -26,11 +26,12 @@ After seeing the [incredible geometric designs][1] throughout the Alhambra in
 Granada, I wanted to try to explore some of the underlying symmetry and
 geometry. I could have jumped straight to the tessellations, but it felt like
 a deeper way to get into it would be to build up from basic constructions, and
-so, over the course of a few train rides, I started with this little library for
-building and rendering plane geometry scenes. [Code on Github][3].
+so, over the course of a few train rides, I started with this little 
+library--**EuclidJS**--for building and rendering plane geometry scenes.
+[Code on Github][3].
 
 Building the scene can be done programmatically with a [simple API][2], or by
-describing the it with a (sort of) friendly grammar that the library can parse.
+describing the it with a (sort of) friendly grammar that Euclid can parse.
 The diagram above comes from the text below (which you can edit, at your own
 risk!).
 
@@ -66,7 +67,13 @@ Draw the circle centered at O containing a.
 
 
 
-## Next up, based on this:
+## Next up:
+1. I'd love to make the grammar much more concise, but still friendly.  One
+   obvious addition would be allowing references like "AB" (for a segment), 
+   "line AB", "circle M".  Another would be to enable working with pairs (or
+   more) objects, e.g., "Let d and e be the points where circles a and b intersect",
+   or even "Let v be the line determined by the points where circles a and b 
+   intersect".
 1. A tessellation builder using this that will, hopefully, be simultaneously simple to use
   and true to the underlying geometry.
 2. A geometry proof parser that attempts to generate diagrams based on the text in 
