@@ -331,20 +331,29 @@ footer.container {
     }
     
     /* colors */
+    $orange: rgba(160, 100, 50, .5);
+    $lightorange: rgba(160, 100, 50, .2);
+    $lightgreen: rgba(100, 150, 50, .5);
+    
     fill: none;
-    stroke: rgba(128, 160, 160, .2);
+    stroke: rgba(128, 160, 160, .3);
     
     .point { fill: white; stroke: inherit; }
-    .handle {
-      fill: none;
-      stroke: rgba(0,0,0,0);
-      stroke-width: 20;
-    }
-    .active {
-      stroke-width: 2px;
-      cursor: pointer;
-    }
-    .hex { stroke: rgba(160, 100, 50, .5); }
+    .main-figure.point { stroke: $orange; fill: $lightorange; }
+    .guides { }
+    .perpendicular-bisectors { stroke-dasharray: 5,5; stroke: $lightgreen; }
+    .result { stroke: $orange; }
+  }
+  
+  
+  .geometry-text {
+    border: none;
+    width: 100%;
+    height: lines(10);
+  }
+  
+  .collapse > *:not(a) {
+    @include visuallyhidden;
   }
 }
 
