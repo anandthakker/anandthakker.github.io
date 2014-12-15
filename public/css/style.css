@@ -636,6 +636,8 @@ footer.container {
       stroke: rgba(100, 150, 50, 0.5); }
     .home .geometry .result {
       stroke: rgba(160, 100, 50, 0.5); }
+  .home .message {
+    color: #CC0200; }
   .home .geometry-text {
     border: none;
     width: 100%;

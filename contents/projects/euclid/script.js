@@ -16,13 +16,12 @@ function init() {
   text.addEventListener('keyup', parse);
 
   function parse() {
-    scene.parse(text.value.trim(), onparsed);
+    geom.parse(scene, text.value.trim(), onparsed);
   }
 
   function onparsed(res, err) {
     if (err) {
       message.innerText = err.line + ':' + err.column + ': ' + err.message;
-      console.log(err);
     } else {
       message.innerText = '';
       update();

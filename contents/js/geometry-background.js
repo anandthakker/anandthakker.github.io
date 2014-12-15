@@ -33,11 +33,27 @@ function init() {
   })
   var render = geom.renderer(scene, g);
   
+  
+  var text = document.querySelector('textarea');
+  var message = document.querySelector('.message');
+  text.addEventListener('keyup', parse);
+  
   /* parse textarea into geom scene. */
+  var last = '';
   function parse() {
-    var text = document.querySelector('.geometry-text').value;
-    text = text.replace(/#.*$/gm, '');
-    scene.parse(text);
+    var curr = text.value.replace(/#.*$/gm, '');
+    if(curr !== last) {
+      last = curr;
+      geom.parse(scene, curr, onparsed);
+    }
+  }
+  function onparsed(res, err) {
+    if (err) {
+      message.innerText = err.line + ':' + err.column + ': ' + err.message;
+    } else {
+      message.innerText = '';
+      update();
+    }
   }
   
   /* update rendered scene. */

@@ -55,26 +55,22 @@ The diagram above comes from the text below (which you can edit, at your own&nbs
 Let a = (150, 100).
 Let b = (350, 300).
 Let c = (300, 400).
-Let s be a segment with endpoints a and b.
-Let t be a segment with endpoints b and c.
-Let u be a segment from a to c.
+Draw a segment joining a and b.
+Draw a segment with endpoints b and c.
+Draw a segment from a to c.
 
 [guides]
-Let k be a circle centered at a containing b.
-Let l be a circle centered at b containing a.
-Let m be the circle centered at b containing c.
+Let k be a circle through b centered at a.
+Let l be a circle containing a with center b.
+Let m be the circle centered at b through c.
 Let n be the circle centered at c containing b.
 d = the intersection of k and l
 e = the intersection of k and l that is not d
 f = the intersection of m and n
 g = the intersection of m and n that is not f
 
-[perpendicular-bisectors]
-Let v be the line determined by d and e
-Let w be the line determined by f and g
-
 [result]
-Let O be the intersection of v and w
+Let O be the intersection of line d-e and line f-g
 Draw the circle centered at O containing a.
 </textarea>
 
@@ -82,10 +78,8 @@ Draw the circle centered at O containing a.
 
 <h2 id="next-up-">Next&nbsp;up:</h2>
 <ol>
-<li>I’d love to make the grammar much more concise, but still friendly.  One
-obvious addition would be allowing references like “<span class="caps">AB</span>” (for a segment), 
-“line AB”, “circle M”.  Another would be to enable working with pairs (or
-more) objects, e.g., “Let d and e be the points where circles a and b intersect”,
+<li>I’d still like to make the grammar more flexible (and thus concise), with, e.g.,
+things like “Let d and e be the points where circles a and b intersect”,
 or even “Let v be the line determined by the points where circles a and b&nbsp;intersect”.</li>
 <li>A tessellation builder using this that will, hopefully, be simultaneously simple to use
 and true to the underlying&nbsp;geometry.</li>

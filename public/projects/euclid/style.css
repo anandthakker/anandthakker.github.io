@@ -18,10 +18,10 @@ http://www.paulirish.com/2012/box-sizing-border-box-ftw/
     .geometry .guides.point {
       fill: #fff;
       stroke: #888; }
-  .geometry .perpendicular-bisectors {
-    stroke-dasharray: 5,5; }
   .geometry .result {
     stroke: #050; }
+    .geometry .result.line {
+      stroke-dasharray: 5,5; }
 
 textarea {
   width: 100%;

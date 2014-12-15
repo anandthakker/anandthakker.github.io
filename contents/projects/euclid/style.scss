@@ -14,10 +14,8 @@
       stroke: #888;
     }
   }
-  .perpendicular-bisectors {
-    stroke-dasharray: 5,5;
-  }
   .result {
+    &.line { stroke-dasharray: 5,5; }
     stroke: #050;
   }
 }
