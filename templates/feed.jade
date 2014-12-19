@@ -1,0 +1,33 @@
+doctype xml
+rss(version='2.0',
+  xmlns:content='http://purl.org/rss/1.0/modules/content/',
+  xmlns:wfw='http://wellformedweb.org/CommentAPI/',
+  xmlns:dc='http://purl.org/dc/elements/1.1/'
+  xmlns:atom='http://www.w3.org/2005/Atom')
+  channel
+    - var items = env.helpers.getCardData(contents);
+    title= locals.name
+    atom:link(href=locals.url + '/feed.xml', rel='self', type='application/rss+xml')
+      link= locals.url
+      description= locals.description
+      pubDate= Date().toString()
+      generator Wintersmith - https://github.com/jnordberg/wintersmith
+      language en
+      for item in items
+        - var metadata = item.metadata || {}
+        - var title = (metadata.title ? (metadata.title + ' - ') : '') + locals.name
+        - var description = metadata.description || locals.description
+        - var permalink = locals.url + item.url
+        - var article = env.helpers.getPropertyPath(contents, item.key)
+        - var date = metadata.date ? article.rfc822date : Date().toString()
+        - var html = article.markdown ? article.getHtml(locals.url) : article.description
+        - if(html) {
+        item
+          title= title
+          link= permalink
+          pubDate= date
+          guid(isPermaLink='true')= permalink
+          author= locals.owner
+          //- passing locals.url resolves all relative urls to absolute
+          description= html
+        - }
