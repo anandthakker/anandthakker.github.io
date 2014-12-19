@@ -1,10 +1,11 @@
 doctype html
 block vars
   - var bodyclass = null;
-  - var activeSection = null;
-  - if(page && page.metadata && page.metadata.activeSection) {
-  -   activeSection = page.metadata.activeSection;
-  - }
+  - var metadata = page && page.metadata || {}
+  - var activeSection = metadata.activeSection || null
+  - var description = metadata.description || locals.description
+  - var title = (metadata.title ? (metadata.title + ' - ') : '') + locals.name
+  
 html.no-js(lang='')
   head
     block head
@@ -12,12 +13,10 @@ html.no-js(lang='')
       meta(name='viewport', content='width=device-width, initial-scale=1')
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
 
-      block seo
-        - description = locals.description
       title
         block title
-          = locals.name
-      meta(name='description', content=description)
+          = title.trim()
+      meta(name='description', content=description.trim())
 
 
       link(rel='stylesheet', type='text/css', href='/css/normalize.css')

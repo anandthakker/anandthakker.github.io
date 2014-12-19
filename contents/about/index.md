@@ -1,5 +1,7 @@
 ---
 template: about.jade
+title: Resume
+description: Resume of Anand Thakker
 filename: /resume/index.html
 activeSection: resume
 identities:
