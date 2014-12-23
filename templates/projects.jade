@@ -18,7 +18,7 @@ block content
       if !proj.metadata.draft && (!type || proj.metadata.type == type)
         article.project
           span.date
-            != moment.utc(proj.date).format('MMMM YYYY')
+            != moment.utc(proj.date).format('MMM YYYY')
           each tag in proj.metadata.tags
             div.tag= tag
 

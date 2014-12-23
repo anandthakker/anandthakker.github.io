@@ -5,7 +5,7 @@
     <atom:link href="http://anand.codes/feed.xml" rel="self" type="application/rss+xml">
       <link>http://anand.codes</link>
       <description>Personal site of Anand Thakker</description>
-      <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+      <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
       <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
       <language>en</language>
       <item>
@@ -122,7 +122,7 @@ either before scrolling up or after)?&lt;/p&gt;
       <item>
         <title>Projects - Anand Thakker</title>
         <link>http://anand.codes/projects/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/projects/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; While there’s an “Experiments” section below for smaller stuff, in fact most of these 
@@ -198,18 +198,6 @@ rearrange the maps.&lt;/p&gt;
 </description>
       </item>
       <item>
-        <title>Baseline Grid + CSS Background - Anand Thakker</title>
-        <link>http://anand.codes/projects/baseline-grid/</link>
-        <pubDate>Tue, 25 Feb 2014 01:00:00 +0100</pubDate>
-        <guid isPermaLink="true">http://anand.codes/projects/baseline-grid/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Aligning a CSS background grid with the page’s typographic grid. Based
-on &lt;a href=&quot;http://codepen.io/jasonadelia/details/DnrAe&quot;&gt;http://codepen.io/jasonadelia/details/DnrAe&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;GLlwJ&quot; data-default-tab=&quot;result&quot; class='codepen'&gt;See the Pen &lt;a href='http://codepen.io/anandthakker/pen/GLlwJ/'&gt;Baseline Grid + CSS Background&lt;/a&gt; by Anand Thakker (&lt;a href='http://codepen.io/anandthakker'&gt;@anandthakker&lt;/a&gt;) on &lt;a href='http://codepen.io'&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
-&lt;script async src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
-</description>
-      </item>
-      <item>
         <title>AngularJS Click-Off Directive - Anand Thakker</title>
         <link>http://anand.codes/projects/click-off/</link>
         <pubDate>Tue, 25 Feb 2014 01:00:00 +0100</pubDate>
@@ -271,24 +259,15 @@ myApp.directive(&lt;span class=&quot;string&quot;&gt;'clickOff'&lt;/span&gt;, &l
 </description>
       </item>
       <item>
-        <title>Drawing simplified lines - Anand Thakker</title>
-        <link>http://anand.codes/projects/draw/</link>
-        <pubDate>Thu, 19 Jun 2014 02:00:00 +0200</pubDate>
-        <guid isPermaLink="true">http://anand.codes/projects/draw/</guid>
+        <title>Baseline Grid + CSS Background - Anand Thakker</title>
+        <link>http://anand.codes/projects/baseline-grid/</link>
+        <pubDate>Tue, 25 Feb 2014 01:00:00 +0100</pubDate>
+        <guid isPermaLink="true">http://anand.codes/projects/baseline-grid/</guid>
         <author>Anand Thakker</author>
-        <description>&lt;p&gt;Draw something in the box below. As you draw, the mouse/touch coordinates
-are captured at &lt;em&gt;each&lt;/em&gt; mouseMove.  When you stop drawing, the resulting array
-of points is simplified using &lt;a href=&quot;http://mourner.github.io/simplify-js/&quot;&gt;Simplify.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This isn’t doing that much yet, but it will be once I…&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Scrap Simplify.js in favor of doing the simplification in realtime. (Pending research
-on existing algorithms for this).&lt;/li&gt;
-&lt;li&gt;Partition the drawn curve into an ordered set of non-intersecting curves&lt;/li&gt;
-&lt;li&gt;Use that to make &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this&lt;/a&gt; into a digital toy (but only if I can do it in a way that doesn’t ruin the mystery and fun!).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;draw&quot;&gt;&lt;canvas id=&quot;canvas&quot; width=&quot;900&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
-&lt;div id=&quot;info&quot; class=&quot;info&quot;&gt;&lt;/div&gt;
-
+        <description>&lt;p&gt;Aligning a CSS background grid with the page’s typographic grid. Based
+on &lt;a href=&quot;http://codepen.io/jasonadelia/details/DnrAe&quot;&gt;http://codepen.io/jasonadelia/details/DnrAe&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;GLlwJ&quot; data-default-tab=&quot;result&quot; class='codepen'&gt;See the Pen &lt;a href='http://codepen.io/anandthakker/pen/GLlwJ/'&gt;Baseline Grid + CSS Background&lt;/a&gt; by Anand Thakker (&lt;a href='http://codepen.io/anandthakker'&gt;@anandthakker&lt;/a&gt;) on &lt;a href='http://codepen.io'&gt;CodePen&lt;/a&gt;.&lt;/p&gt;&lt;/p&gt;
+&lt;script async src=&quot;//codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
 </description>
       </item>
       <item>
@@ -353,6 +332,27 @@ a proof. (This is very ambitious, but would be very cool.)&lt;/li&gt;
 </description>
       </item>
       <item>
+        <title>Drawing simplified lines - Anand Thakker</title>
+        <link>http://anand.codes/projects/draw/</link>
+        <pubDate>Thu, 19 Jun 2014 02:00:00 +0200</pubDate>
+        <guid isPermaLink="true">http://anand.codes/projects/draw/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Draw something in the box below. As you draw, the mouse/touch coordinates
+are captured at &lt;em&gt;each&lt;/em&gt; mouseMove.  When you stop drawing, the resulting array
+of points is simplified using &lt;a href=&quot;http://mourner.github.io/simplify-js/&quot;&gt;Simplify.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This isn’t doing that much yet, but it will be once I…&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scrap Simplify.js in favor of doing the simplification in realtime. (Pending research
+on existing algorithms for this).&lt;/li&gt;
+&lt;li&gt;Partition the drawn curve into an ordered set of non-intersecting curves&lt;/li&gt;
+&lt;li&gt;Use that to make &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this&lt;/a&gt; into a digital toy (but only if I can do it in a way that doesn’t ruin the mystery and fun!).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;draw&quot;&gt;&lt;canvas id=&quot;canvas&quot; width=&quot;900&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;div id=&quot;info&quot; class=&quot;info&quot;&gt;&lt;/div&gt;
+
+</description>
+      </item>
+      <item>
         <title>Visualizing Bayes' Theorem - Anand Thakker</title>
         <link>http://anand.codes/2014/03/09/visualizing-bayes-theorem/</link>
         <pubDate>Sun, 09 Mar 2014 01:00:00 +0100</pubDate>
@@ -366,24 +366,8 @@ sure of its result?  Weirdly, the answer is NO.&lt;/p&gt;
       </item>
       <item>
         <title>Anand Thakker</title>
-        <link>http://anand.codes/about/background.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/background.html</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Started programming as a kid; was captivated by &lt;strong&gt;algorithms&lt;/strong&gt;, programming language 
-theory, and &lt;strong&gt;functional programming&lt;/strong&gt; in college; worked in a software startup making
-tools for Web Services (WSDL/SOAP) developers for a few years; left software to 
-teach high school for seven years.&lt;/p&gt;
-&lt;p&gt;Returned to coding recently to find it a glorious new world of thriving open 
-source projects, clean REST API’s for &lt;em&gt;everything&lt;/em&gt;, elegant functional programming 
-in production code, and citizen coders/entrepreneurs trying to help people and 
-the planet.  &lt;strong&gt;Count me in.&lt;/strong&gt;&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Anand Thakker</title>
         <link>http://anand.codes/about/skills.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/skills.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;ul&gt;
@@ -398,9 +382,25 @@ then let’s talk.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Anand Thakker</title>
+        <link>http://anand.codes/about/background.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/background.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Started programming as a kid; was captivated by &lt;strong&gt;algorithms&lt;/strong&gt;, programming language 
+theory, and &lt;strong&gt;functional programming&lt;/strong&gt; in college; worked in a software startup making
+tools for Web Services (WSDL/SOAP) developers for a few years; left software to 
+teach high school for seven years.&lt;/p&gt;
+&lt;p&gt;Returned to coding recently to find it a glorious new world of thriving open 
+source projects, clean REST API’s for &lt;em&gt;everything&lt;/em&gt;, elegant functional programming 
+in production code, and citizen coders/entrepreneurs trying to help people and 
+the planet.  &lt;strong&gt;Count me in.&lt;/strong&gt;&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Resume - Anand Thakker</title>
         <link>http://anand.codes/resume/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/resume/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Hi. I’m Anand Thakker. Depending on the year or season, I’m either a &lt;strong&gt;software developer&lt;/strong&gt;,
@@ -412,49 +412,20 @@ with new ideas, make cool stuff, and try to do some good.&lt;/p&gt;
 </description>
       </item>
       <item>
-        <title>Developer: Java, C#, Javascript, XML/WSDL/SOAP - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/mindreef/developer.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/developer.html</guid>
+        <title>Intertect - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/intertect/</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
         <author>Anand Thakker</author>
-        <description>&lt;p&gt;Worked as a member of the 6-person dev team, both with solo responsibility
-for major parts of the codebase and collaborative responsibility for developing
-features, general maintenance, testing, bug fixes, etc.  The main product was a
-Java server with a rich web UI (despite the savage and perilous pre-jQuery era),
-but there was also substantial work in C#/.NET. &lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Mindreef - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/mindreef/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;A startup in Hollis, NH that built tools for developing and testing
-&lt;abbr title=&quot;Simple Object Access Protocol&quot;&gt;SOAP&lt;/abbr&gt;/
-&lt;abbr title=&quot;Web Service Description Language&quot;&gt;WSDL&lt;/abbr&gt;-based web services.
-Acquired by &lt;a href=&quot;http://www.progress.com&quot;&gt;Progress Software&lt;/a&gt; in 2008.&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Co-creator: Pseudocode Meta Language - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/mindreef/pml.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/pml.html</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;&lt;a href=&quot;http://twitter.com/aaronwhite&quot;&gt;A colleague&lt;/a&gt; and I stayed after work one day, excitedly discussing an 
-idea we’d had for how we could use the programming language theory we’d learned
-in college to overcome some important limitations in one of Mindreef’s product 
-features.  A few late nights later, we’d built a prototype, and a couple weeks
-after that, we had “PML”, an underlying type system to consolidate and coherently 
-represent the typing information scattered throughout collections of WSDL and XML Schema documents.  Theoretically elegant as this was, the real importance of this work
-was in enabling multiple unique core features in Mindreef’s products.&lt;/p&gt;
+        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
+Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
+&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
 </description>
       </item>
       <item>
         <title>Traveling &amp; Freelancing - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;While my wife and I are take the rare opportunity of synchronized job transitions to
@@ -463,9 +434,32 @@ freelance contracts.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Smarterer Website: CSS/SASS, Python - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/freelance/smarterer.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/smarterer.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Implemented this &lt;a href=&quot;http://smarterer.com&quot;&gt;live, responsive site&lt;/a&gt; from PSD design.
+(The headache of dealing with IE 8 support motivated me to build &lt;a href=&quot;https://github.com/anandthakker/doiuse&quot;&gt;doiuse&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Also extended, polished up, and documented the &lt;a href=&quot;https://github.com/smarterer/leaderboard&quot;&gt;sample Flask app&lt;/a&gt; that Smarterer use as an example to accompany their API documentation.&lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Top Secret: Python/Django REST, Angular, ES6 - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/freelance/sg.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/sg.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;A former student and I have started working on an app that we aren’t quite ready to
+talk about yet.  We’re enjoying using &lt;em&gt;Django REST&lt;/em&gt; on the back end and &lt;em&gt;Angular&lt;/em&gt; + &lt;em&gt;ES6&lt;/em&gt;
+on the front end.  Still trying to decide whether we’ll go hybrid or native for 
+smaller devices.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Park School Mathematics: CSS/SASS, JS, Node, Backbone - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/parkmath.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/parkmath.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;The content for the math curriculum that my colleagues and I wrote (see &lt;a href=&quot;http://anand.codes/resume/#curriculum-writing&quot;&gt;‘Curriculum Writing’&lt;/a&gt; below) has been locked up in about 40 InDesign documents, along with thousands equations in the form of MathType .EPS files. I’m in the process of:&lt;/p&gt;
@@ -481,43 +475,18 @@ prompted me to start &lt;a href=&quot;https://github.com/prose/prose/commits?aut
 </description>
       </item>
       <item>
-        <title>Top Secret: Python/Django REST, Angular, ES6 - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/freelance/sg.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/sg.html</guid>
+        <title>Co-Author: Park School Mathematics Textbook Series - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/parkschool/curriculum-writing.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/curriculum-writing.html</guid>
         <author>Anand Thakker</author>
-        <description>&lt;p&gt;A former student and I have started working on an app that we aren’t quite ready to
-talk about yet.  We’re enjoying using &lt;em&gt;Django REST&lt;/em&gt; on the back end and &lt;em&gt;Angular&lt;/em&gt; + &lt;em&gt;ES6&lt;/em&gt;
-on the front end.  Still trying to decide whether we’ll go hybrid or native for 
-smaller devices.&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Smarterer Website: CSS/SASS, Python - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/freelance/smarterer.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/smarterer.html</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Implemented this &lt;a href=&quot;http://smarterer.com&quot;&gt;live, responsive site&lt;/a&gt; from PSD design.
-(The headache of dealing with IE 8 support motivated me to build &lt;a href=&quot;https://github.com/anandthakker/doiuse&quot;&gt;doiuse&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;Also extended, polished up, and documented the &lt;a href=&quot;https://github.com/smarterer/leaderboard&quot;&gt;sample Flask app&lt;/a&gt; that Smarterer use as an example to accompany their API documentation.&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Intertect - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/intertect/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
-Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
-&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;From 2007 to 2010, my colleagues and I worked together to write our own textbook series for 9th-11th grade math, centered on problems and problem solving rather than on facts and techniques. Rejecting the notion of a teacher-proof textbook that legalistically lays out the steps of a technique and all its potential edge cases and variations, we chose instead to create a text whose purpose was to generate rich and messy mathematical conversations.  So there are no explanations, no worked out examples, no reference material&amp;mdash;all of that is the work of the students and teacher together in the classroom.&lt;/p&gt;
 </description>
       </item>
       <item>
         <title>Data Analysis: Student-led Arctic Research - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/arctic-research.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/arctic-research.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Served as the &lt;i&gt;de facto&lt;/i&gt; data analyst of the group, both managing / analyzing / visualizing
@@ -526,27 +495,9 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
 </description>
       </item>
       <item>
-        <title>Co-Author: Park School Mathematics Textbook Series - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/parkschool/curriculum-writing.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/curriculum-writing.html</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;From 2007 to 2010, my colleagues and I worked together to write our own textbook series for 9th-11th grade math, centered on problems and problem solving rather than on facts and techniques. Rejecting the notion of a teacher-proof textbook that legalistically lays out the steps of a technique and all its potential edge cases and variations, we chose instead to create a text whose purpose was to generate rich and messy mathematical conversations.  So there are no explanations, no worked out examples, no reference material&amp;mdash;all of that is the work of the students and teacher together in the classroom.&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>The Park School of Baltimore - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/parkschool/</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;A K-12 independent school in Baltimore, Maryland.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Teaching: Computer Science - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-cs.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-cs.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Developed two semester-long introductory programming 
@@ -560,12 +511,61 @@ and Algorithms&lt;/em&gt;, &lt;em&gt;Speech Processing and Production&lt;/em&gt;
 </description>
       </item>
       <item>
+        <title>The Park School of Baltimore - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/parkschool/</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;A K-12 independent school in Baltimore, Maryland.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Teaching: Math and Statistics - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-math.html</link>
-        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-math.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Taught courses ranging from basic ninth grade math to Abstract Algebra.  Regardless of the particular content or the ability level of the students, my approach to teaching math has always focused on problem solving, exploratory thinking, and reasoning.  It’s about the joy of puzzles and the value of skepticism and the beauty of proof.&lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Mindreef - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/mindreef/</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;A startup in Hollis, NH that built tools for developing and testing
+&lt;abbr title=&quot;Simple Object Access Protocol&quot;&gt;SOAP&lt;/abbr&gt;/
+&lt;abbr title=&quot;Web Service Description Language&quot;&gt;WSDL&lt;/abbr&gt;-based web services.
+Acquired by &lt;a href=&quot;http://www.progress.com&quot;&gt;Progress Software&lt;/a&gt; in 2008.&lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Developer: Java, C#, Javascript, XML/WSDL/SOAP - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/mindreef/developer.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/developer.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Worked as a member of the 6-person dev team, both with solo responsibility
+for major parts of the codebase and collaborative responsibility for developing
+features, general maintenance, testing, bug fixes, etc.  The main product was a
+Java server with a rich web UI (despite the savage and perilous pre-jQuery era),
+but there was also substantial work in C#/.NET. &lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Co-creator: Pseudocode Meta Language - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/mindreef/pml.html</link>
+        <pubDate>Tue Dec 23 2014 23:15:11 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/pml.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;&lt;a href=&quot;http://twitter.com/aaronwhite&quot;&gt;A colleague&lt;/a&gt; and I stayed after work one day, excitedly discussing an 
+idea we’d had for how we could use the programming language theory we’d learned
+in college to overcome some important limitations in one of Mindreef’s product 
+features.  A few late nights later, we’d built a prototype, and a couple weeks
+after that, we had “PML”, an underlying type system to consolidate and coherently 
+represent the typing information scattered throughout collections of WSDL and XML Schema documents.  Theoretically elegant as this was, the real importance of this work
+was in enabling multiple unique core features in Mindreef’s products.&lt;/p&gt;
 </description>
       </item>
     </atom:link>
