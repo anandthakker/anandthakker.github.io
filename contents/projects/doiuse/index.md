@@ -1,12 +1,13 @@
 ---
-title: Do I Use
-date: 2014-11-13
+title: diouse.com
+date: 2014-12-13
 type: project
+demo: http://doiuse.com
 github: anandthakker/doiuse
 description: >
-  Node module / command line utility to lint CSS for browser support against 
-  the caniuse.com database.  Inspired by autoprefixer and postcss and a website
-  project that annoyingly needed IE 8 support.
+  Lint your CSS for browser support against the caniuse.com database. Online at
+  doiuse.com; also available as a node module / CLI.  Inspired by autoprefixer 
+  and postcss and a website project that annoyingly needed IE 8 support.
 tags:
   - css
   - dev tool

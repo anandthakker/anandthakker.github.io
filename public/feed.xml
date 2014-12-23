@@ -5,7 +5,7 @@
     <atom:link href="http://anand.codes/feed.xml" rel="self" type="application/rss+xml">
       <link>http://anand.codes</link>
       <description>Personal site of Anand Thakker</description>
-      <pubDate>Fri Dec 19 2014 15:41:32 GMT+0100 (CET)</pubDate>
+      <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
       <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
       <language>en</language>
       <item>
@@ -87,21 +87,6 @@ been feeling in putting angular and d3 together.  &lt;a href=&quot;http://alexan
 </description>
       </item>
       <item>
-        <title>WTF: position: fixed and z-index on Safari - Anand Thakker</title>
-        <link>http://anand.codes/2014/04/22/wtf-position-fixed-and-z-index-on-safari/</link>
-        <pubDate>Tue, 22 Apr 2014 02:00:00 +0200</pubDate>
-        <guid isPermaLink="true">http://anand.codes/2014/04/22/wtf-position-fixed-and-z-index-on-safari/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Safari seems not to respect z-indexes until after browser window is
-resized. Open up &lt;a href=&quot;http://anand.codes/experiments/safari-position-fixed-z-index-issue.html&quot;&gt;this file&lt;/a&gt; in
-Safari 7.0.3 on OS X.&lt;/p&gt;
-&lt;p&gt;To investigate next: what else, besides browser resize, will force the
-z-index layering to be correct?  Modifying the style of the relevant
-elements (either before scrolling up or after)?   Any repaint (again,
-either before scrolling up or after)?&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Typograph - Scale &amp; Rhythm - Anand Thakker</title>
         <link>http://anand.codes/2014/02/15/typograph-scale-rhythm/</link>
         <pubDate>Sat, 15 Feb 2014 01:00:00 +0100</pubDate>
@@ -120,9 +105,24 @@ the top awesome.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>WTF: position: fixed and z-index on Safari - Anand Thakker</title>
+        <link>http://anand.codes/2014/04/22/wtf-position-fixed-and-z-index-on-safari/</link>
+        <pubDate>Tue, 22 Apr 2014 02:00:00 +0200</pubDate>
+        <guid isPermaLink="true">http://anand.codes/2014/04/22/wtf-position-fixed-and-z-index-on-safari/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Safari seems not to respect z-indexes until after browser window is
+resized. Open up &lt;a href=&quot;http://anand.codes/experiments/safari-position-fixed-z-index-issue.html&quot;&gt;this file&lt;/a&gt; in
+Safari 7.0.3 on OS X.&lt;/p&gt;
+&lt;p&gt;To investigate next: what else, besides browser resize, will force the
+z-index layering to be correct?  Modifying the style of the relevant
+elements (either before scrolling up or after)?   Any repaint (again,
+either before scrolling up or after)?&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Projects - Anand Thakker</title>
         <link>http://anand.codes/projects/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/projects/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; While there’s an “Experiments” section below for smaller stuff, in fact most of these 
@@ -271,6 +271,27 @@ myApp.directive(&lt;span class=&quot;string&quot;&gt;'clickOff'&lt;/span&gt;, &l
 </description>
       </item>
       <item>
+        <title>Drawing simplified lines - Anand Thakker</title>
+        <link>http://anand.codes/projects/draw/</link>
+        <pubDate>Thu, 19 Jun 2014 02:00:00 +0200</pubDate>
+        <guid isPermaLink="true">http://anand.codes/projects/draw/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Draw something in the box below. As you draw, the mouse/touch coordinates
+are captured at &lt;em&gt;each&lt;/em&gt; mouseMove.  When you stop drawing, the resulting array
+of points is simplified using &lt;a href=&quot;http://mourner.github.io/simplify-js/&quot;&gt;Simplify.js&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This isn’t doing that much yet, but it will be once I…&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Scrap Simplify.js in favor of doing the simplification in realtime. (Pending research
+on existing algorithms for this).&lt;/li&gt;
+&lt;li&gt;Partition the drawn curve into an ordered set of non-intersecting curves&lt;/li&gt;
+&lt;li&gt;Use that to make &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this&lt;/a&gt; into a digital toy (but only if I can do it in a way that doesn’t ruin the mystery and fun!).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;draw&quot;&gt;&lt;canvas id=&quot;canvas&quot; width=&quot;900&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;div id=&quot;info&quot; class=&quot;info&quot;&gt;&lt;/div&gt;
+
+</description>
+      </item>
+      <item>
         <title>Euclidean geometry in JS. - Anand Thakker</title>
         <link>http://anand.codes/projects/euclid/</link>
         <pubDate>Wed, 03 Dec 2014 01:00:00 +0100</pubDate>
@@ -332,27 +353,6 @@ a proof. (This is very ambitious, but would be very cool.)&lt;/li&gt;
 </description>
       </item>
       <item>
-        <title>Drawing simplified lines - Anand Thakker</title>
-        <link>http://anand.codes/projects/draw/</link>
-        <pubDate>Thu, 19 Jun 2014 02:00:00 +0200</pubDate>
-        <guid isPermaLink="true">http://anand.codes/projects/draw/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Draw something in the box below. As you draw, the mouse/touch coordinates
-are captured at &lt;em&gt;each&lt;/em&gt; mouseMove.  When you stop drawing, the resulting array
-of points is simplified using &lt;a href=&quot;http://mourner.github.io/simplify-js/&quot;&gt;Simplify.js&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This isn’t doing that much yet, but it will be once I…&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Scrap Simplify.js in favor of doing the simplification in realtime. (Pending research
-on existing algorithms for this).&lt;/li&gt;
-&lt;li&gt;Partition the drawn curve into an ordered set of non-intersecting curves&lt;/li&gt;
-&lt;li&gt;Use that to make &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this&lt;/a&gt; into a digital toy (but only if I can do it in a way that doesn’t ruin the mystery and fun!).&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&quot;draw&quot;&gt;&lt;canvas id=&quot;canvas&quot; width=&quot;900&quot; height=&quot;600&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;
-&lt;div id=&quot;info&quot; class=&quot;info&quot;&gt;&lt;/div&gt;
-
-</description>
-      </item>
-      <item>
         <title>Visualizing Bayes' Theorem - Anand Thakker</title>
         <link>http://anand.codes/2014/03/09/visualizing-bayes-theorem/</link>
         <pubDate>Sun, 09 Mar 2014 01:00:00 +0100</pubDate>
@@ -367,7 +367,7 @@ sure of its result?  Weirdly, the answer is NO.&lt;/p&gt;
       <item>
         <title>Anand Thakker</title>
         <link>http://anand.codes/about/background.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/background.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Started programming as a kid; was captivated by &lt;strong&gt;algorithms&lt;/strong&gt;, programming language 
@@ -381,23 +381,9 @@ the planet.  &lt;strong&gt;Count me in.&lt;/strong&gt;&lt;/p&gt;
 </description>
       </item>
       <item>
-        <title>Resume - Anand Thakker</title>
-        <link>http://anand.codes/resume/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/resume/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Hi. I’m Anand Thakker. Depending on the year or season, I’m either a &lt;strong&gt;software developer&lt;/strong&gt;,
-a high school &lt;strong&gt;math and CS teacher&lt;/strong&gt;, or some combination of the two.
-Regardless of the year or season, I’m eager to play
-with new ideas, make cool stuff, and try to do some good.&lt;/p&gt;
-&lt;h4 id=&quot;current-status-&quot;&gt;Current status:&lt;/h4&gt;
-&lt;p&gt;Traveling until Spring 2015.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Anand Thakker</title>
         <link>http://anand.codes/about/skills.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/skills.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;ul&gt;
@@ -412,9 +398,23 @@ then let’s talk.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Resume - Anand Thakker</title>
+        <link>http://anand.codes/resume/</link>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/resume/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Hi. I’m Anand Thakker. Depending on the year or season, I’m either a &lt;strong&gt;software developer&lt;/strong&gt;,
+a high school &lt;strong&gt;math and CS teacher&lt;/strong&gt;, or some combination of the two.
+Regardless of the year or season, I’m eager to play
+with new ideas, make cool stuff, and try to do some good.&lt;/p&gt;
+&lt;h4 id=&quot;current-status-&quot;&gt;Current status:&lt;/h4&gt;
+&lt;p&gt;Traveling until Spring 2015.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Developer: Java, C#, Javascript, XML/WSDL/SOAP - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/developer.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/developer.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Worked as a member of the 6-person dev team, both with solo responsibility
@@ -427,7 +427,7 @@ but there was also substantial work in C#/.NET. &lt;/p&gt;
       <item>
         <title>Mindreef - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;A startup in Hollis, NH that built tools for developing and testing
@@ -439,7 +439,7 @@ Acquired by &lt;a href=&quot;http://www.progress.com&quot;&gt;Progress Software&
       <item>
         <title>Co-creator: Pseudocode Meta Language - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/pml.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/pml.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;&lt;a href=&quot;http://twitter.com/aaronwhite&quot;&gt;A colleague&lt;/a&gt; and I stayed after work one day, excitedly discussing an 
@@ -452,20 +452,9 @@ was in enabling multiple unique core features in Mindreef’s products.&lt;/p&gt
 </description>
       </item>
       <item>
-        <title>Intertect - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/intertect/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
-Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
-&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Traveling &amp; Freelancing - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;While my wife and I are take the rare opportunity of synchronized job transitions to
@@ -476,7 +465,7 @@ freelance contracts.&lt;/p&gt;
       <item>
         <title>Park School Mathematics: CSS/SASS, JS, Node, Backbone - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/parkmath.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/parkmath.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;The content for the math curriculum that my colleagues and I wrote (see &lt;a href=&quot;http://anand.codes/resume/#curriculum-writing&quot;&gt;‘Curriculum Writing’&lt;/a&gt; below) has been locked up in about 40 InDesign documents, along with thousands equations in the form of MathType .EPS files. I’m in the process of:&lt;/p&gt;
@@ -494,7 +483,7 @@ prompted me to start &lt;a href=&quot;https://github.com/prose/prose/commits?aut
       <item>
         <title>Top Secret: Python/Django REST, Angular, ES6 - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/sg.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/sg.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;A former student and I have started working on an app that we aren’t quite ready to
@@ -506,7 +495,7 @@ smaller devices.&lt;/p&gt;
       <item>
         <title>Smarterer Website: CSS/SASS, Python - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/smarterer.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/smarterer.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Implemented this &lt;a href=&quot;http://smarterer.com&quot;&gt;live, responsive site&lt;/a&gt; from PSD design.
@@ -515,9 +504,20 @@ smaller devices.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Intertect - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/intertect/</link>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
+Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
+&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Data Analysis: Student-led Arctic Research - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/arctic-research.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/arctic-research.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Served as the &lt;i&gt;de facto&lt;/i&gt; data analyst of the group, both managing / analyzing / visualizing
@@ -528,7 +528,7 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
       <item>
         <title>Co-Author: Park School Mathematics Textbook Series - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/curriculum-writing.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/curriculum-writing.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;From 2007 to 2010, my colleagues and I worked together to write our own textbook series for 9th-11th grade math, centered on problems and problem solving rather than on facts and techniques. Rejecting the notion of a teacher-proof textbook that legalistically lays out the steps of a technique and all its potential edge cases and variations, we chose instead to create a text whose purpose was to generate rich and messy mathematical conversations.  So there are no explanations, no worked out examples, no reference material&amp;mdash;all of that is the work of the students and teacher together in the classroom.&lt;/p&gt;
@@ -537,7 +537,7 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
       <item>
         <title>The Park School of Baltimore - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;A K-12 independent school in Baltimore, Maryland.&lt;/p&gt;
@@ -546,7 +546,7 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
       <item>
         <title>Teaching: Computer Science - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-cs.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-cs.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Developed two semester-long introductory programming 
@@ -562,7 +562,7 @@ and Algorithms&lt;/em&gt;, &lt;em&gt;Speech Processing and Production&lt;/em&gt;
       <item>
         <title>Teaching: Math and Statistics - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-math.html</link>
-        <pubDate>Fri Dec 19 2014 15:41:33 GMT+0100 (CET)</pubDate>
+        <pubDate>Tue Dec 23 2014 23:07:06 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-math.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Taught courses ranging from basic ninth grade math to Abstract Algebra.  Regardless of the particular content or the ability level of the students, my approach to teaching math has always focused on problem solving, exploratory thinking, and reasoning.  It’s about the joy of puzzles and the value of skepticism and the beauty of proof.&lt;/p&gt;

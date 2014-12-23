@@ -18,18 +18,21 @@ block content
       if !proj.metadata.draft && (!type || proj.metadata.type == type)
         article.project
           span.date
-            != moment.utc(proj.date).format('DD MMMM YYYY')
+            != moment.utc(proj.date).format('MMMM YYYY')
           each tag in proj.metadata.tags
             div.tag= tag
 
           - hasWriteup = (proj.intro.trim().length > 0)
           - githubUrl = 'https://github.com/'+proj.metadata.github
           h3
-            a(href=hasWriteup ? proj.url : githubUrl)= proj.title
+            a(href=hasWriteup ? proj.url : (proj.metadata.demo || githubUrl))= proj.title
 
           p
             | !{ typogr(proj.metadata.description).typogrify() }
             br
+            if proj.metadata.demo
+              a.demo(href=proj.metadata.demo) (check it out)
+
             if hasWriteup
               a.more(href=proj.url) (read more)
 
