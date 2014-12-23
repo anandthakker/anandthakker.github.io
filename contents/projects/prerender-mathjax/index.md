@@ -8,6 +8,5 @@ description: >
   equations in a page using MathJax's beautiful math rendering.
 tags:
   - MathJax
-  - server-side
   - node
 ---
