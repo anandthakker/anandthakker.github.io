@@ -1,5 +1,5 @@
 ---
-title: diouse.com
+title: doiuse.com
 date: 2014-12-13
 type: project
 demo: http://doiuse.com
