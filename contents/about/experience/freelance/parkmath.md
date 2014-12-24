@@ -1,7 +1,7 @@
 ---
 title: "Park School Mathematics: CSS/SASS, JS, Node, Backbone"
 id: parkmath
-show: true
+show: false
 order: 1
 ---
 

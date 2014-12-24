@@ -29,5 +29,5 @@ Regardless of the year or season, I'm eager to play
 with new ideas, make cool stuff, and try to do some good.
 
 ####Current status:
-Traveling until March; looking for somewhere interesting to work & play
-as a developer at that point.
+Traveling around the world until March; looking for somewhere interesting to 
+work & play & build things with code at that point.

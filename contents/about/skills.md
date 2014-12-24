@@ -19,8 +19,11 @@ skills:
 
 ---
 
+- I'm comfortable working up and down the so-called "full stack." (How else can you
+  know you're solving a problem in the right place?)
 - I can think about architecture, design data structures, and analyze
   algorithms.
+- I care about modularity and API design.
 - I enjoy learning new languages and frameworks, and I'm flexible about 
   different approaches to writing code and building software.
 - I work and play well with others.

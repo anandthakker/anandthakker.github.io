@@ -437,6 +437,12 @@ footer.container {
   & > section h2 { @extend %h2; }
   
   .skills {
+    ul { position: relative; }
+    li:before {
+      content: '✓';
+      position: absolute;
+      left: -1em;
+    }
     .skill {
       font-weight: bold;
     }

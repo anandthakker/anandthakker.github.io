@@ -680,6 +680,12 @@ footer.container {
 .projects .project p {
   max-width: calc(100% - 4em); }
 
+.resume .skills ul {
+  position: relative; }
+.resume .skills li:before {
+  content: '✓';
+  position: absolute;
+  left: -1em; }
 .resume .skills .skill {
   font-weight: bold; }
 .resume .work {
