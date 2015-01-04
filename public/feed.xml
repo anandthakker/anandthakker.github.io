@@ -5,20 +5,9 @@
     <atom:link href="http://anand.codes/feed.xml" rel="self" type="application/rss+xml">
       <link>http://anand.codes</link>
       <description>Personal site of Anand Thakker</description>
-      <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+      <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
       <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
       <language>en</language>
-      <item>
-        <title>My &quot;Oroborromean Rings,&quot; inspired by this video.  - Anand Thakker</title>
-        <link>http://anand.codes/2010/12/18/my-oroborromean-rings-inspired-by-this-video/</link>
-        <pubDate>Sat, 18 Dec 2010 01:00:00 +0100</pubDate>
-        <guid isPermaLink="true">http://anand.codes/2010/12/18/my-oroborromean-rings-inspired-by-this-video/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/oroborromean.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;My “Oro&lt;a href=&quot;http://en.wikipedia.org/wiki/Borromean_rings&quot;&gt;borromean Rings&lt;/a&gt;,”
-inspired by &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this video&lt;/a&gt;.&lt;/p&gt;
-</description>
-      </item>
       <item>
         <title>Playing Card Polyhedra - Anand Thakker</title>
         <link>http://anand.codes/2011/05/07/playing-card-polyhedra/</link>
@@ -37,6 +26,37 @@ thing.  Um, yeah.  Math and being a teacher pretty much rule.  More pictures:&lt
 &lt;img src=&quot;/images/tumblr_lkuh6ljEog1qz7dpqo5_r1_1280.jpe&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;It’s built using no glue whatsoever, and every one of the
 sixty cards is cut in exactly the same way.  &lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>My &quot;Oroborromean Rings,&quot; inspired by this video.  - Anand Thakker</title>
+        <link>http://anand.codes/2010/12/18/my-oroborromean-rings-inspired-by-this-video/</link>
+        <pubDate>Sat, 18 Dec 2010 01:00:00 +0100</pubDate>
+        <guid isPermaLink="true">http://anand.codes/2010/12/18/my-oroborromean-rings-inspired-by-this-video/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/oroborromean.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;My “Oro&lt;a href=&quot;http://en.wikipedia.org/wiki/Borromean_rings&quot;&gt;borromean Rings&lt;/a&gt;,”
+inspired by &lt;a href=&quot;https://www.youtube.com/watch?v=heKK95DAKms&quot;&gt;this video&lt;/a&gt;.&lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Data binding in d3 and AngularJS - Anand Thakker</title>
+        <link>http://anand.codes/2014/01/31/data-binding-in-d3-and-angularjs/</link>
+        <pubDate>Fri, 31 Jan 2014 01:00:00 +0100</pubDate>
+        <guid isPermaLink="true">http://anand.codes/2014/01/31/data-binding-in-d3-and-angularjs/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;It seems d3 sees itself as kind of a data binding library, that
+happens to be good at visualisations. This usually confuses newbies to
+no end, but makes sense once you get the hang of d3. But bindings are
+also a core pillar of Angular’s way of working. So using both leads us
+to having two duelling libraries, both trying to control the DOM. In
+order to get what we want, we need to understand both and use both. This
+doesn’t feel right.
+— &lt;cite&gt;&lt;a href=&quot;http://alexandros.resin.io/angular-d3-svg/&quot;&gt;Alexandros Marinos&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A wonderfully clear article that puts its finger on the weirdness I’ve
+been feeling in putting angular and d3 together.  &lt;a href=&quot;http://alexandros.resin.io/angular-d3-svg/&quot;&gt;Here’s the whole article&lt;/a&gt;&lt;/p&gt;
 </description>
       </item>
       <item>
@@ -64,26 +84,6 @@ model.  I long for the Java days when my IDE could complete my sentences
 within the current file), and more importantly, when I didn’t have to
 wait till run-time to find out that I’d misspelled a property name. &lt;/p&gt;
 &lt;p&gt;Am I just not getting the new paradigm or something?&lt;/p&gt;
-</description>
-      </item>
-      <item>
-        <title>Data binding in d3 and AngularJS - Anand Thakker</title>
-        <link>http://anand.codes/2014/01/31/data-binding-in-d3-and-angularjs/</link>
-        <pubDate>Fri, 31 Jan 2014 01:00:00 +0100</pubDate>
-        <guid isPermaLink="true">http://anand.codes/2014/01/31/data-binding-in-d3-and-angularjs/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;It seems d3 sees itself as kind of a data binding library, that
-happens to be good at visualisations. This usually confuses newbies to
-no end, but makes sense once you get the hang of d3. But bindings are
-also a core pillar of Angular’s way of working. So using both leads us
-to having two duelling libraries, both trying to control the DOM. In
-order to get what we want, we need to understand both and use both. This
-doesn’t feel right.
-— &lt;cite&gt;&lt;a href=&quot;http://alexandros.resin.io/angular-d3-svg/&quot;&gt;Alexandros Marinos&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;A wonderfully clear article that puts its finger on the weirdness I’ve
-been feeling in putting angular and d3 together.  &lt;a href=&quot;http://alexandros.resin.io/angular-d3-svg/&quot;&gt;Here’s the whole article&lt;/a&gt;&lt;/p&gt;
 </description>
       </item>
       <item>
@@ -120,9 +120,29 @@ either before scrolling up or after)?&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Some Side Project Ideas - Anand Thakker</title>
+        <link>http://anand.codes/2015/01/05/some-side-project-ideas/</link>
+        <pubDate>Mon, 05 Jan 2015 01:00:00 +0100</pubDate>
+        <guid isPermaLink="true">http://anand.codes/2015/01/05/some-side-project-ideas/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Pending side project ideas / extremely early stage experiments:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;node_modules docs search:&lt;/strong&gt; A simple server that indexes all the README’s
+in &lt;code&gt;node_modules&lt;/code&gt; exposes them to a super fast search.  Because I’m sick of 
+googling and waiting for github or npm on my crappy internet connection while
+travelling.&lt;/li&gt;
+&lt;li&gt;Explore questions about the age of authors at the time works are published.
+Potential data source: &lt;a href=&quot;http://dbpedia.org&quot;&gt;dbpedia.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;melt-stream:&lt;/strong&gt;  The &lt;code&gt;melt&lt;/code&gt; function from data reshaping (e.g. R, pandas),
+but for node streams.  More generally: look into the state of data analysis 
+modules on npm.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      </item>
+      <item>
         <title>Projects - Anand Thakker</title>
         <link>http://anand.codes/projects/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/projects/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Here are some of the side projects I’ve been working on for the past year or so
@@ -175,26 +195,6 @@ example:&lt;/p&gt;
 alternative to the &lt;code&gt;model&lt;/code&gt;/&lt;code&gt;property&lt;/code&gt;approach.&lt;/li&gt;
 &lt;li&gt;Option for labeling ranges?&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-      </item>
-      <item>
-        <title>Simple data explorer for Baltimore neighborhood data. - Anand Thakker</title>
-        <link>http://anand.codes/projects/baltimore-hackathon-data-explorer/</link>
-        <pubDate>Tue, 03 Jun 2014 02:00:00 +0200</pubDate>
-        <guid isPermaLink="true">http://anand.codes/projects/baltimore-hackathon-data-explorer/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;In response to a local challenge for this year’s &lt;a href=&quot;http://hackforchange.org/&quot;&gt;National Day of Civic Hacking&lt;/a&gt;,
-designer &lt;a href=&quot;http://twitter.com/bryanconnor&quot;&gt;Bryan Connor&lt;/a&gt; and I built a simple app for exploring a set of data about
-Baltimore neighborhoods.  The data, curated/collected by &lt;a href=&quot;http://bniajfi.org/&quot;&gt;BNIA&lt;/a&gt;, includes
-dozens of different indicators about 55 “Community Statistical Areas” in Baltimore.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/#/i/salepr12:read812:pwhite10:mort44_12/c/North-_Baltimore--Guilford--Homeland:Upton--Druid-_Heights:The-_Waverlies/&quot;&gt;&lt;img src=&quot;/images/baltimoredataexplorer.jpg&quot; alt=&quot;Screenshot of Data Explorer App&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;The idea here is to make a way to explore indicators and neighborhoods
-of interest.  Currently, you can choose your indicators from the menu on the
-right, and you’ll get a &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth&lt;/a&gt; map and a histogram for each one, presented
-as &lt;a href=&quot;http://en.wikipedia.org/wiki/Small_multiple&quot;&gt;“small multiples”&lt;/a&gt;.  You can also highlight specific neighborhoods and
-rearrange the maps.&lt;/p&gt;
-&lt;p&gt;A work in progress, for sure, but here’s &lt;a href=&quot;http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/#/i/salepr12:read812:pwhite10:mort44_12/c/North-_Baltimore--Guilford--Homeland:Upton--Druid-_Heights:The-_Waverlies/&quot;&gt;the current live version&lt;/a&gt; and &lt;a href=&quot;http://github.com/anandthakker/baltimore-neighborhood-vitalsigns&quot;&gt;the github repo&lt;/a&gt;.&lt;/p&gt;
 </description>
       </item>
       <item>
@@ -271,6 +271,26 @@ myApp.directive(&lt;span class=&quot;string&quot;&gt;'clickOff'&lt;/span&gt;, &l
 </description>
       </item>
       <item>
+        <title>Simple data explorer for Baltimore neighborhood data. - Anand Thakker</title>
+        <link>http://anand.codes/projects/baltimore-hackathon-data-explorer/</link>
+        <pubDate>Tue, 03 Jun 2014 02:00:00 +0200</pubDate>
+        <guid isPermaLink="true">http://anand.codes/projects/baltimore-hackathon-data-explorer/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;In response to a local challenge for this year’s &lt;a href=&quot;http://hackforchange.org/&quot;&gt;National Day of Civic Hacking&lt;/a&gt;,
+designer &lt;a href=&quot;http://twitter.com/bryanconnor&quot;&gt;Bryan Connor&lt;/a&gt; and I built a simple app for exploring a set of data about
+Baltimore neighborhoods.  The data, curated/collected by &lt;a href=&quot;http://bniajfi.org/&quot;&gt;BNIA&lt;/a&gt;, includes
+dozens of different indicators about 55 “Community Statistical Areas” in Baltimore.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/#/i/salepr12:read812:pwhite10:mort44_12/c/North-_Baltimore--Guilford--Homeland:Upton--Druid-_Heights:The-_Waverlies/&quot;&gt;&lt;img src=&quot;/images/baltimoredataexplorer.jpg&quot; alt=&quot;Screenshot of Data Explorer App&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;more&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The idea here is to make a way to explore indicators and neighborhoods
+of interest.  Currently, you can choose your indicators from the menu on the
+right, and you’ll get a &lt;a href=&quot;http://en.wikipedia.org/wiki/Choropleth_map&quot;&gt;choropleth&lt;/a&gt; map and a histogram for each one, presented
+as &lt;a href=&quot;http://en.wikipedia.org/wiki/Small_multiple&quot;&gt;“small multiples”&lt;/a&gt;.  You can also highlight specific neighborhoods and
+rearrange the maps.&lt;/p&gt;
+&lt;p&gt;A work in progress, for sure, but here’s &lt;a href=&quot;http://anandthakker.github.io/baltimore-neighborhood-vitalsigns/#/i/salepr12:read812:pwhite10:mort44_12/c/North-_Baltimore--Guilford--Homeland:Upton--Druid-_Heights:The-_Waverlies/&quot;&gt;the current live version&lt;/a&gt; and &lt;a href=&quot;http://github.com/anandthakker/baltimore-neighborhood-vitalsigns&quot;&gt;the github repo&lt;/a&gt;.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Euclidean geometry in JS. - Anand Thakker</title>
         <link>http://anand.codes/projects/euclid/</link>
         <pubDate>Wed, 03 Dec 2014 01:00:00 +0100</pubDate>
@@ -344,25 +364,9 @@ sure of its result?  Weirdly, the answer is NO.&lt;/p&gt;
 </description>
       </item>
       <item>
-        <title>Anand Thakker</title>
-        <link>http://anand.codes/about/background.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/background.html</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Started programming as a kid; was captivated by &lt;strong&gt;algorithms&lt;/strong&gt;, programming language 
-theory, and &lt;strong&gt;functional programming&lt;/strong&gt; in college; worked in a software startup making
-tools for Web Services (WSDL/SOAP) developers for a few years; left software to 
-teach high school for seven years.&lt;/p&gt;
-&lt;p&gt;Returned to coding recently to find it a glorious new world of thriving open 
-source projects, clean REST API’s for &lt;em&gt;everything&lt;/em&gt;, elegant functional programming 
-in production code, and citizen coders/entrepreneurs trying to help people and 
-the planet.  &lt;strong&gt;Count me in.&lt;/strong&gt;&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Resume - Anand Thakker</title>
         <link>http://anand.codes/resume/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/resume/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Hi. I’m Anand Thakker. Depending on the year or season, I’m either a &lt;strong&gt;software developer&lt;/strong&gt;,
@@ -376,8 +380,24 @@ work &amp;amp; play &amp;amp; build things with code at that point.&lt;/p&gt;
       </item>
       <item>
         <title>Anand Thakker</title>
+        <link>http://anand.codes/about/background.html</link>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/background.html</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Started programming as a kid; was captivated by &lt;strong&gt;algorithms&lt;/strong&gt;, programming language 
+theory, and &lt;strong&gt;functional programming&lt;/strong&gt; in college; worked in a software startup making
+tools for Web Services (WSDL/SOAP) developers for a few years; left software to 
+teach high school for seven years.&lt;/p&gt;
+&lt;p&gt;Returned to coding recently to find it a glorious new world of thriving open 
+source projects, clean REST API’s for &lt;em&gt;everything&lt;/em&gt;, elegant functional programming 
+in production code, and citizen coders/entrepreneurs trying to help people and 
+the planet.  &lt;strong&gt;Count me in.&lt;/strong&gt;&lt;/p&gt;
+</description>
+      </item>
+      <item>
+        <title>Anand Thakker</title>
         <link>http://anand.codes/about/skills.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/skills.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;ul&gt;
@@ -395,9 +415,20 @@ then let’s talk.&lt;/p&gt;
 </description>
       </item>
       <item>
+        <title>Traveling &amp; Freelancing - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/freelance/</link>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;While my wife and I are take the rare opportunity of synchronized job transitions to
+travel abroad and visit family, I’m working on side projects and a couple of small 
+freelance contracts.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Park School Mathematics: CSS/SASS, JS, Node, Backbone - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/parkmath.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/parkmath.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;The content for the math curriculum that my colleagues and I wrote (see &lt;a href=&quot;http://anand.codes/resume/#curriculum-writing&quot;&gt;‘Curriculum Writing’&lt;/a&gt; below) has been locked up in about 40 InDesign documents, along with thousands equations in the form of MathType .EPS files. I’m in the process of:&lt;/p&gt;
@@ -413,20 +444,9 @@ prompted me to start &lt;a href=&quot;https://github.com/prose/prose/commits?aut
 </description>
       </item>
       <item>
-        <title>Traveling &amp; Freelancing - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/freelance/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/freelance/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;While my wife and I are take the rare opportunity of synchronized job transitions to
-travel abroad and visit family, I’m working on side projects and a couple of small 
-freelance contracts.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Side Projects: Node (front + back), Python/Django REST, Angular - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/sideprojects.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/sideprojects.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;ol&gt;
@@ -449,7 +469,7 @@ smaller devices.&lt;/p&gt;
       <item>
         <title>Smarterer Website: CSS/SASS, Python - Anand Thakker</title>
         <link>http://anand.codes/about/experience/freelance/smarterer.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/freelance/smarterer.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Implemented this &lt;a href=&quot;http://smarterer.com&quot;&gt;live, responsive site&lt;/a&gt; from PSD design.
@@ -458,20 +478,9 @@ smaller devices.&lt;/p&gt;
 </description>
       </item>
       <item>
-        <title>Intertect - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/intertect/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
-Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
-&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Developer: Java, C#, Javascript, XML/WSDL/SOAP - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/developer.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/developer.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Worked as a member of the 6-person dev team, both with solo responsibility
@@ -484,7 +493,7 @@ but there was also substantial work in C#/.NET. &lt;/p&gt;
       <item>
         <title>Mindreef - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;A startup in Hollis, NH that built tools for developing and testing
@@ -496,7 +505,7 @@ Acquired by &lt;a href=&quot;http://www.progress.com&quot;&gt;Progress Software&
       <item>
         <title>Co-creator: Pseudocode Meta Language - Anand Thakker</title>
         <link>http://anand.codes/about/experience/mindreef/pml.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/mindreef/pml.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;&lt;a href=&quot;http://twitter.com/aaronwhite&quot;&gt;A colleague&lt;/a&gt; and I stayed after work one day, excitedly discussing an 
@@ -509,9 +518,20 @@ was in enabling multiple unique core features in Mindreef’s products.&lt;/p&gt
 </description>
       </item>
       <item>
+        <title>Intertect - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/intertect/</link>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/intertect/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;Four &lt;a href=&quot;http://www.ncssm.edu/&quot;&gt;high school&lt;/a&gt; geeks renting an apartment as an office, trying to create a meta search engine.
+Google pretty much ended that one, but the company later became Pinpoint, then Motricity, and now
+&lt;a href=&quot;http://www.voltari.com/&quot;&gt;Voltari&lt;/a&gt;.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Data Analysis: Student-led Arctic Research - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/arctic-research.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/arctic-research.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Served as the &lt;i&gt;de facto&lt;/i&gt; data analyst of the group, both managing / analyzing / visualizing
@@ -520,18 +540,9 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
 </description>
       </item>
       <item>
-        <title>The Park School of Baltimore - Anand Thakker</title>
-        <link>http://anand.codes/about/experience/parkschool/</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
-        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/</guid>
-        <author>Anand Thakker</author>
-        <description>&lt;p&gt;A K-12 independent school in Baltimore, Maryland.&lt;/p&gt;
-</description>
-      </item>
-      <item>
         <title>Co-Author: Park School Mathematics Textbook Series - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/curriculum-writing.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/curriculum-writing.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;From 2007 to 2010, my colleagues and I worked together to write our own textbook series for 9th-11th grade math, centered on problems and problem solving rather than on facts and techniques. Rejecting the notion of a teacher-proof textbook that legalistically lays out the steps of a technique and all its potential edge cases and variations, we chose instead to create a text whose purpose was to generate rich and messy mathematical conversations.  So there are no explanations, no worked out examples, no reference material&amp;mdash;all of that is the work of the students and teacher together in the classroom.&lt;/p&gt;
@@ -540,7 +551,7 @@ statistical programming language R so that they could do so themselves.&lt;/p&gt
       <item>
         <title>Teaching: Computer Science - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-cs.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-cs.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Developed two semester-long introductory programming 
@@ -554,9 +565,18 @@ and Algorithms&lt;/em&gt;, &lt;em&gt;Speech Processing and Production&lt;/em&gt;
 </description>
       </item>
       <item>
+        <title>The Park School of Baltimore - Anand Thakker</title>
+        <link>http://anand.codes/about/experience/parkschool/</link>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
+        <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/</guid>
+        <author>Anand Thakker</author>
+        <description>&lt;p&gt;A K-12 independent school in Baltimore, Maryland.&lt;/p&gt;
+</description>
+      </item>
+      <item>
         <title>Teaching: Math and Statistics - Anand Thakker</title>
         <link>http://anand.codes/about/experience/parkschool/teaching-math.html</link>
-        <pubDate>Mon Jan 05 2015 00:20:25 GMT+0100 (CET)</pubDate>
+        <pubDate>Mon Jan 05 2015 00:33:55 GMT+0100 (CET)</pubDate>
         <guid isPermaLink="true">http://anand.codes/about/experience/parkschool/teaching-math.html</guid>
         <author>Anand Thakker</author>
         <description>&lt;p&gt;Taught courses ranging from basic ninth grade math to Abstract Algebra.  Regardless of the particular content or the ability level of the students, my approach to teaching math has always focused on problem solving, exploratory thinking, and reasoning.  It’s about the joy of puzzles and the value of skepticism and the beauty of proof.&lt;/p&gt;
