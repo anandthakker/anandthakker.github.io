@@ -1,7 +1,7 @@
 ---
 title: "AngularJS multi-range slider"
 date: 2014-03-02
-type: project
+type: experiment
 template: article.jade
 github: anandthakker/angular-multirange-slider
 description: >

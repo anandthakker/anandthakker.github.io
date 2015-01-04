@@ -9,6 +9,7 @@ description: >
   (The dynamic background on the home page is an example of this.)
 tags:
   - d3js
+  - node
   - geometry
   - visual
 scripts:

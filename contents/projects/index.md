@@ -8,5 +8,5 @@ tags:
   - project
 ---
 
-**Note:** While there's an "Experiments" section below for smaller stuff, in fact most of these 
-side projects are in pretty early and experimental stages.
+Here are some of the side projects I've been working on for the past year or so
+since I dusted off the old text editor and started coding again.
