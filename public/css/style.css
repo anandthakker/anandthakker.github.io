@@ -470,7 +470,8 @@ small {
     font-family: "Playfair Display", serif;
     text-transform: none;
     text-align: center;
-    margin-bottom: 1.5rem; } }
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem; } }
 /*-----------------------------------
   Common Layout / Composition
 -----------------------------------*/
@@ -582,6 +583,7 @@ footer.container {
 @media print {
   .site-header h1 {
     font-size: 1.5em;
+    margin-top: 1.5rem;
     text-align: right; }
     .site-header h1 .name {
       float: left; }
@@ -715,42 +717,37 @@ footer.container {
     margin: 0 0 0 2px;
     text-align: center; } }
 @media print {
-  .resume {
-    /*** HACK because Chrome isn't respecting page-break-after:avoid properly
-        for this one. */ }
-    .resume:after {
-      content: "Thanks for your time and consideration.";
-      display: block;
-      border-top: 1px solid black;
-      margin-top: 2em;
-      width: 100%; }
-    .resume .work[data-has-details] h4 {
-      display: inline-block;
-      vertical-align: top;
-      width: 32%;
-      padding-right: 1%; }
-    .resume .work[data-has-details] .details {
-      display: inline-block;
-      vertical-align: top;
-      width: 60%;
-      padding-top: .25em;
-      font-size: 0.66667em; }
-      .resume .work[data-has-details] .details p {
-        padding-left: .5em; }
-      .resume .work[data-has-details] .details p:first-of-type {
-        border-left: 1px dotted black; }
-    .resume .work[data-has-details]:before, .resume .work[data-has-details]:after {
-      content: " ";
-      /* 1 */
-      display: table;
-      /* 2 */ }
-    .resume .work[data-has-details]:after {
-      clear: both; }
-    .resume * + .organization,
-    .resume * + .school {
-      margin-top: 3rem; }
-    .resume .organization:nth-of-type(3) {
-      page-break-before: always; } }
+  .resume:after {
+    content: "Thanks for your time and consideration.";
+    display: block;
+    border-top: 1px solid black;
+    margin-top: 2em;
+    width: 100%; }
+  .resume .work[data-has-details] h4 {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    padding-right: 1%; }
+  .resume .work[data-has-details] .details {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    padding-top: .25em;
+    font-size: 0.66667em; }
+    .resume .work[data-has-details] .details > p {
+      padding-left: .5em; }
+    .resume .work[data-has-details] .details > p:first-of-type {
+      border-left: 1px dotted black; }
+  .resume .work[data-has-details]:before, .resume .work[data-has-details]:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .resume .work[data-has-details]:after {
+    clear: both; }
+  .resume * + .organization,
+  .resume * + .school {
+    margin-top: 3rem; } }
 
 @media only screen {
   .js .work[data-has-details] h4 {

@@ -150,6 +150,7 @@ small { font-size: scale-to(-1); }
     text-transform: none;
     text-align: center;
     margin-bottom: lines(1);
+    margin-top: lines(1);
   }
 }
 
@@ -280,6 +281,7 @@ footer.container {
 
   .site-header h1 {
     font-size: scale-to(1);
+    margin-top: lines(1);
     text-align: right;
     .name {
       float: left;
@@ -519,8 +521,8 @@ footer.container {
         width: 60%;
         padding-top: .25em;
         font-size: scale-to(-1);
-        p { padding-left: .5em; }
-        p:first-of-type {
+        & > p { padding-left: .5em; }
+        & > p:first-of-type {
           border-left: 1px dotted black;
         }
       }
@@ -533,9 +535,6 @@ footer.container {
       margin-top: lines(2);
     }
     
-    /*** HACK because Chrome isn't respecting page-break-after:avoid properly
-        for this one. */
-    .organization:nth-of-type(3) { page-break-before: always; }
   }
 }
 
