@@ -20,7 +20,7 @@
     <![endif]-->
     <div class="container">
       <header class="site-header">
-        <h1><span class="name">Anand Thakker</span><span class="email"></span><span class="protocol">http://</span>anand.codes</h1>
+        <h1><span class="name">Anand Thakker</span><span class="email"> </span><span class="protocol">http://</span>anand.codes</h1>
         <nav role="navigation">
           <ul>
             <li><a href="/">home</a></li>
@@ -65,20 +65,20 @@ clicks <em>off</em> an element.  Useful for dismissable&nbsp;messages.</p>
 <p><strong>Code:</strong></p>
 <pre><code class="lang-javascript"><span class="keyword">var</span> myApp = angular.module(<span class="string">'myApp'</span>,[]);
 
-myApp.directive(<span class="string">'clickOff'</span>, <span class="function"><span class="keyword">function</span><span class="params">($parse, $document)</span> {</span>
+myApp.directive(<span class="string">'clickOff'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">$parse, $document</span>) </span>{
     <span class="keyword">var</span> dir = {
-        compile: <span class="function"><span class="keyword">function</span><span class="params">($element, attr)</span> {</span>
+        compile: <span class="function"><span class="keyword">function</span>(<span class="params">$element, attr</span>) </span>{
           <span class="comment">// Parse the expression to be executed</span>
           <span class="comment">// whenever someone clicks _off_ this element.</span>
           <span class="keyword">var</span> fn = $parse(attr[<span class="string">"clickOff"</span>]);
-          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span><span class="params">(scope, element, attr)</span> {</span>
+          <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">scope, element, attr</span>) </span>{
             <span class="comment">// add a click handler to the element that</span>
             <span class="comment">// stops the event propagation.</span>
-            element.bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span><span class="params">(event)</span> {</span>
+            element.bind(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>{
               event.stopPropagation();
             });
-            angular.element($document[<span class="number">0</span>].body).bind(<span class="string">"click"</span>,                                                                 <span class="function"><span class="keyword">function</span><span class="params">(event)</span> {</span>
-                scope.$apply(<span class="function"><span class="keyword">function</span><span class="params">()</span> {</span>
+            angular.element($<span class="built_in">document</span>[<span class="number">0</span>].body).bind(<span class="string">"click"</span>,                                                                 <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>{
+                scope.$apply(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>{
                     fn(scope, {$event:event});
                 });
             });

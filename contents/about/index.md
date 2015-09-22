@@ -28,6 +28,6 @@ a high school **math and CS teacher**, or some combination of the two.
 Regardless of the year or season, I'm eager to play
 with new ideas, make cool stuff, and try to do some good.
 
-####Current status:
-Traveling around the world until March; looking for somewhere interesting to 
-work & play & build things with code at that point.
+#### Current status:
+Building things with open source and open data at [Development
+Seed](https://developmentseed.org).

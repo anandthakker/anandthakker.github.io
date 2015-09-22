@@ -7,6 +7,10 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
+block append head
+  if page.metadata.styles
+    each style in page.metadata.styles
+      link(rel='stylesheet', type='text/css', href=style)
 
 block content
   article.article
@@ -19,3 +23,8 @@ block content
 block prepend footer
   div.pagenav
     a(href=contents.index.url) « Full blog
+
+block append scripts
+  if page.metadata.scripts
+    each script in page.metadata.scripts
+      script(src=script)
