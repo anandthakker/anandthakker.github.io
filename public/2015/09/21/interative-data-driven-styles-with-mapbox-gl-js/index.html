@@ -43,23 +43,27 @@ Examples with code <a href="/2015/09/21/interative-data-driven-styles-with-mapbo
 <h2 id="interactivity-vs-rich-visual-style">Interactivity vs Rich Visual&nbsp;Style</h2>
 <p><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox <span class="caps">GL</span> JS</a> is awesome.  Until it came along, there often seemed to be
 deep, difficult tradeoffs in web maps between interactivity and rich visual
-styling.  For interactivity, you could send you geographic data to the browser
+styling.  For interactivity, you could send your geographic data to the browser
 as GeoJSON (or something) and render it there, but that meant there were real
 limits to how much you could feasibly visualize on your map.  Alternatively, you
-could use a tools like <a href="https://www.mapbox.com/mapbox-studio-classic/#darwin">Mapbox Studio
+could use a tool like <a href="https://www.mapbox.com/mapbox-studio-classic/#darwin">Mapbox Studio
 Classic</a> to render rich,
 beautiful, data-driven maps that could be served to the browser efficiently as
 image tiles, but then you don’t have the underlying data, and thus you can’t
 have&nbsp;interactivity.</p>
 <p>Libraries like <a href="http://leafletjs.com/">Leaflet</a> (and <a href="https://www.mapbox.com/mapbox.js/api/v2.2.2/">Mapbox.js</a>, and many
-others) do a pretty great job at helping do both of these at once, but it’s a
-bit of a weird dance decomposing a map into some layers that are static and
-richly visualized, and others that are interactive but leaner,&nbsp;data-wise.</p>
+others) do a pretty great job at helping do both of these at once, but as great
+as those libraries are, it’s still a weird dance decomposing a map into some
+layers that are static and richly visualized, and others that are interactive
+but leaner, data-wise.  And maintaining such a setup over time can quickly
+progress from annoying to&nbsp;unmanageable.</p>
 <h2 id="have-eat-cake">Have <span class="amp">&amp;</span> Eat&nbsp;Cake</h2>
-<p>With Mapbox <span class="caps">GL</span>, instead of having to juggle these two approaches, we get the
-best of both worlds.  The server side serves up the geo data using <a href="https://www.mapbox.com/developers/vector-tiles/">vector
-tiles</a>, and the client side styles and renders it. It’s elegant and
-effective. (Read more here: <a href="https://www.mapbox.com/blog/whats-in-a-mapbox-studio-style/">What’s in a Mapbox Studio Style</a>.)</p>
+<p>With Mapbox <span class="caps">GL</span>, instead of having to juggle these two approaches, we genuinely
+get the best of both worlds.  The server side serves up the geo data with
+astonishing efficiency using <a href="https://www.mapbox.com/developers/vector-tiles/">vector tiles</a>, and the client side styles and
+renders it. It’s an elegant and effective, and it’s the right division of
+responsibilities between server and client. (Read more here: <a href="https://www.mapbox.com/blog/whats-in-a-mapbox-studio-style/">What’s in a
+Mapbox Studio Style</a>.)</p>
 <p>Mapbox <span class="caps">GL</span> JS is easily badass enough already to be used for many production
 applications–e.g. at <a href="https://developmentseed.org">Dev Seed</a> we used it to make
 an interactive visualization of electricity use in 600,000 villages across India

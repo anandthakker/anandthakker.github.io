@@ -24,26 +24,30 @@ Examples with code [below](#hover).
 
 [Mapbox GL JS][1] is awesome.  Until it came along, there often seemed to be
 deep, difficult tradeoffs in web maps between interactivity and rich visual
-styling.  For interactivity, you could send you geographic data to the browser
+styling.  For interactivity, you could send your geographic data to the browser
 as GeoJSON (or something) and render it there, but that meant there were real
 limits to how much you could feasibly visualize on your map.  Alternatively, you
-could use a tools like [Mapbox Studio
+could use a tool like [Mapbox Studio
 Classic][2] to render rich,
 beautiful, data-driven maps that could be served to the browser efficiently as
 image tiles, but then you don't have the underlying data, and thus you can't
 have interactivity.
 
 Libraries like [Leaflet][3] (and [Mapbox.js][4], and many
-others) do a pretty great job at helping do both of these at once, but it's a
-bit of a weird dance decomposing a map into some layers that are static and
-richly visualized, and others that are interactive but leaner, data-wise.
+others) do a pretty great job at helping do both of these at once, but as great
+as those libraries are, it's still a weird dance decomposing a map into some
+layers that are static and richly visualized, and others that are interactive
+but leaner, data-wise.  And maintaining such a setup over time can quickly
+progress from annoying to unmanageable.
 
 ## Have & Eat Cake
 
-With Mapbox GL, instead of having to juggle these two approaches, we get the
-best of both worlds.  The server side serves up the geo data using [vector
-tiles][5], and the client side styles and renders it. It's elegant and
-effective. (Read more here: [What's in a Mapbox Studio Style][6].)
+With Mapbox GL, instead of having to juggle these two approaches, we genuinely
+get the best of both worlds.  The server side serves up the geo data with
+astonishing efficiency using [vector tiles][5], and the client side styles and
+renders it. It's an elegant and effective, and it's the right division of
+responsibilities between server and client. (Read more here: [What's in a
+Mapbox Studio Style][6].)
 
 Mapbox GL JS is easily badass enough already to be used for many production
 applications--e.g. at [Dev Seed](https://developmentseed.org) we used it to make
