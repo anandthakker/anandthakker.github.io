@@ -46,8 +46,7 @@ With Mapbox GL, instead of having to juggle these two approaches, we genuinely
 get the best of both worlds.  The server side serves up the geo data with
 astonishing efficiency using [vector tiles][5], and the client side styles and
 renders it. It's an elegant and effective, and it's the right division of
-responsibilities between server and client. (Read more here: [What's in a
-Mapbox Studio Style][6].)
+responsibilities between . (Read more here: [What's in a Mapbox Studio Style][6].)
 
 Mapbox GL JS is easily badass enough already to be used for many production
 applications--e.g. at [Dev Seed](https://developmentseed.org) we used it to make
@@ -226,7 +225,7 @@ var choro = new mapboxgl.Map({
 
 These are just the simplest examples of the data-rich, interactive maps enabled
 by Mapbox GL JS. To take this stuff a bit further, check out Justin Miller's [Anatomy of a travel map](http://justinmiller.io/posts/2015/01/20/anatomy-of-a-travel-map/), which
-walks through a slightly more complex application of these techniques, and also
+walks through a more complete (and complex) application of these techniques, and also
 nicely explains how to create and upload your own vector tile data.
 
 [1]: https://www.mapbox.com/mapbox-gl-js/api/
