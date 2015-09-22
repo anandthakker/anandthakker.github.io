@@ -218,6 +218,13 @@ var choro = new mapboxgl.Map({
 
 [Full code here.](http://bl.ocks.org/anandthakker/52d26ae7b71b7e23c279)
 
+## More
+
+These are just the simplest examples of the data-rich, interactive maps enabled
+by Mapbox GL JS. To take this stuff a bit further, check out Justin Miller's [Anatomy of a travel map](http://justinmiller.io/posts/2015/01/20/anatomy-of-a-travel-map/), which
+walks through a slightly more complex application of these techniques, and also
+nicely explains how to create and upload your own vector tile data.
+
 [1]: https://www.mapbox.com/mapbox-gl-js/api/
 [2]: https://www.mapbox.com/mapbox-studio-classic/#darwin
 [3]: http://leafletjs.com/
