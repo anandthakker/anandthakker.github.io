@@ -30,11 +30,11 @@ limits to how much you could feasibly visualize on your map.  Alternatively, you
 could use a tool like [Mapbox Studio
 Classic][2] to render rich,
 beautiful, data-driven maps that could be served to the browser efficiently as
-image tiles, but then you don't have the underlying data, and thus you can't
-have interactivity.
+image tiles, but then you wouldn't have the underlying data: no data, no
+interactivity.
 
 Libraries like [Leaflet][3] (and [Mapbox.js][4], and many
-others) do a pretty great job at helping do both of these at once, but as great
+others) do a pretty great job at helping to do both of these at once, but as great
 as those libraries are, it's still a weird dance decomposing a map into some
 layers that are static and richly visualized, and others that are interactive
 but leaner, data-wise.  And maintaining such a setup over time can quickly
@@ -45,8 +45,9 @@ progress from annoying to unmanageable.
 With Mapbox GL, instead of having to juggle these two approaches, we genuinely
 get the best of both worlds.  The server side serves up the geo data with
 astonishing efficiency using [vector tiles][5], and the client side styles and
-renders it. It's an elegant and effective, and it's the right division of
-responsibilities between . (Read more here: [What's in a Mapbox Studio Style][6].)
+renders it. It's elegant and effective, and it's the right division of
+responsibilities between client and server. (Read more here: [What's in a Mapbox
+Studio Style][6].)
 
 Mapbox GL JS is easily badass enough already to be used for many production
 applications--e.g. at [Dev Seed](https://developmentseed.org) we used it to make
@@ -87,6 +88,7 @@ feature(s) we're hovering over, and use that information to update the hover
 layer's `filter` property to only select those features.  In code:
 
 ```javascript
+// define the base style
 var hoverStyle = {
   version: 8,
   name: 'Basic',
@@ -121,6 +123,7 @@ var hoverStyle = {
   }]
 }
 
+// start up the map
 var hovermap = new mapboxgl.Map({
   container: 'hover-map',
   style: hoverStyle,
@@ -159,7 +162,7 @@ population density (stored as the `pop_density` property on each feature).
 Similar to the hover, it works by creating multiple layers--in this case, one
 for *each level* of the color scale.  Then, for each level, we set the filter to
 select only the features that have a `pop_density` value in the relevant range
-for that level.  In code:
+for that level. In code:
 
 ```javascript
 var chorostyle = {
@@ -223,10 +226,12 @@ var choro = new mapboxgl.Map({
 
 ## More
 
-These are just the simplest examples of the data-rich, interactive maps enabled
-by Mapbox GL JS. To take this stuff a bit further, check out Justin Miller's [Anatomy of a travel map](http://justinmiller.io/posts/2015/01/20/anatomy-of-a-travel-map/), which
-walks through a more complete (and complex) application of these techniques, and also
-nicely explains how to create and upload your own vector tile data.
+These are just the very simplest examples of the data-rich, interactive maps
+enabled by Mapbox GL JS. To take this stuff a bit further, check out Justin
+Miller's [Anatomy of a travel
+map](http://justinmiller.io/posts/2015/01/20/anatomy-of-a-travel-map/), which
+walks through a more complete (and complex) application of these techniques, and
+also nicely explains how to create and upload your own vector tile data.
 
 [1]: https://www.mapbox.com/mapbox-gl-js/api/
 [2]: https://www.mapbox.com/mapbox-studio-classic/#darwin
