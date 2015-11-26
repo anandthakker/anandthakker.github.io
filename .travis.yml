@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '4.0'
+env:
+  global:
+  - GH_REF: github.com/anandthakker/anandthakker.github.io
+before_install: gem install sass
+script: npm run build
+deploy:
+  provider: script
+  script: deploy.sh
+  on:
+    branch: master

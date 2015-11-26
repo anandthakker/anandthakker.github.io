@@ -7,10 +7,9 @@
   },
   "plugins": [
     "./plugins/paginator.coffee",
-    "wintersmith-sass",
-    "wintersmith-coffee"
+    "wintersmith-sass"
   ],
-  "output": "public",
+  "output": "build",
   "require": {
     "moment": "moment",
     "_": "underscore",
