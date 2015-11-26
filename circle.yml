@@ -1,16 +1,16 @@
 ## Customize the test machine
-machine:
+general:
   branches:
     ignore:
       - master # this is the "gh-pages" equivalent for my user page
+
+machine:
   node:
     version: 4.0
   timezone:
     America/New_York # Set the timezone
-
-  # Add some environment variables
   environment:
-    GH_REF: github.com/anandthakker/anandthakker.github.io
+    GH_REF: git@github.com:anandthakker/anandthakker.github.io.git
 
 test:
   override:
