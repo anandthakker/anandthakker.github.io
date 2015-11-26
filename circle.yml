@@ -12,6 +12,10 @@ machine:
   environment:
     GH_REF: git@github.com:anandthakker/anandthakker.github.io.git
 
+dependencies:
+  post:
+    - gem install sass # install newer version of sass
+
 test:
   override:
     - npm run build
