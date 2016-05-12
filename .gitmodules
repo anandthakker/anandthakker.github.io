@@ -1,0 +1,3 @@
+[submodule "contents/talks"]
+	path = contents/talks
+	url = git@github.com:anandthakker/talks.git
