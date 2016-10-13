@@ -24,14 +24,6 @@ block content
       h2 Skills
       != typogr(contents.about['skills.md'].html).typogrify()
       - skills = contents.about['skills.md'].metadata.skills
-      ul
-        each skill in skills
-          li
-            span.skill= skill.name
-            if skill.includes
-              span.includes  (!{skill.includes.join(', ')})
-            if skill.note
-              span.note  (!{skill.note})
 
     section.education
       h2 Education

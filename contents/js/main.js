@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // ## Expand/Collapse ###
   document.querySelectorAll('.resume [data-has-details] h4')
   .forEach(node => node.addEventListener('click', e => {
-    if (!this.parentElement.classList.contains('collapse') &&
+    if (!node.parentElement.classList.contains('collapse') &&
     (window.getSelection() || '').toString().length) {
       return
     } else {
-      return this.parentElement.classList.toggle('collapse')
+      return node.parentElement.classList.toggle('collapse')
     }
   }))
 

@@ -1,5 +1,5 @@
 ---
-title: "Side Projects: Node (front + back), Python/Django REST, Angular"
+title: "Side Projects"
 id: sg
 show: true
 order: 0
@@ -13,7 +13,3 @@ SVG. (The dynamic background on my [front page](/) is an example of this.)
 for browser support using [caniuse.com](http://caniuse.com) data and convenient
 [autoprefixer](https://github.com/postcss/autoprefixer)-like browser description.
 
-3. Also, a former student and I have started working on an app that we aren't quite ready to
-talk about yet.  We're enjoying using *Django REST* on the back end and *Angular* + *ES6*
-on the front end.  Still trying to decide whether we'll go hybrid or native for 
-smaller devices.

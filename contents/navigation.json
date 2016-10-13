@@ -2,7 +2,6 @@
   "view": "none",
   "sections": {
     "home": "/",
-    "projects": "/projects",
     "notes": "/notes",
     "resume": "/resume"
   }

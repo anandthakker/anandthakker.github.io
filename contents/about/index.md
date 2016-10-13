@@ -18,9 +18,6 @@ identities:
   keybase:
     name: "anandthakker"
     url: "https://keybase.io/anandthakker"
-  stackoverflow:
-    name: "anandthakker"
-    url: "http://stackoverflow.com/users/2544296/anandthakker"
 ---
 
 Hi. I'm Anand Thakker. Depending on the year or season, I'm either a **software developer**,

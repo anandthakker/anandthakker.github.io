@@ -1,7 +1,7 @@
 ---
 title: "Data Analysis: Student-led Arctic Research"
 id: arctic-research
-show: true
+show: false
 order: 1
 ---
 
