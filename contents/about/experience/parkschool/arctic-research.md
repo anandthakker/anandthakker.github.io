@@ -2,7 +2,7 @@
 title: "Data Analysis: Student-led Arctic Research"
 id: arctic-research
 show: false
-order: 1
+order: 2
 ---
 
 Served as the <i>de facto</i> data analyst of the group, both managing / analyzing / visualizing
