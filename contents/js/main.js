@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }))
 
   // dodge the robots
-  var emailstring = [ 'm', 'e', '@', 'a', 'n', 'a', 'n', 'd', '.', 'c', 'o', 'd', 'e', 's' ].join('')
+  var emailstring = [ 'm', 'a', 'i', 'l', '@', 'a', 'n', 'a', 'n', 'd', 't', 'h', 'a', 'k', 'k', 'e', 'r', '.', 'n', 'e', 't' ].join('')
   var email = document.querySelector('[href^=emailaddress]')
   function onmouseover () {
     this.setAttribute('href', 'mailto:' + emailstring)

@@ -6,7 +6,9 @@ general:
 
 machine:
   node:
-    version: 4.0
+    version: 8
+  ruby:
+    version: 2.4.0
   timezone:
     America/New_York # Set the timezone
   environment:
