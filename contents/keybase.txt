@@ -4,7 +4,7 @@ https://keybase.io/anandthakker
 
 I hereby claim:
 
-  * I am an admin of http://anand.codes
+  * I am an admin of http://anandthakker.net
   * I am anandthakker (https://keybase.io/anandthakker) on keybase.
   * I have a public key with fingerprint 7F94 DE91 B40A 4E3D B43B  6886 F288 30EB 768D D2ED
 
@@ -20,7 +20,7 @@ To claim this, I am signing this object:
             "username": "anandthakker"
         },
         "service": {
-            "hostname": "anand.codes",
+            "hostname": "anandthakker.net",
             "protocol": "http:"
         },
         "type": "web_service_binding",
