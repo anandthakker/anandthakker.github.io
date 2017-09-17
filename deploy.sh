@@ -5,6 +5,9 @@ set -e
 cd build
 git init
 
+# copy circle.yml so that CircleCI knows not to build master
+cp ../circle.yml .
+
 # inside this git repo we'll pretend to be a new user
 git config user.name "CI Robot"
 git config user.email "robot@anandthakker.net"
