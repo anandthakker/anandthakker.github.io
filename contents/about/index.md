@@ -23,8 +23,7 @@ identities:
 Hi. I'm Anand Thakker. Depending on the year or season, I'm either a **software developer**,
 a high school **math and CS teacher**, or some combination of the two.
 Regardless of the year or season, I'm eager to play
-with new ideas, make cool stuff, and try to do some good.
+with new ideas, build things, and try to do some good.
 
 #### Current status:
-Building things with open source and open data at [Development
-Seed](https://developmentseed.org).
+Building a GL-powered map rendering engine at [Mapbox](https://mapbox.com).
