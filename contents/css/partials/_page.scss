@@ -165,7 +165,6 @@ small { font-size: scale-to(-1); }
   @include heading-level(1);
 
   h1 {
-    @include grid-border($font-color);
     margin-bottom: 0;
     @media only screen { span { @include visuallyhidden; } }
   }
@@ -205,7 +204,6 @@ nav {
   @extend %uncollapse-margin;
   
   @media only screen {
-    @include bg-grid();
     background-position: 0 1.25em;
     background-origin: content-box;
   }
