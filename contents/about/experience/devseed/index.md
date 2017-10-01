@@ -6,5 +6,5 @@ to: 2017
 
 A design and development shop using open source tools and open data trying to
 do some good in the world.
-[https://developmentseeed.org](https://developmentseed.org)
+<a class="url" href="https://developmentseeed.org">https://developmentseeed.org</a>
 

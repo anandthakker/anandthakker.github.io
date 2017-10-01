@@ -1,9 +1,7 @@
 ---
 ---
 
-I'm comfortable hacking in anything from Python to C/C++, but the vast
-majority of my recent experience is with Javascript (Node & browser).  More
-importantly:
+Rather than claiming skills with specific languages or environments, I'll just say:
 
 - I like to think about software architecture and algorithms, fine-grained performance optimizations, and everything in between.
 - I enjoy learning new languages and systems, and I'm flexible about different

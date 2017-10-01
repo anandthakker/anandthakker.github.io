@@ -56,7 +56,7 @@ img {
   
   a[href^="http"]:not([href*="twitter"]) {
     border-bottom: 1px dotted black;
-    &:after {
+    &:not(.url):after {
       content: ' (' attr(href) ')';
       word-break: break-all;
     }
@@ -166,7 +166,7 @@ small { font-size: scale-to(-1); }
 
   h1 {
     margin-bottom: 0;
-    @media only screen { span { @include visuallyhidden; } }
+    @media only screen { .email,.web { @include visuallyhidden; } }
   }
 
   nav {
@@ -276,22 +276,22 @@ footer.container {
 
 
 @media print {
-
   .site-header h1 {
+    border-bottom: 0.5px solid black;
     font-size: scale-to(1);
     margin-top: lines(1);
     text-align: right;
+    font-size: scale-to(-1);
     .name {
       float: left;
+      font-size: scale-to(2);
     }
-    .email { 
-      float: left;
-      clear: left;
+    .email {
+      display: block;
       margin: 0;
-      font-size: scale-to(-1);
     }
   }
-  
+
   .site-header nav,
   #current-status-,
   #current-status- + *,
@@ -440,7 +440,7 @@ footer.container {
   .skills {
     ul { position: relative; }
     li:before {
-      content: '✓';
+      content: '–';
       position: absolute;
       left: -1em;
     }
@@ -488,16 +488,7 @@ footer.container {
       padding: 0;
     }
   }
-  
-  @media only screen {
-    a[href^=http]:after {
-      content: "⧉";
-      font: 1em/1.5em;
-      margin: 0 0 0 2px;
-      text-align: center;
-    }
-  }
-  
+
   @media print {
     &:after {
       content: "Thanks for your time and consideration.";

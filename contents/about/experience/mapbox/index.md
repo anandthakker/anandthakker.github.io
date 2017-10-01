@@ -5,5 +5,4 @@ to: present
 ---
 
 A mapping and location software company.
-[https://mapbox.com](https://mapbox.com)
-
+<a class="url" href="https://mapbox.com">https://mapbox.com</a>

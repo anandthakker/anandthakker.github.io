@@ -7,18 +7,8 @@ block append header
 
 block content
 
-  section.about
-    != typogr(contents.about['index.md'].html).typogrify()
-    nav
-      include contact
-
   section.resume
     - orderIterator = function (item) {return item.metadata.order;}
-
-    section.background
-      h2 Background
-      != typogr(contents.about['background.md'].html).typogrify()
-
 
     section.skills
       h2 Skills
