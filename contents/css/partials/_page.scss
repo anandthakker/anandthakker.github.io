@@ -53,7 +53,7 @@ img {
   a {
     color: black;
   }
-  
+
   a[href^="http"]:not([href*="twitter"]) {
     border-bottom: 1px dotted black;
     &:not(.url):after {
@@ -61,7 +61,7 @@ img {
       word-break: break-all;
     }
   }
-  
+
   h1,
   h2,
   h3,
@@ -174,6 +174,7 @@ small { font-size: scale-to(-1); }
 
     ul {
       margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
@@ -191,7 +192,7 @@ nav {
     &:before {
       content: '/';
       padding: 0 .25em;
-    } 
+    }
   }
 
   .active {
@@ -202,7 +203,7 @@ nav {
 
 .container {
   @extend %uncollapse-margin;
-  
+
   @media only screen {
     background-position: 0 1.25em;
     background-origin: content-box;
@@ -226,7 +227,7 @@ $container-width: 50em;
 
 footer.container {
   @extend %clearfix;
-  
+
   & > * { font-size: .75em;}
 
   color: lighten($font-color, 50%);
@@ -277,7 +278,7 @@ footer.container {
 
 @media print {
   .site-header h1 {
-    border-bottom: 0.5px solid black;
+    border-bottom: 0.5px solid #888;
     font-size: scale-to(1);
     margin-top: lines(1);
     text-align: right;
@@ -310,7 +311,7 @@ footer.container {
     margin-top: lines(3);
   }
   .container { position: relative; }
-  
+
   /* dynamic geometry background */
   .geometry {
     /* imitate a background image */
@@ -323,39 +324,39 @@ footer.container {
     width: 100%;
     height: 100%;
     z-index: 100;
-    
+
     /* siblings to this element should get a higher z-index
     WARNING: this is probably a bit dangerous... */
     & ~ * {
       position: relative;
       z-index: 200;
     }
-    
+
     /* colors */
     $orange: rgba(160, 100, 50, .5);
     $lightorange: rgba(160, 100, 50, .2);
     $lightgreen: rgba(100, 150, 50, .5);
-    
+
     fill: none;
     stroke: rgba(128, 160, 160, .3);
-    
+
     .point { fill: white; stroke: inherit; }
     .main-figure.point { stroke: $orange; fill: $lightorange; }
     .guides { }
     .perpendicular-bisectors { stroke-dasharray: 5,5; stroke: $lightgreen; }
     .result { stroke: $orange; }
   }
-  
+
   .message {
     color: $red;
   }
-  
+
   .geometry-text {
     border: none;
     width: 100%;
     height: lines(10);
   }
-  
+
   .collapse > *:not(a) {
     @include visuallyhidden;
   }
@@ -392,7 +393,7 @@ footer.container {
   header {
     @extend %uncollapse-margin;
     @include heading-level(3);
-    
+
     .date {
       @extend %header-date;
       float: right;
@@ -408,7 +409,7 @@ footer.container {
 .projects {
   h2 { @extend %h3; }
   * + h2 { margin-top: lines(2); }
-  
+
   .project {
     @include heading-level(4);
 
@@ -426,7 +427,7 @@ footer.container {
         clear: right;
       }
     }
-    
+
     p {
       max-width: calc(100% - 4em);
     }
@@ -435,8 +436,12 @@ footer.container {
 
 
 .resume {
+  @media only screen {
+    margin-top: lines(2);
+    border-top: 0.5px solid #888;
+  }
+
   & > section h2 { @extend %h2; }
-  
   .skills {
     ul { position: relative; }
     li:before {
@@ -448,14 +453,14 @@ footer.container {
       font-weight: bold;
     }
   }
-  
+
   .experience .organization {
     @include heading-level(3);
   }
   .experience .work {
     @include heading-level(4);
   }
-  
+
   .work {
     margin-top: 0;
     margin-bottom: lines(1);
@@ -465,8 +470,8 @@ footer.container {
       font-size: scale-to(-1);
     }
   }
-  
-  
+
+
   .education .school {
     @include heading-level(3);
 
@@ -479,12 +484,12 @@ footer.container {
       }
     }
   }
-  
+
   .date { @extend %header-date; }
   @media only screen and (max-width: 479px) {
-    .date { 
+    .date {
       display: block;
-      float: none; 
+      float: none;
       padding: 0;
     }
   }
@@ -497,7 +502,7 @@ footer.container {
       margin-top: 2em;
       width: 100%;
     }
-    
+
     .work[data-has-details] {
       h4 {
         display: inline-block;
@@ -516,15 +521,15 @@ footer.container {
           border-left: 1px dotted black;
         }
       }
-      
+
       @include clearfix;
     }
-    
+
     * + .organization,
     * + .school {
       margin-top: lines(2);
     }
-    
+
   }
 }
 
@@ -533,7 +538,7 @@ footer.container {
     .work[data-has-details] {
       h4 { cursor: pointer; }
       h4:hover { text-decoration: underline; }
-      
+
     }
     .work[data-has-details]:hover {
       h4:after { content: " (hide description)"; }
