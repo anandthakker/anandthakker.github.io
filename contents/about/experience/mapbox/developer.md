@@ -5,5 +5,5 @@ order: 0
 show: true
 ---
 
-Helping to build [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js), a Javascript library for rendering fast, rich maps in web brosers, and [Mapbox GL Native](https://github.com/mapbox/mapbox-gl-native), an analogous C++ library powering several platform-specific map renering SDKs.
+Helping to build [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js), a Javascript library for rendering fast, rich maps in web brosers, and [Mapbox GL Native](https://github.com/mapbox/mapbox-gl-native), an analogous C++ library powering several platform-specific map rendering SDKs.
 
