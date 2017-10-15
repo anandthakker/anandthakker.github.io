@@ -1,0 +1,768 @@
+@charset "UTF-8";
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers: h5bp.com/u
+ */
+/*
+ * Hide only visually, but have it available for screen readers: h5bp.com/v
+ */
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.site-header:before, footer.container:before, .posts:before, .site-header:after, footer.container:after, .posts:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+.site-header:after, footer.container:after, .posts:after {
+  clear: both; }
+
+/* uncollapse margins */
+body:before, .container:before, .posts header:before, .article header:before,
+.intro header:before,
+.experiment header:before, body:after, .container:after, .posts header:after, .article header:after,
+.intro header:after,
+.experiment header:after {
+  content: "\00a0";
+  /* nbsp; */
+  display: block;
+  overflow: hidden;
+  height: 0; }
+
+/*
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+.tomorrow-comment, pre .comment, pre .title {
+  color: #8e908c; }
+
+.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
+  color: #c82829; }
+
+.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
+  color: #f5871f; }
+
+.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
+  color: #eab700; }
+
+.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
+  color: #718c00; }
+
+.tomorrow-aqua, pre .css .hexcolor {
+  color: #3e999f; }
+
+.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
+  color: #4271ae; }
+
+.tomorrow-purple, pre .keyword, pre .javascript .function {
+  color: #8959a8; }
+
+pre,
+.code {
+  display: block;
+  margin: 1.5rem 0;
+  background: rgba(200, 200, 200, 0.2); }
+  pre code,
+  .code code {
+    display: block; }
+
+code,
+.code {
+  color: #4d4d4c;
+  font-family: Menlo, Monaco, Consolas, monospace; }
+
+/*-----------------------------------
+Site Styles
+-----------------------------------*/
+html {
+  font-size: 16px; }
+
+body,
+select,
+input,
+textarea {
+  color: #222;
+  font-family: "Gudea", sans-serif;
+  line-height: 1.5; }
+
+/*
+http://alistapart.com/article/axiomatic-css-and-lobotomized-owls
+Sure, this may be doable with *:nth-child(n+2) {...}, but I love
+seeing the owl staring at me every time I scroll past :)
+*/
+* + * {
+  margin-top: 1.5rem;
+  margin-bottom: 0; }
+
+*:first-child {
+  margin-top: 0; }
+
+li + li {
+  margin-top: 0; }
+
+a {
+  color: #0002CC;
+  text-decoration: none; }
+  a:hover {
+    color: #0002CC; }
+  a:hover {
+    text-decoration: underline; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0; }
+
+img {
+  max-width: 100%; }
+
+@media print {
+  body,
+  a {
+    color: black; }
+
+  a[href^="http"]:not([href*="twitter"]) {
+    border-bottom: 1px dotted black; }
+    a[href^="http"]:not([href*="twitter"]):not(.url):after {
+      content: " (" attr(href) ")";
+      word-break: break-all; }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .organization > p {
+    page-break-after: avoid;
+    page-break-inside: avoid; }
+
+  .work {
+    page-break-inside: avoid; } }
+/* Heading styles */
+.site-header h1,
+.site-header h2,
+.site-header h3,
+.site-header h4, .resume > section h2, .article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4, .projects h2, .resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4, .resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4, .about h1,
+.about h2,
+.about h3,
+.about h4, .article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4, .projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4, .resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
+  text-transform: none;
+  text-align: left;
+  color: #222; }
+  .site-header h1 a,
+  .site-header h2 a,
+  .site-header h3 a,
+  .site-header h4 a, .resume > section h2 a, .article header h1 a,
+  .article header h2 a,
+  .article header h3 a,
+  .article header h4 a,
+  .intro header h1 a,
+  .intro header h2 a,
+  .intro header h3 a,
+  .intro header h4 a,
+  .experiment header h1 a,
+  .experiment header h2 a,
+  .experiment header h3 a,
+  .experiment header h4 a, .projects h2 a, .resume .experience .organization h1 a,
+  .resume .experience .organization h2 a,
+  .resume .experience .organization h3 a,
+  .resume .experience .organization h4 a, .resume .education .school h1 a,
+  .resume .education .school h2 a,
+  .resume .education .school h3 a,
+  .resume .education .school h4 a, .about h1 a,
+  .about h2 a,
+  .about h3 a,
+  .about h4 a, .article .content h1 a,
+  .article .content h2 a,
+  .article .content h3 a,
+  .article .content h4 a,
+  .intro .content h1 a,
+  .intro .content h2 a,
+  .intro .content h3 a,
+  .intro .content h4 a,
+  .experiment .content h1 a,
+  .experiment .content h2 a,
+  .experiment .content h3 a,
+  .experiment .content h4 a, .projects .project h1 a,
+  .projects .project h2 a,
+  .projects .project h3 a,
+  .projects .project h4 a, .resume .experience .work h1 a,
+  .resume .experience .work h2 a,
+  .resume .experience .work h3 a,
+  .resume .experience .work h4 a {
+    color: #222; }
+    .site-header h1 a:hover,
+    .site-header h2 a:hover,
+    .site-header h3 a:hover,
+    .site-header h4 a:hover, .resume > section h2 a:hover, .article header h1 a:hover,
+    .article header h2 a:hover,
+    .article header h3 a:hover,
+    .article header h4 a:hover,
+    .intro header h1 a:hover,
+    .intro header h2 a:hover,
+    .intro header h3 a:hover,
+    .intro header h4 a:hover,
+    .experiment header h1 a:hover,
+    .experiment header h2 a:hover,
+    .experiment header h3 a:hover,
+    .experiment header h4 a:hover, .projects h2 a:hover, .resume .experience .organization h1 a:hover,
+    .resume .experience .organization h2 a:hover,
+    .resume .experience .organization h3 a:hover,
+    .resume .experience .organization h4 a:hover, .resume .education .school h1 a:hover,
+    .resume .education .school h2 a:hover,
+    .resume .education .school h3 a:hover,
+    .resume .education .school h4 a:hover, .about h1 a:hover,
+    .about h2 a:hover,
+    .about h3 a:hover,
+    .about h4 a:hover, .article .content h1 a:hover,
+    .article .content h2 a:hover,
+    .article .content h3 a:hover,
+    .article .content h4 a:hover,
+    .intro .content h1 a:hover,
+    .intro .content h2 a:hover,
+    .intro .content h3 a:hover,
+    .intro .content h4 a:hover,
+    .experiment .content h1 a:hover,
+    .experiment .content h2 a:hover,
+    .experiment .content h3 a:hover,
+    .experiment .content h4 a:hover, .projects .project h1 a:hover,
+    .projects .project h2 a:hover,
+    .projects .project h3 a:hover,
+    .projects .project h4 a:hover, .resume .experience .work h1 a:hover,
+    .resume .experience .work h2 a:hover,
+    .resume .experience .work h3 a:hover,
+    .resume .experience .work h4 a:hover {
+      color: #222; }
+
+.site-header h1,
+.site-header h2,
+.site-header h3,
+.site-header h4,
+.article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4,
+.projects h2,
+.resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4,
+.resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal; }
+
+.resume > section h2,
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4,
+.projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4,
+.resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
+  font-family: "Gudea", sans-serif;
+  font-weight: bold; }
+
+.resume > section h2 {
+  text-transform: uppercase;
+  text-align: right;
+  color: #ddd; }
+
+/* Set up typographic scale. */
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0rem; }
+
+.site-header h1,
+.site-header h2,
+.site-header h3,
+.site-header h4 {
+  margin-top: 3rem;
+  font-size: 2.25em;
+  line-height: 1.3333333333;
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 480px) {
+    .site-header h1,
+    .site-header h2,
+    .site-header h3,
+    .site-header h4 {
+      margin-top: 3rem;
+      font-size: 3.375em;
+      line-height: 1.3333333333;
+      margin-bottom: 3rem; } }
+
+.resume > section h2 {
+  margin-top: 3rem;
+  font-size: 2.25em;
+  line-height: 1.3333333333;
+  margin-bottom: 3rem; }
+  @media only screen and (min-width: 480px) {
+    .resume > section h2 {
+      margin-top: 3rem;
+      font-size: 3.375em;
+      line-height: 0.8888888889;
+      margin-bottom: 3rem; } }
+
+.article header h1,
+.article header h2,
+.article header h3,
+.article header h4,
+.intro header h1,
+.intro header h2,
+.intro header h3,
+.intro header h4,
+.experiment header h1,
+.experiment header h2,
+.experiment header h3,
+.experiment header h4, .projects h2, .resume .experience .organization h1,
+.resume .experience .organization h2,
+.resume .experience .organization h3,
+.resume .experience .organization h4, .resume .education .school h1,
+.resume .education .school h2,
+.resume .education .school h3,
+.resume .education .school h4 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 0rem; }
+
+.about h1,
+.about h2,
+.about h3,
+.about h4, .article .content h1,
+.article .content h2,
+.article .content h3,
+.article .content h4,
+.intro .content h1,
+.intro .content h2,
+.intro .content h3,
+.intro .content h4,
+.experiment .content h1,
+.experiment .content h2,
+.experiment .content h3,
+.experiment .content h4, .projects .project h1,
+.projects .project h2,
+.projects .project h3,
+.projects .project h4, .resume .experience .work h1,
+.resume .experience .work h2,
+.resume .experience .work h3,
+.resume .experience .work h4 {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 0rem; }
+  .about h1 + *,
+  .about h2 + *,
+  .about h3 + *,
+  .about h4 + *, .article .content h1 + *,
+  .article .content h2 + *,
+  .article .content h3 + *,
+  .article .content h4 + *,
+  .intro .content h1 + *,
+  .intro .content h2 + *,
+  .intro .content h3 + *,
+  .intro .content h4 + *,
+  .experiment .content h1 + *,
+  .experiment .content h2 + *,
+  .experiment .content h3 + *,
+  .experiment .content h4 + *, .projects .project h1 + *,
+  .projects .project h2 + *,
+  .projects .project h3 + *,
+  .projects .project h4 + *, .resume .experience .work h1 + *,
+  .resume .experience .work h2 + *,
+  .resume .experience .work h3 + *,
+  .resume .experience .work h4 + * {
+    margin-top: 0; }
+
+small {
+  font-size: 0.6666666667em; }
+
+@media print {
+  .resume > section h2 {
+    color: black;
+    font-weight: normal;
+    font-family: "Playfair Display", serif;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem; } }
+/*-----------------------------------
+  Common Layout / Composition
+-----------------------------------*/
+.site-header h1 {
+  margin-bottom: 0; }
+  @media only screen {
+    .site-header h1 .email, .site-header h1 .web {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; } }
+.site-header nav {
+  float: right; }
+  .site-header nav ul {
+    margin-top: 0;
+    margin-bottom: 0; }
+
+nav {
+  margin: 0; }
+  nav li {
+    display: inline-block;
+    margin: 0; }
+    nav li:first-child:before {
+      display: none; }
+    nav li:before {
+      content: '/';
+      padding: 0 .25em; }
+  nav .active {
+    font-weight: bold;
+    text-transform: uppercase; }
+
+.container {
+  margin-top: 0;
+  padding: 0 1.5em 1.5rem; }
+  @media only screen {
+    .container {
+      background-position: 0 1.25em;
+      background-origin: content-box; } }
+
+@media only screen and (min-width: 35em) {
+  .container {
+    padding: 0 10em 1.5rem 5em;
+    max-width: 50em;
+    margin: 0 auto; } }
+footer.container {
+  color: #a2a2a2;
+  background: #fff;
+  padding: 0 .5em 2em; }
+  footer.container > * {
+    font-size: .75em; }
+  footer.container .copy {
+    margin-top: 1.5rem;
+    float: left; }
+    footer.container .copy p,
+    footer.container .copy nav,
+    footer.container .copy ul {
+      display: inline; }
+  footer.container .poweredby {
+    float: left;
+    clear: left; }
+    @media only screen and (min-width: 35em) {
+      footer.container .poweredby {
+        clear: none;
+        float: right; } }
+
+.tags {
+  margin: 0; }
+
+.tags li,
+.tag {
+  margin-top: 0rem;
+  font-size: 0.6666666667em;
+  line-height: 2.25;
+  margin-bottom: 0rem;
+  color: #767676; }
+
+.article header .date,
+.intro header .date,
+.experiment header .date, .projects .project .date, .resume .date {
+  padding-left: .5em;
+  color: #767676;
+  white-space: nowrap; }
+
+@media print {
+  .site-header h1 {
+    border-bottom: 0.5px solid #888;
+    font-size: 1.5em;
+    margin-top: 1.5rem;
+    text-align: right;
+    font-size: 0.6666666667em; }
+    .site-header h1 .name {
+      float: left;
+      font-size: 2.25em; }
+    .site-header h1 .email {
+      display: block;
+      margin: 0; }
+
+  .site-header nav,
+  #current-status-,
+  #current-status- + *,
+  footer > *,
+  .contact {
+    display: none; } }
+/*-----------------------------------
+ Page- or section-specific Styles
+-----------------------------------*/
+.home {
+  /* dynamic geometry background */ }
+  @media only screen and (min-width: 50em) {
+    .home {
+      margin-top: 4.5rem; } }
+  .home .container {
+    position: relative; }
+  .home .geometry {
+    /* imitate a background image */
+    pointer-events: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* siblings to this element should get a higher z-index
+    WARNING: this is probably a bit dangerous... */
+    /* colors */
+    fill: none;
+    stroke: rgba(128, 160, 160, 0.3); }
+    .home .geometry ~ * {
+      position: relative;
+      z-index: 200; }
+    .home .geometry .point {
+      fill: white;
+      stroke: inherit; }
+    .home .geometry .main-figure.point {
+      stroke: rgba(160, 100, 50, 0.5);
+      fill: rgba(160, 100, 50, 0.2); }
+    .home .geometry .perpendicular-bisectors {
+      stroke-dasharray: 5,5;
+      stroke: rgba(100, 150, 50, 0.5); }
+    .home .geometry .result {
+      stroke: rgba(160, 100, 50, 0.5); }
+  .home .message {
+    color: #CC0200; }
+  .home .geometry-text {
+    border: none;
+    width: 100%;
+    height: 15rem; }
+  .home .collapse > *:not(a) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+.posts header a {
+  color: #222; }
+  .posts header a:hover {
+    color: #222; }
+.posts .pagenav {
+  margin-top: 3rem;
+  float: right; }
+  .posts .pagenav a {
+    padding-left: 2em; }
+
+.article header .date,
+.intro header .date,
+.experiment header .date {
+  float: right; }
+
+.projects * + h2 {
+  margin-top: 3rem; }
+.projects .project .date {
+  float: right;
+  clear: right; }
+.projects .project .tag {
+  float: right;
+  margin-left: 1em; }
+  .projects .project .tag:nth-of-type(-n+3) {
+    clear: right; }
+.projects .project p {
+  max-width: calc(100% - 4em); }
+
+@media only screen {
+  .resume {
+    margin-top: 3rem;
+    border-top: 0.5px solid #888; } }
+.resume .skills ul {
+  position: relative; }
+.resume .skills li:before {
+  content: '–';
+  position: absolute;
+  left: -1em; }
+.resume .skills .skill {
+  font-weight: bold; }
+.resume .work {
+  margin-top: 0;
+  margin-bottom: 1.5rem; }
+  .resume .work:first-of-type {
+    margin-top: 1.5rem; }
+  .resume .work h4:after {
+    font-weight: normal;
+    font-size: 0.6666666667em; }
+.resume .education .school table {
+  margin-top: 1.5rem; }
+.resume .education .school td {
+  vertical-align: baseline; }
+  .resume .education .school td:first-child {
+    font-weight: bold;
+    padding-right: .5em; }
+@media only screen and (max-width: 479px) {
+  .resume .date {
+    display: block;
+    float: none;
+    padding: 0; } }
+@media print {
+  .resume:after {
+    content: "Thanks for your time and consideration.";
+    display: block;
+    border-top: 1px solid black;
+    margin-top: 2em;
+    width: 100%; }
+  .resume .work[data-has-details] h4 {
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    padding-right: 1%; }
+  .resume .work[data-has-details] .details {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%;
+    padding-top: .25em;
+    font-size: 0.6666666667em; }
+    .resume .work[data-has-details] .details > p {
+      padding-left: .5em; }
+    .resume .work[data-has-details] .details > p:first-of-type {
+      border-left: 1px dotted black; }
+  .resume .work[data-has-details]:before, .resume .work[data-has-details]:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  .resume .work[data-has-details]:after {
+    clear: both; }
+  .resume * + .organization,
+  .resume * + .school {
+    margin-top: 3rem; } }
+
+@media only screen {
+  .js .work[data-has-details] h4 {
+    cursor: pointer; }
+  .js .work[data-has-details] h4:hover {
+    text-decoration: underline; }
+  .js .work[data-has-details]:hover h4:after {
+    content: " (hide description)"; }
+  .js .work.collapse[data-has-details]:not(:target) {
+    margin-bottom: 0; }
+    .js .work.collapse[data-has-details]:not(:target) h4:after {
+      content: " (show description)"; }
+    .js .work.collapse[data-has-details]:not(:target) .details {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px; } }
+/* base styles for euclid js */
+.geometry {
+  stroke: black;
+  fill: none; }
+  .geometry .point {
+    fill: black;
+    stroke: none; }
+  .geometry .free-point {
+    fill: blue;
+    stroke: none;
+    cursor: pointer; }
+  .geometry .handle {
+    fill: none;
+    stroke: rgba(0, 0, 0, 0);
+    stroke-width: 20; }
+  .geometry .active {
+    stroke-width: 2px;
+    cursor: pointer; }

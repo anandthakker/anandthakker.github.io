@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anand Thakker
+    </title>
+    <meta name="description" content="Personal site of Anand Thakker">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
+    <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
+    <script src="/js/vendor/modernizr.custom.js"></script>
+  </head>
+  <body class="notes">
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <header class="site-header">
+        <h1><span class="name">Anand Thakker</span><span class="email"> </span><span class="web">http://anandthakker.net</span></h1>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/">home</a></li>
+            <li class="active">notes</li>
+            <li><a href="/resume">resume</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="posts">
+          <article class="intro">
+            <header><span class="date">22 September 2015</span>
+              <h3><a href="/2015/09/21/interative-data-driven-styles-with-mapbox-gl-js/">Interative &amp; Data-driven Styles with Mapbox GL JS</a></h3>
+            </header>
+            <section class="content"><p><strong>tl;dr:</strong> Mapbox <span class="caps">GL</span> JS feels like the future of web maps, promising
+data-driven styles (e.g. a color scale) and interaction-driven styles (e.g.
+<code>:hover</code>).  They’re still in the works as first-class features of the <span class="caps">API</span>, but
+it’s possible–through some mild workarounds–to make them work today.
+Examples with code <a href="#hover">below</a>.</p>
+<a href="/2015/09/21/interative-data-driven-styles-with-mapbox-gl-js/" class="more">(more)</a>
+            </section>
+          </article>
+          <article class="intro">
+            <header><span class="date">05 January 2015</span>
+              <h3><a href="/2015/01/04/pending-side-projects-and-experiments/">Pending side projects and experiments</a></h3>
+            </header>
+            <section class="content"><p>Recording some pending side project ideas or extremely early stage experiments 
+here to keep track of them (and keep myself&nbsp;honest!).</p>
+<ol>
+<li><strong>node_modules docs search:</strong> A simple server that indexes all the <span class="caps">README</span>’s
+in <code>node_modules</code> exposes them to a super fast search.  Because I’m sick of 
+waiting for github.com or npmjs.org on my crappy internet connection while&nbsp;travelling.</li>
+<li><strong>melt-stream:</strong>  The <code>melt</code> function from data analysis libraries (e.g. 
+R’s “reshape”, Python’s pandas), but for node streams.  More generally: I’d like
+to look into the state of data analysis modules on npm.  It would be fun to
+port some of the essentials to Nodeland, and even more fun to be able to do heavy
+data analysis&nbsp;there.</li>
+<li>A better Appalachian Trail map, possibly with some simple trip-planning features.
+(Shapefiles available <a href="https://www.appalachiantrail.org/about-the-trail/mapping-gis-data/appalachian-trail-gis-gps-data">here</a>.)</li>
+</ol>
+
+            </section>
+          </article>
+          <article class="intro">
+            <header><span class="date">22 April 2014</span>
+              <h3><a href="/2014/04/21/wtf-position-fixed-and-z-index-on-safari/">WTF: position: fixed and z-index on Safari</a></h3>
+            </header>
+            <section class="content"><p>Safari seems not to respect z-indexes until after browser window is
+resized. Open up <a href="/experiments/safari-position-fixed-z-index-issue.html">this file</a> in
+Safari 7.0.3 on <span class="caps">OS</span>&nbsp;X.</p>
+<p>To investigate next: what else, besides browser resize, will force the
+z-index layering to be correct?  Modifying the style of the relevant
+elements (either before scrolling up or after)?   Any repaint (again,
+either before scrolling up or&nbsp;after)?</p>
+
+            </section>
+          </article>
+          <div class="pagenav"><a href="/archive.html">« Archives</a><a href="/notes/page/2/">Older »</a>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer class="container">
+      <section class="copy">
+        <p>&copy; 2017 Anand Thakker</p>
+        <nav>
+          <ul>
+            <li><a href="https://twitter.com/anandthakker">twitter</a></li>
+            <li><a href="https://github.com/anandthakker">github</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="poweredby">
+        <p>Powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '5800b9ebbb922a05c1005e66');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

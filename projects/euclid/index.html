@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Euclidean geometry in JS. - Euclidean geometry in JS. - Anand Thakker
+    </title>
+    <meta name="description" content="Model Euclidean geometry, and draw/interact with it in the browser using d3. (The dynamic background on the home page is an example of this.)">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
+    <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
+    <script src="/js/vendor/modernizr.custom.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body class="experiment-detail">
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <header class="site-header">
+        <h1><span class="name">Anand Thakker</span><span class="email"> </span><span class="web">http://anandthakker.net</span></h1>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/notes">notes</a></li>
+            <li><a href="/resume">resume</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <article class="experiment">
+          <header>
+            <h2>Euclidean geometry in JS.</h2>
+          </header>
+          <section class="content"><svg class="geometry" viewbox="0 0 500 500" preserveAspectRatio="xMidYMin meet">
+</svg>
+
+<p>After seeing the <a href="https://www.google.com/search?q=alhambra+geometry&amp;espv=2&amp;tbm=isch&amp;tbo=u&amp;source=univ&amp;sa=X&amp;ei=pXR_VL-TGob5asH2guAG&amp;ved=0CDgQsAQ&amp;biw=1146&amp;bih=672">incredible geometric designs</a> throughout the Alhambra in
+Granada, I wanted to try to explore some of the underlying symmetry and
+geometry. I could have jumped straight to the tessellations, but it felt like
+a deeper way to get into it would be to build up from basic constructions, and
+so, over the course of a few train rides, I started with this little 
+library–<strong>EuclidJS</strong>–for building and rendering plane geometry scenes.
+<a href="https://github.com/anandthakker/euclid">Code on Github</a>.</p>
+<p>Building the scene can be done programmatically with a <a href="https://anandthakker.github.io/euclid/">simple <span class="caps">API</span></a>, or by
+describing the it with a (sort of) friendly grammar that Euclid can parse.
+The diagram above comes from the text below (which you can edit, at your own&nbsp;risk!).</p>
+<p><div class="message">
+</div></p>
+<textarea class="code">
+[main-figure]
+Let a = (150, 100).
+Let b = (350, 300).
+Let c = (300, 400).
+Draw a segment joining a and b.
+Draw a segment with endpoints b and c.
+Draw a segment from a to c.
+
+[guides]
+Let k be a circle through b centered at a.
+Let l be a circle containing a with center b.
+Let m be the circle centered at b through c.
+Let n be the circle centered at c containing b.
+d = the intersection of k and l
+e = the intersection of k and l that is not d
+f = the intersection of m and n
+g = the intersection of m and n that is not f
+
+[result]
+Let O be the intersection of line d-e and line f-g
+Draw the circle centered at O containing a.
+</textarea>
+
+
+
+<h2 id="next-up-">Next&nbsp;up:</h2>
+<ol>
+<li>I’d still like to make the grammar more flexible (and thus concise), with, e.g.,
+things like “Let d and e be the points where circles a and b intersect”,
+or even “Let v be the line determined by the points where circles a and b&nbsp;intersect”.</li>
+<li>A tessellation builder using this that will, hopefully, be simultaneously simple to use
+and true to the underlying&nbsp;geometry.</li>
+<li>A geometry proof parser that attempts to generate diagrams based on the text in 
+a proof. (This is very ambitious, but would be very&nbsp;cool.)</li>
+</ol>
+</section>
+        </article>
+      </main>
+    </div>
+    <footer class="container">
+      <div class="pagenav"><a href="/notes/">« Home</a></div>
+      <section class="copy">
+        <p>&copy; 2017 Anand Thakker</p>
+        <nav>
+          <ul>
+            <li><a href="https://twitter.com/anandthakker">twitter</a></li>
+            <li><a href="https://github.com/anandthakker">github</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="poweredby">
+        <p>Powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="/js/geometry.js"></script>
+    <script src="script.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '5800b9ebbb922a05c1005e66');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

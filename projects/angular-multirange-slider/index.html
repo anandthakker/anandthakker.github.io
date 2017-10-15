@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AngularJS multi-range slider - AngularJS multi-range slider - Anand Thakker
+    </title>
+    <meta name="description" content="An Angular directive for a multi-range slider widget, to allow user to input multiple ranges that add to a fixed total.">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
+    <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
+    <script src="/js/vendor/modernizr.custom.js"></script>
+  </head>
+  <body class="article-detail">
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <header class="site-header">
+        <h1><span class="name">Anand Thakker</span><span class="email"> </span><span class="web">http://anandthakker.net</span></h1>
+        <nav role="navigation">
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="/notes">notes</a></li>
+            <li><a href="/resume">resume</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <article class="article">
+          <header><span class="date">02 March 2014</span>
+            <h2>AngularJS multi-range slider</h2>
+          </header>
+          <section class="content"><p>I needed a slider that could be used to choose choose a list of
+probabilities that always add up to 1. I could have used a text input or
+slider for each probability and link it up so that changing one would
+update the others, but that’s a fairly clunky interaction. This approach
+isn’t perfect, but I think it’s&nbsp;better…</p>
+<p>Code: <a href="http://codepen.io/anandthakker/pen/marlo">Codepen</a>
+| <a href="https://github.com/anandthakker/angular-multirange-slider">Github</a></p>
+<p>##Usage</p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="name">slider</span> <span class="attr">model</span>=<span class="string">"arrayOfValues"</span>&gt;</span><span class="tag">&lt;/<span class="name">slider</span>&gt;</span>
+</code></pre>
+<p><code>arrayOfValues</code> is an array of numbers: the range values, in order from
+left to&nbsp;right.</p>
+<p>or</p>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="name">slider</span> <span class="attr">model</span>=<span class="string">"arrayOfObjects"</span> <span class="attr">property</span>=<span class="string">"prop"</span>&gt;</span><span class="tag">&lt;/<span class="name">slider</span>&gt;</span>
+</code></pre>
+<p><code>arrayOfObjects</code> is an array of objects and <code>prop</code> is the property from
+which to pull the range value from each&nbsp;object.</p>
+<p>Either of these can also take a <code>step</code> attribute, which locks the values
+into multiples of the given step&nbsp;size.</p>
+<p>For styling: the markup generated is a
+containing <code>div</code> (<code>.slider-control</code>), a <code>div</code> for the actual slider bar
+(<code>.slider</code>, the js sets <code>position: relative</code>), and an
+absolutely-positioned <code>div</code> for each handle (<code>.slider-handle</code>). The
+handles are children of the slider div, and their positioning is a
+percentage of the slider’s width, so the whole
+thing <em>should</em> stretch/shrink to fit its containing element. For&nbsp;example:</p>
+<pre><code class="lang-html">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider-control ng-isolate-scope"</span> <span class="attr">model</span>=<span class="string">"otherProbs"</span>&gt;</span>
+      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider"</span> <span class="attr">style</span>=<span class="string">"position: relative;"</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider-handle"</span> <span class="attr">style</span>=<span class="string">"position: absolute; left: 30%; top: -8px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"slider-handle"</span> <span class="attr">style</span>=<span class="string">"position: absolute; left: 60%; top: -8px;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+      <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="name">div</span>&gt;</span>
+</code></pre>
+<h2 id="-todo-"><strong>Todo</strong></h2>
+<ul>
+<li>Allow comprehension expressions as a more flexible (and common)
+alternative to the <code>model</code>/<code>property</code>approach.</li>
+<li>Option for labeling&nbsp;ranges?</li>
+</ul>
+</section>
+        </article>
+      </main>
+    </div>
+    <footer class="container">
+      <div class="pagenav"><a href="/notes/">« Full blog</a></div>
+      <section class="copy">
+        <p>&copy; 2017 Anand Thakker</p>
+        <nav>
+          <ul>
+            <li><a href="https://twitter.com/anandthakker">twitter</a></li>
+            <li><a href="https://github.com/anandthakker">github</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="poweredby">
+        <p>Powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '5800b9ebbb922a05c1005e66');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>

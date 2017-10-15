@@ -1,0 +1,33 @@
+/* uncollapse margins */
+/*
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.geometry {
+  height: 22.5rem;
+  width: 100%;
+  margin-bottom: 1em;
+  overflow-x: visible !important;
+  overflow-y: visible !important; }
+  .geometry .guides {
+    stroke: #ddd; }
+    .geometry .guides.point {
+      fill: #fff;
+      stroke: #888; }
+  .geometry .result {
+    stroke: #050; }
+    .geometry .result.line {
+      stroke-dasharray: 5,5; }
+
+textarea {
+  width: 100%;
+  height: 37.5rem;
+  border: none; }
+
+.message {
+  font-size: 0.6666666667em;
+  color: #CC0200; }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Anand Thakker
+    </title>
+    <meta name="description" content="Personal site of Anand Thakker">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Playfair+Display|Playfair+Display+SC|Open+Sans|Gudea:400,700,400italic">
+    <meta name="google-site-verification" content="EzZE5XKp-gONi3TwRsa5riwb2NBjkOCFb6LGy3PNq7g">
+    <script src="/js/vendor/modernizr.custom.js"></script>
+  </head>
+  <body class="home">
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <svg viewbox="0 0 2400 2400" preserveAspectRatio="xMinYMin meet" class="geometry"></svg>
+      <header class="site-header">
+        <h1><span class="name">Anand Thakker</span><span class="email"> </span><span class="web">http://anandthakker.net</span></h1>
+        <nav role="navigation">
+          <ul>
+            <li class="active">home</li>
+            <li><a href="/notes">notes</a></li>
+            <li><a href="/resume">resume</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <section class="about"><p>Hi. I’m Anand Thakker. Depending on the year or season, I’m either a <strong>software developer</strong>,
+a high school <strong>math and <span class="caps">CS</span> teacher</strong>, or some combination of the two.
+Regardless of the year or season, I’m eager to play
+with new ideas, build things, and try to do some&nbsp;good.</p>
+<h4 id="current-status-">Current&nbsp;status:</h4>
+<p>Building a <span class="caps">GL</span>-powered map rendering engine at <a href="https://mapbox.com">Mapbox</a>.</p>
+
+          <nav>
+            <section class="contact">
+              <ul>
+                <li><a href="emailaddress">email</a></li>
+                <li><a href="https://twitter.com/anandthakker">twitter</a></li>
+                <li><a href="https://github.com/anandthakker">github</a></li>
+                <li><a href="/about/pubkey.txt">pubkey</a></li>
+                <li><a href="https://keybase.io/anandthakker">keybase</a></li>
+              </ul>
+            </section>
+          </nav>
+        </section>
+      </main>
+    </div>
+    <footer class="container">
+      <section class="copy">
+        <p>&copy; 2017 Anand Thakker</p>
+        <nav>
+          <ul>
+            <li><a href="https://twitter.com/anandthakker">twitter</a></li>
+            <li><a href="https://github.com/anandthakker">github</a></li>
+          </ul>
+        </nav>
+      </section>
+      <section class="poweredby">
+        <p>Powered by&nbsp;<a href="https://github.com/jnordberg/wintersmith">Wintersmith</a></p>
+      </section>
+      <div class="about-background collapse"><a href="#"><br>Play with the geometry background!</a>
+        <p>
+          The moving background is a dynamic compass-and-ruler construction
+          for circumscribing an arbitrary triangle, generated from the
+          text below using<a href="/projects/euclid/"> Euclid JS.</a> You can mess around with the text and it'll change the figure.
+        </p>
+        <div class="message"></div>
+        <textarea class="code geometry-text">
+          [main-figure]
+          Let a = (300, 1500).
+          Let b = (1800, 1200). # this is the point following the mouse.
+          Let c = (-120, 1).
+          Let s be a segment with endpoints a and b.
+          Let t be a segment with endpoints b and c.
+          Let u be a segment from a to c.
+          
+          [guides]
+          Let k be a circle centered at a containing b.
+          Let l be a circle centered at b containing a.
+          Let m be the circle centered at b containing c.
+          Let n be the circle centered at c containing b.
+          d = the intersection of k and l
+          e = the intersection of k and l that is not d
+          f = the intersection of m and n
+          g = the intersection of m and n that is not f
+          
+          [perpendicular-bisectors]
+          Let v be the line determined by d and e
+          Let w be the line determined by f and g
+          
+          [result]
+          Let O be the intersection of v and w
+          Draw the circle centered at O containing a.
+          
+        </textarea>
+      </div>
+    </footer>
+    <script src="/js/main.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="/js/geometry.js"></script>
+    <script src="/js/geometry-background.js"></script>
+    <script>
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '5800b9ebbb922a05c1005e66');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
